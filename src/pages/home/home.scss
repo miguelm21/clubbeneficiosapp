@@ -1,55 +1,217 @@
-page-home {
-	html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-  #map {
-    width: 100%;
-    height: 100%;
-  }
-     .controls {
-        margin-top: 10px;
-        border: 1px solid transparent;
-        border-radius: 2px 0 0 2px;
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        height: 32px;
-        outline: none;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      }
+	page-home {
+		.container-header{
+			border-bottom: 1px outset;
+		}
+		.toolbar-background{
+			background: #00298f;
+		}
+		.toolbar-title-ios {
+			text-align: left;
+			font-size: 1.7rem;
+			font-weight: 600;
+			color: #fff;
+			pointer-events: auto;
+		}
+		.toolbar-title {
+			display: block;
+			/* overflow: hidden; */
+			width: 100%;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			color: #fff;
+		}
+		.icon-search{
+			width: 5%;
+			float: right;
+			color: #fff;
+		}
+		.infor-user-section{
+			border-bottom: 2px outset;
+		}
+		.user-img {
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: auto;
+			height: auto;
+			max-height: 100%;
+			max-width: 40%;
+			object-fit: contain;
+			position: absolute;
+			margin: 0 auto;
+			float: right;
+		}
 
-      #pac-input {
-        background-color: #fff;
-        font-family: Roboto;
-        font-size: 15px;
-        font-weight: 300;
-        margin-left: 12px;
-        padding: 0 11px 0 13px;
-        text-overflow: ellipsis;
-        width: 200px;
-      }
+		.container img {
+			padding: 2%;
+			position: relative;
+			height: auto;
+			width: auto;
+			margin: auto;
+			vertical-align: middle;
+			border: 1px groove black;
+			margin-top: 2%;
+		}
 
-      #pac-input:focus {
-        border-color: #4d90fe;
-      }
+		.user-text{
+			font-weight: 500;
+			line-height: 1.2;
+		}
+		.beneficios-section{
+			border-bottom: 2px outset;
+			height: 43%;
+			// background-color: black;
+			background-image: url('/assets/imgs/beneficios-cupon.jpg');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			position:relative;
+		}
+		.noticias-section{
+			border-bottom: 2px outset;
+			height: 42%;
+			// background-color: black;
+			background-image: url('/assets/imgs/beneficio-noticia.jpg');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			position:relative;
+		}
+		.title-background{
+			position:absolute;
+			bottom:5px;
+			right:10px;
+			color: black;
+			font-weight: 800;
+			border-radius: 5%;
+			padding: 2px;
+			border: 1px solid #00298f;
+			text-decoration: none;
+		}
+		// Medias Querys
+		@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+			.toolbar-title {
+				display: block;
+				/* overflow: hidden; */
+				width: 100%;
+				font-size: 24px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.user-text{
+				font-weight: 500;
+				line-height: 1.2;
+				font-size: 27px;
+			}
+			.user-img {
+				max-width: 25%;
+				border: 1px solid !important;
+			}
+			.title-background{
+				font-size: 24px;
+			}
+			.beneficios-section{
+				height: 50vh;
+			}
+			.noticias-section{
+				height: 50vh;
+			}
+		}
+		@media only screen and (min-width: 993px) and (max-width: 1200px) {
+			.toolbar-title {
+				display: block;
+				/* overflow: hidden; */
+				width: 100%;
+				font-size: 24px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.user-text{
+				font-weight: 500;
+				line-height: 1.2;
+				font-size: 20px;
+			}
+			.user-img {
+				max-width: 25%;
+				border: 1px solid !important;
+			}
+			.title-background{
+				font-size: 19px;
+			}
+			.beneficios-section{
+				height: 60vh;
+			}
+			.noticias-section{
+				height: 60vh;
+			}
+		}
+		@media only screen and (min-width: 768px) and (max-width: 992px) {
+			.toolbar-title {
+				display: block;
+				/* overflow: hidden; */
+				width: 100%;
+				font-size: 24px;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.user-text{
+				font-weight: 500;
+				line-height: 1.2;
+				font-size: 20px;
+			}
+			.user-img {
+				max-width: 25%;
+			}
+			.title-background{
+				font-size: 17px;
+			}
+			.beneficios-section{
+				height: 42vh;
+			}
+			.noticias-section{
+				height: 40.8vh;
+			}
+		}
+		@media (min-width: 501px) and (max-width: 767px) {
+			.beneficios-section{
+				height: 40vh;
+			}
+			.noticias-section{
+				height: 39.9vh;
+			}
+		}
+		@media (min-width: 401px) and (max-width: 500px) {
+			.beneficios-section{
+				height: 40vh;
+			}
+			.noticias-section{
+				height: 39.9vh;
+			}
+		}
+		@media screen and (min-width: 320px) and (max-height: 640px) {
+			.user-img {
+				max-width: 25%;
+			}
+			.beneficios-section{
+				height: 70vh;
+			}
+			.noticias-section{
+				height: 70vh;
+			}
+		}
+		@media (max-width: 400px) and (orientation: portrait) {
+			.user-img {
+				max-width: 40%;
+			}
+			.beneficios-section{
+				height: 40vh;
+			}
+			.noticias-section{
+				height: 39vh;
+			}
 
-      .pac-container {
-        font-family: Roboto;
-      }
+		}
 
-      #type-selector {
-        color: #fff;
-        background-color: #4d90fe;
-        padding: 5px 11px 0px 11px;
-      }
 
-      #type-selector label {
-        font-family: Roboto;
-        font-size: 13px;
-        font-weight: 300;
-      }
-      #target {
-        width: 345px;
-      }
-}
+	}
+
+

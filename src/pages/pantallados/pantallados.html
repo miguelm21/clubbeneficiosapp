@@ -1,0 +1,41 @@
+<!--
+  Generated template for the PantalladosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="container-header">
+
+	<ion-navbar>
+		<ion-title text-center class="title-nav"><img class="icon-nav" src="assets/imgs/pin.png">&nbsp;&nbsp;Cercanos</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+	<!-- Contenedor Google-map -->
+	<div padding class="contenedor-map">
+		<div text-center #map id="map">
+		</div>
+	</div>
+	<!-- End Contenedor Google-map -->
+	<ion-list class="list-offert">
+		<ion-item class="item-offert">
+			<ion-thumbnail item-start>
+				<img src="assets/imgs/user.png" #myImage (click)="presentImage(myImage)">
+			</ion-thumbnail>
+			<h2 class="title-offert">Oferta 1</h2>
+			<p class="text-offert">Descripción</p>
+			<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
+		</ion-item>
+		<ion-item class="item-offert">
+			<ion-thumbnail item-start>
+				<img src="assets/imgs/user.png" #myImage2 (click)="presentImage2(myImage2)">
+			</ion-thumbnail>
+			<h2 class="title-offert">Oferta 2</h2>
+			<p class="text-offert">Descripción</p>
+			<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
+		</ion-item>
+	</ion-list>
+</ion-content>

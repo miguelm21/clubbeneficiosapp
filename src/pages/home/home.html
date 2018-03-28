@@ -1,4 +1,40 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="container-header">
+
+	<ion-navbar  hideBackButton>
+		<ion-title class="title-club">ClubUNO<ion-icon class="icon-search" ios="ios-search" md="md-search" (tap)="MoveToPage2()"></ion-icon></ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
 <ion-content>
-	<input id="pac-input" class="controls" type="text" placeholder="Search Box">
-	<div #map id="map"></div>
+	<!-- Section User Information -->
+	<div class="infor-user-section">
+		<ion-row class="user-text">
+			<ion-col col-6>
+				<p>Usuario Nombre</p>
+				<p>Tipo de Membresia</p>
+			</ion-col>
+			<ion-col col-6 class="container">
+				<img class="user-img" src="assets/imgs/user.png" #myImage (click)="presentImage(myImage)">
+			</ion-col>
+		</ion-row>
+		<!-- END Section User Information -->
+	</div>
+	<!-- Section Background Beneficios -->
+	<div class="beneficios-section">
+		<a class="title-background" (tap)="MoveToPageBeneficios()">Beneficios</a>
+		<!-- END Section Background Beneficios -->
+	</div>
+	<!-- Section Background Noticias -->
+	<div class="noticias-section">
+		<a class="title-background" (tap)="MoveToPageNoticias()">Noticias</a>
+		<!-- END Section Background Noticias -->
+	</div>
 </ion-content>

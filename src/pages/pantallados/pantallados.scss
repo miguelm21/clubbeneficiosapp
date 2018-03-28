@@ -1,0 +1,105 @@
+page-pantallados {
+	.icon-nav{
+		width: 17px;
+	}
+	.container-header{
+		border-bottom: 1px outset;
+		color: black;
+	}
+	.toolbar-title-md{
+		color:black;
+	}
+	.toolbar-background{
+		background: #00298f;
+	}
+	#map{
+		width: 100%;
+		height: 100%;
+		border: 2px groove;
+		padding: 135px;
+	}
+	.list-offert{
+		margin-top: 3%;
+	}
+	.item-offert{
+		border-bottom: 1px outset;
+		border-top: 0px !important;
+	}
+	.button-offert{
+		color:#00298f; 
+	}
+	// Media Querys
+	@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+		.toolbar-title-ios {
+			text-align: center;
+			font-size: 3.2rem;
+			font-weight: 600;
+			color: black;
+			pointer-events: auto;
+		}
+		ion-app.ios [padding] {
+			padding: 30px;
+		}
+		.contenedor-map{
+			height: 70%;
+		}
+		.title-offert{
+			font-size: 28px;
+		}
+		.text-offert{
+			font-size: 22px;
+		}
+		.button-offert{
+			font-size: 26px !important;
+		}
+	}
+	@media only screen and (min-width: 993px) and (max-width: 1200px) {
+		.toolbar-title-ios {
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: black;
+			pointer-events: auto;
+		}
+		ion-app.ios [padding] {
+			padding: 30px;
+		}
+		.contenedor-map{
+			height: 70%;
+		}
+		.title-offert{
+			font-size: 24px;
+		}
+		.text-offert{
+			font-size: 18px;
+		}
+		.button-offert{
+			font-size: 20px !important;
+		}
+	}
+	@media only screen and (min-width: 768px) and (max-width: 992px) {
+		.toolbar-title-ios {
+			text-align: center;
+			font-size: 2.4rem;
+			font-weight: 600;
+			color: #000;
+			pointer-events: auto;
+		}
+		ion-app.ios [padding] {
+			padding: 30px;
+		}
+		.contenedor-map{
+			height: 50%;
+		}
+		.title-offert{
+			font-size: 24px;
+		}
+		.text-offert{
+			font-size: 18px;
+		}
+		.button-offert{
+			font-size: 20px !important;
+		}
+	}
+
+}

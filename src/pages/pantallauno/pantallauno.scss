@@ -1,0 +1,280 @@
+page-pantallauno {
+	.container-header{
+		border-bottom: 1px outset;
+	}
+	.toolbar-background{
+		background: #00298f;
+	}
+	.theme-bg{
+		background: #effff0;
+	}
+	.button-cancel{
+		width: 100%;
+		font-size: 12px;
+		padding: -7px;
+	}
+	.category-title{
+		color: #2d2727;
+		font-size: 14px;
+		margin-top: 4% !important;
+	}
+	.button-search{
+		width: 65%;
+		font-size: 12px;
+		padding: -10px !important;
+		float: right;
+		border-radius: 50%;
+	}
+	.searchbar-md .searchbar-search-icon {
+		left: 8px;
+		top: 9px;
+		width: 21px;
+		height: 21px;
+		display:none;
+	}
+	.searchbar-ios .searchbar-input{
+		background: #fff !important;
+	}
+	.searchbar-md .searchbar-input {
+		padding: 0px 5px;
+		border-radius: 2px;
+		border: 2px solid #2CB5E8;
+		background-position: left 8px center;
+		height: 37px;
+		font-size: 1.6rem;
+		font-weight: 400;
+		line-height: 0rem;
+		color: #141414;
+		background-color: #fff;
+		-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+	.search-section{
+		border: 1px solid #00298f;
+		border-radius: 3%;
+		margin-top: 4%;
+		background: linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);
+		margin-bottom: 2%;
+	}
+	.search-text{
+		font-size: 17px;
+		color:#2d2727;
+		font-weight: 900;
+		margin-bottom: 2%;
+	}
+	.search-text-offers{
+		font-size: 17px;
+		text-decoration: none;
+		margin-left: 5px;
+		color:#7321a4;
+	}
+	.icon-star{
+		width: 29px;
+		padding-top: 10px;
+		margin-bottom: -10%;
+	}
+	.icon-pin{
+		width: 22px;
+		padding-top: 10px;
+		margin-bottom: -10%;
+	}
+
+	.accordion-list {
+		margin-top: 7%;
+		height: auto;
+		border-radius: 3%;
+		border: 1px solid #00298f;
+		background: linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);
+	}
+	.section {
+		color: black;
+		background: linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);
+		margin-bottom: 0px;
+	}
+	.section-active {
+		background: #00298f;
+		color: #fff;
+	}
+
+	.child {
+		background: #e8e7e6;
+		color: #000;
+		margin-bottom: 0px;
+	}
+	.child-item {
+		background: #f3f2f1;
+		padding: 8px;
+	}
+	.label {
+		margin: 2px;
+	}
+	.list {
+		margin-bottom: 0px;
+	}
+	// Media Querys
+	@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+		.button-search{
+			width: 28%;
+			font-size: 20px;
+		}
+		.section {
+			font-size: 24px;
+		}
+		.category-title{
+			font-size: 30px;
+		}
+		.searchbar-ios .searchbar-input {
+			height: 5.8rem;
+			font-size: 2rem;
+			font-weight: 400;
+			margin-top: 4px;
+		}
+		.searchbar-ios .searchbar-search-icon {
+			left: 0px;
+			top: 19px;
+			width: 38px;
+			height: 30px;
+			background-repeat: no-repeat;
+			background-size: 24px;
+		}
+		.button-cancel{
+			width: 60%;
+			font-size: 20px;
+			margin-left: 20%;
+		}
+		.searchbar-input {
+			-moz-appearance: none;
+			-ms-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+			display: block;
+			width: 104%;
+			border: 0;
+			font-family: inherit;
+		}
+		.search-text{
+			font-size: 24px;
+		}
+		.search-text-offers{
+			font-size: 24px;
+		}
+		.pin-img{
+			width: 20px;
+		}
+	}
+	@media only screen and (min-width: 993px) and (max-width: 1200px) {
+		.button-search{
+			width: 31%;
+			font-size: 15px;
+		}
+		.section {
+			font-size: 20px;
+		}
+		.searchbar-ios .searchbar-input {
+			height: 4.5rem;
+			font-size: 1.7rem;
+			font-weight: 400;
+			margin-top: 4px;
+		}
+		.searchbar-ios .searchbar-search-icon {
+			left: 9px;
+			top: 10px;
+			width: 29px;
+			height: 26px;
+			background-repeat: no-repeat;
+			background-size: 19px;
+		}
+		.button-cancel{
+			width: 60%;
+			font-size: 16px;
+			margin-left: 20%;
+		}
+		.searchbar-input {
+			-moz-appearance: none;
+			-ms-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+			display: block;
+			width: 104%;
+			border: 0;
+			font-family: inherit;
+		}
+		.search-text{
+			font-size: 20px;
+		}
+		.search-text-offers{
+			font-size: 20px;
+		}
+		.pin-img{
+			width: 20px;
+		}
+	}
+	@media only screen and (min-width: 768px) and (max-width: 992px) {
+		.button-search{
+			width: 35%;
+			font-size: 15px;
+		}
+		.section {
+			font-size: 20px;
+		}
+		.searchbar-ios .searchbar-input {
+			height: 4.5rem;
+			font-size: 1.7rem;
+			font-weight: 400;
+			margin-top: 4px;
+		}
+		.searchbar-ios .searchbar-search-icon {
+			left: 9px;
+			top: 10px;
+			width: 29px;
+			height: 26px;
+			background-repeat: no-repeat;
+			background-size: 19px;
+		}
+		.button-cancel{
+			width: 60%;
+			font-size: 16px;
+			margin-left: 20%;
+		}
+		.searchbar-input {
+			-moz-appearance: none;
+			-ms-appearance: none;
+			-webkit-appearance: none;
+			appearance: none;
+			display: block;
+			width: 104%;
+			border: 0;
+			font-family: inherit;
+		}
+		.search-text{
+			font-size: 20px;
+		}
+		.search-text-offers{
+			font-size: 20px;
+		}
+		.pin-img{
+			width: 20px;
+		}
+	}
+	@media (min-width: 401px) and (max-width: 500px) {
+		.searchbar-ios .searchbar-input {
+			margin-top: 7px;
+		}
+	}
+	@media screen and (min-width: 320px) and (max-height: 640px) {
+		.button-search{
+			width: 35%;
+		}
+		.searchbar-ios .searchbar-input {
+			margin-top: 7px;
+		}
+	}
+	@media (max-width: 400px) and (orientation: portrait) {
+		.button-search{
+			width: 65%;
+		}
+		.searchbar-ios .searchbar-input {
+			margin-top: 7px;
+		}
+	}
+}

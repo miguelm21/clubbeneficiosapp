@@ -1,0 +1,105 @@
+<!--
+  Generated template for the PantallatresPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="container-header">
+
+	<ion-navbar>
+		<ion-title>
+			<img class="pin-img" style="width:42px; border-radius:20%; border:1px solid #439b6e;padding: 4px;float:right;background:linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);" src="assets/imgs/shop2.png" (tap)="MoveToPage()">
+		</ion-title>
+	</ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+	<!-- Slider Section -->
+	<div padding class="contenedor-slider">
+		<div text-center class="slider">
+			<ion-slides autoplay="5000" loop="true" speed="500">
+				<ion-slide>
+					<img class="img-slider" src="assets/imgs/slider1.png">
+				</ion-slide>
+				<ion-slide>
+					<img class="img-slider" src="assets/imgs/slider2.png">
+				</ion-slide>
+			</ion-slides>
+		</div>
+		<!-- END Slider Section -->
+	</div>
+	<!-- Offert Infor -->
+	<ion-row padding class="infor-section">
+		<ion-col col-8>
+			<h4 class="title-offert">Nombre de Oferta</h4>
+		</ion-col>
+		<ion-col class="text-offert" text-center col-12>
+			<p>Descripción</p>
+		</ion-col>
+		<!-- Offert Infor END-->
+	</ion-row>
+	<!-- Select Day -->
+	<ion-row class="contenedor-calendar">
+		<div class="select-day">
+			<input type="radio" name="day" id="Domingo"/>
+			<input type="radio" name="day" id="Lunes" />
+			<input type="radio" name="day" id="Martes" />
+			<input type="radio" name="day" id="Miercoles" />
+			<input type="radio" name="day" id="Jueves" />
+			<input type="radio" name="day" id="Viernes" />
+			<input type="radio" name="day" id="Sabado" />
+
+			<label class="label-day" for="Domingo">D</label>
+			<label class="label-day" for="Lunes">L</label>
+			<label class="label-day" for="Martes">M</label>
+			<label class="label-day" for="Miercoles">M</label>
+			<label class="label-day" for="Jueves">J</label>
+			<label class="label-day" for="Viernes">V</label>
+			<label class="label-day" for="Sabado">S</label>
+		</div>
+		<!-- Select Day END -->
+	</ion-row>
+	<div class="section-two">
+		<ion-row class="row-promo">
+			<ion-col text-center col-3 class="label-promo">
+				<label class="label-text" >Tipo Promo</label>
+			</ion-col>
+		</ion-row>
+		<ion-row class="row-category">
+			<ion-col text-center col-12 class="label-promo">
+				<label class="label-text" >Categoria</label>
+			</ion-col>
+		</ion-row>
+		<div class="section-member">
+			<ion-row>
+				<ion-col col-6>
+					<a href="" class="text-member">Miembro Gold</a>
+				</ion-col>
+			</ion-row>
+			<ion-row>
+				<ion-col col-6>
+					<a href="" class="text-member">Miembro Premium</a>
+				</ion-col>
+			</ion-row>
+		</div>
+	</div>
+<!-- 	<ion-row class="social-row">
+		<img class="social-logos"  src="assets/imgs/fb-logo.png">
+		<img class="social-logos"  src="assets/imgs/twitter-logo.png">
+		<img class="social-logos"  src="assets/imgs/Google-logo.png">
+	</ion-row> -->
+	<ion-row class="social-row">
+		<ion-fab right bottom>
+			<button ion-fab color="danger"><ion-icon ios="md-share" md="md-share"></ion-icon>
+			</button>
+			<ion-fab-list side="left">
+				<button ion-fab color="primary"><ion-icon name="logo-facebook"></ion-icon></button>
+				<button ion-fab color="primary"><ion-icon name="logo-twitter"></ion-icon></button>
+				<button ion-fab color="danger"><ion-icon name="logo-googleplus"></ion-icon></button>
+			</ion-fab-list>
+		</ion-fab>
+	</ion-row>
+
+</ion-content>

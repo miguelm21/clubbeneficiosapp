@@ -1,0 +1,50 @@
+{
+    "items": [
+        {
+            "name": "Categoria 1",
+            "children": [
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                },
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                }
+            ]
+        },
+        {
+            "name": "Categoria 2",
+            "children": [
+                {
+                  
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                },
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                }
+            ]
+        },
+        {
+            "name": "Categoria 3",
+            "children": [
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                },
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                }
+            ]
+        }
+    ]
+}
