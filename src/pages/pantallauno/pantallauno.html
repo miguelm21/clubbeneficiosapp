@@ -8,16 +8,18 @@
 
 	<ion-navbar hideBackButton>
 		<ion-row>
-			<ion-col col-3>
-				<button ion-button class="button-cancel" color="danger" (tap)="Back()">CANCELAR</button>
+			<ion-col col-2>
+				<button ion-button color="cyan" class="button-cancel" icon-only (tap)="Back()">
+					<ion-icon ios="md-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+				</button>
 			</ion-col>
-			<ion-col col-7>
+			<ion-col col-6>
 				<ion-searchbar class="searchbar-input" [(ngModel)]="myInput" [showCancelButton]="false" [animated]="true" [cancelButtonText]="cancelButtonText" [spellcheck]="true">
 				</ion-searchbar>
 			</ion-col>
-			<ion-col col-2>
-				<button ion-button class="button-search" icon-only>
-					<ion-icon name="search"></ion-icon>
+			<ion-col col-4>
+				<button ion-button color="cyan" class="button-search">
+					Buscar
 				</button>		
 			</ion-col>
 		</ion-row>
@@ -26,54 +28,116 @@
 </ion-header>
 
 
-<ion-content padding class="theme-bg">
+<ion-content>
 	<!-- Section Search -->
+
 	<div class="search-section">
 		<ion-row>
-			<ion-col col-6 text-center  (tap)="MoveToPage3()" >
-				<img class="icon-pin" src="assets/imgs/pin.png">
-				<p class="search-text">Cercanos a Mi</p>
-			</ion-col>
-			<ion-col col-6 text-center >
-				<img class="icon-star" src="assets/imgs/star.png">
-				<p class="search-text">Nuevas Ofertas</p>
+			<ion-col col-12 text-center>
+				<button ion-button  style="box-shadow: -1px 1px 7px 2px rgba(0,0,0,0.75);font-family: Acme;" text-center color="cyan" (tap)="MoveToPage3()">Cercanos a Mi</button>
 			</ion-col>
 		</ion-row>
 		<!-- END Section Search -->
 	</div>
-<!-- 	<div class="search-section">
-		<ion-row class="search-text">
-		</ion-row> -->
-		<!-- END Section Search -->
-		<!-- </div> -->
-		<!-- Section Category -->
+	<!-- Slider Section -->
+	<div padding>
+		<ion-slides style="height: 250px;border: 1px solid black;">
+			<ion-slide style="background-image: url(../assets/imgs/burger-combo.png);background-size: cover">
+			</ion-slide>
+			<ion-slide style="background-image: url(../assets/imgs/burger-combo.png);background-size: cover">
+			</ion-slide>
+			<ion-slide style="background-image: url(../assets/imgs/burger-combo.png);background-size: cover">
+			</ion-slide>
+		</ion-slides>
+		<!-- END Slider Section -->
+	</div>
 
-			<ion-list class="accordion-list">
-				<ion-row>
-					<ion-col col-12>
-						<h3 text-center class="category-title"> Categorias</h3>
-					</ion-col>
-				</ion-row>
-				<!-- First Level -->
-				<ion-list-header *ngFor="let item of information; let i = index" no-lines no-padding>
-					<!-- Toggle Button -->
-					<button ion-item  (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
-						<ion-icon item-left ios="ios-arrow-dropright" md="ios-arrow-dropright" *ngIf="!item.open"></ion-icon>
-						<ion-icon item-left ios="ios-arrow-dropdown" md="ios-arrow-dropdown" *ngIf="item.open"></ion-icon>
-						{{ item.name }}
-					</button>
-					<ion-list *ngIf="item.children && item.open" no-lines>
-						<!-- Second Level -->
-						<ion-list-header *ngFor="let child of item.children; let j = index" no-padding>
-							<!-- Direct Add Button as Fallback -->
-							<ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
-								<h2>{{ child.name }}</h2>
-								<p text-lowercase>{{ child.information }}</p>
-								<button ion-button outline item-end (click)="ver(child)">{{ child.ver }}</button>
-							</ion-item>
-						</ion-list-header>
-					</ion-list>
+	<!-- Section Category -->
+
+	<ion-list class="accordion-list">
+		<!-- First Level -->
+		<ion-list-header *ngFor="let item of information; let i = index" no-lines no-padding>
+			<!-- Toggle Button -->
+			<button ion-item  (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
+				<img class="icon-category" src="{{ item.icon }}" item-start>				<ion-icon item-right color="bluep" ios="ios-arrow-dropright" md="ios-arrow-dropright" *ngIf="!item.open"></ion-icon>
+				<ion-icon item-right color="bluep" ios="ios-arrow-dropdown" md="ios-arrow-dropdown" *ngIf="item.open"></ion-icon>
+				<span class="categoria-title">{{ item.name }}</span>
+			</button>
+			<ion-list *ngIf="item.children && item.open" no-lines>
+				<!-- Second Level -->
+				<ion-list-header *ngFor="let child of item.children; let j = index" no-padding>
+					<!-- Direct Add Button as Fallback -->
+					<ion-item *ngIf="!child.children" ion-item detail-none class="child-item" text-wrap>
+						<h2 class="beneficio-title">{{ child.name }}</h2>
+						<p text-lowercase>{{ child.information }}</p>
+						<ion-row class="checkbox-line">
+							<ion-col col-3>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+									<label class="custom-control-label" style="font-size:14px;" for="customRadioInline1">Basic</label>
+								</div>
+							</ion-col>
+							<ion-col col-4>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+									<label class="custom-control-label" style="font-size:13px;" for="customRadioInline2">Premium</label>
+								</div>
+							</ion-col>
+							<ion-col col-4>
+								<div class="custom-control custom-radio custom-control-inline">
+									<input type="radio" id="customRadioInline3" name="customRadioInline3" class="custom-control-input">
+									<label class="custom-control-label" style="font-size:14px;" for="customRadioInline3">Black</label>
+								</div>
+							</ion-col>
+						<!-- 	<ion-col col-4>
+								<div class = "item item-checkbox">
+									<label style="font-size:14px;" class = "checkbox">
+										<input type = "checkbox" />
+										Basic
+									</label>
+								</div>
+							</ion-col>
+							<ion-col col-4>
+								<div class = "item item-checkbox">
+									<label style="font-size:13px;" class = "checkbox">
+										<input type = "checkbox" />
+										Premium
+									</label>
+								</div>
+							</ion-col>
+							<ion-col col-4>
+								<div class = "item item-checkbox">
+									<label style="font-size:14px;" class = "checkbox">
+										<input type = "checkbox" />
+										<span>Black</span>
+									</label>
+								</div>
+							</ion-col> -->
+						</ion-row>
+						<ion-row class="contenedor-calendar">
+							<div class="select-day">
+								<input type="radio" name="day" id="Lunes" />
+								<input type="radio" name="day" id="Martes" />
+								<input type="radio" name="day" id="Miercoles" />
+								<input type="radio" name="day" id="Jueves" />
+								<input type="radio" name="day" id="Viernes" />
+								<input type="radio" name="day" id="Sabado" />
+								<input type="radio" name="day" id="Domingo"/>
+
+								<label class="label-day" for="Lunes">LUN</label>
+								<label class="label-day" for="Martes">MAR</label>
+								<label class="label-day" for="Miercoles">MIE</label>
+								<label class="label-day" for="Jueves">JUE</label>
+								<label class="label-day" for="Viernes">VIE</label>
+								<label class="label-day" for="Sabado">SAB</label>
+								<label class="label-day" for="Domingo">DOM</label>
+							</div>
+						</ion-row>
+						<!-- Select Day END -->						
+					</ion-item>
 				</ion-list-header>
 			</ion-list>
-			<!-- END Section Category -->
-	</ion-content>
+		</ion-list-header>
+	</ion-list>
+	<!-- END Section Category -->
+</ion-content>

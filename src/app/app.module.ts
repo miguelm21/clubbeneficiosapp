@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 import { IonicPageModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
 
+import { EmailComposer } from '@ionic-native/email-composer';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
@@ -36,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     GoogleMaps,
     Geolocation,
+    EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

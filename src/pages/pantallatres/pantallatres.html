@@ -7,8 +7,11 @@
 <ion-header class="container-header">
 
 	<ion-navbar>
-		<ion-title>
-			<img class="pin-img" style="width:42px; border-radius:20%; border:1px solid #439b6e;padding: 4px;float:right;background:linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);" src="assets/imgs/shop2.png" (tap)="MoveToPage()">
+		<ion-title style="line-height: 50px;">
+			Beneficio
+			<button ion-button icon-only round style="float:right;"  (tap)="MoveToPage()">
+				<img  style="width: 40px" src="assets/imgs/shop-icon.png">
+			</button>
 		</ion-title>
 	</ion-navbar>
 
@@ -21,10 +24,10 @@
 		<div text-center class="slider">
 			<ion-slides autoplay="5000" loop="true" speed="500">
 				<ion-slide>
-					<img class="img-slider" src="assets/imgs/slider1.png">
+					<img class="img-sliders" src="assets/imgs/burger-combo2.png" #myImage (tap)="presentImage(myImage)">
 				</ion-slide>
 				<ion-slide>
-					<img class="img-slider" src="assets/imgs/slider2.png">
+					<img class="img-sliders" src="assets/imgs/burger-combo.png">
 				</ion-slide>
 			</ion-slides>
 		</div>

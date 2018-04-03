@@ -9,9 +9,15 @@ page-pantallauno {
 		background: #effff0;
 	}
 	.button-cancel{
-		width: 100%;
+		width: 60%;
 		font-size: 12px;
-		padding: -7px;
+		padding: 0px;
+		background: transparent;
+		border:0px;
+	}
+	.icon-category{
+		width: 35px;
+		height: 40px;
 	}
 	.category-title{
 		color: #2d2727;
@@ -19,11 +25,9 @@ page-pantallauno {
 		margin-top: 4% !important;
 	}
 	.button-search{
-		width: 65%;
+		width: 100%;
 		font-size: 12px;
-		padding: -10px !important;
 		float: right;
-		border-radius: 50%;
 	}
 	.searchbar-md .searchbar-search-icon {
 		left: 8px;
@@ -34,10 +38,14 @@ page-pantallauno {
 	}
 	.searchbar-ios .searchbar-input{
 		background: #fff !important;
+		border-radius: 28px;
+	}
+	.searchbar-ios{
+		width: 114%;
 	}
 	.searchbar-md .searchbar-input {
 		padding: 0px 5px;
-		border-radius: 2px;
+		border-radius: 28px;
 		border: 2px solid #2CB5E8;
 		background-position: left 8px center;
 		height: 37px;
@@ -49,12 +57,82 @@ page-pantallauno {
 		-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 	}
-	.search-section{
-		border: 1px solid #00298f;
-		border-radius: 3%;
+	// .contenedor-slider{
+	// 	padding: 20px !important;
+	// 	margin-top:-5%;
+	// }
+	// .slider{
+	// 	width: 100%;
+	// 	height:250px;
+	// 	max-height: 250px;
+	// 	border: 1px groove rgba(0, 255, 255, 0.5);
+	// }
+	.slider {
+}
+.sliders{
+	border: 1px solid black;
+	height: 260px;
+}
+
+.slider-slide
+{
+  text-align: center;  
+}
+.title-img{
+	position:absolute;
+	bottom:5px;
+}
+
+	.checkbox-line{
 		margin-top: 4%;
-		background: linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);
+	}
+	// Calendario Style
+	.contenedor-calendar{
+		padding-left: 1px;
+		margin-top: 5%;
+	}
+	.select-day  input{
+		display: none;
+	}
+	.label-day {
+		display: inline-block;
+		width: 35px;
+		font-size:12px;
+		height: 30px;
+		text-align: center;
+		border: 1px solid #00298f;
+		line-height: 30px;
+		cursor: pointer;
+		font-family: Acme;
+	}
+	#Domingo:checked ~ label[for="Domingo"],
+	#Lunes:checked ~ label[for="Lunes"],
+	#Martes:checked ~ label[for="Martes"],
+	#Miercoles:checked ~ label[for="Miercoles"],
+	#Jueves:checked ~ label[for="Jueves"],
+	#Viernes:checked ~ label[for="Viernes"],
+	#Sabado:checked ~ label[for="Sabado"] {
+		background: #00298f;
+		color: #ffffff;
+	}
+	// Calendario Style End
+	.img-slider{
+		padding: 70px;
+		margin-top: -15%;
+	}
+	.search-section{
+		margin-top: 0%;
 		margin-bottom: 2%;
+	}
+	.col-icon{
+		padding: 0px !important;
+		width: 12.33333%;
+		max-width: 12.33333%;
+		flex: 0 0 8.33333%;
+	}
+	.icon-search{
+		width: 35px !important;
+		height: 30px;
 	}
 	.search-text{
 		font-size: 17px;
@@ -68,42 +146,39 @@ page-pantallauno {
 		margin-left: 5px;
 		color:#7321a4;
 	}
-	.icon-star{
-		width: 29px;
-		padding-top: 10px;
-		margin-bottom: -10%;
-	}
-	.icon-pin{
-		width: 22px;
-		padding-top: 10px;
-		margin-bottom: -10%;
-	}
-
 	.accordion-list {
 		margin-top: 7%;
 		height: auto;
-		border-radius: 3%;
-		border: 1px solid #00298f;
-		background: linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);
 	}
 	.section {
 		color: black;
-		background: linear-gradient(to right bottom, rgba(0, 255, 255, 0.5), cyan);
 		margin-bottom: 0px;
+		height: 100%;
+		font-family: Acme;
+	}
+	.categoria-title{
+		font-size:17px;
+	}
+	.beneficio-title{
+		font-family: Acme;
+	}
+	.custom-control-label{
+		font-family: Acme;
 	}
 	.section-active {
-		background: #00298f;
+		background: #00A0E3;
 		color: #fff;
+		font-family: Acme;
 	}
 
 	.child {
-		background: #e8e7e6;
 		color: #000;
-		margin-bottom: 0px;
 	}
 	.child-item {
-		background: #f3f2f1;
+		background: #fff;
 		padding: 8px;
+		margin-bottom: 5px;
+		border-bottom: 1px solid #00A0E3 !important;
 	}
 	.label {
 		margin: 2px;
@@ -262,6 +337,19 @@ page-pantallauno {
 		}
 	}
 	@media screen and (min-width: 320px) and (max-height: 640px) {
+		.contenedor-slider{
+			padding: 20px !important;
+			margin-top:-5%;
+		}
+		.img-slider{
+			width: 60%;
+		}
+		.slider{
+			width: 100%;
+			height:250px;
+			max-height: 250px;
+			border: 1px groove rgba(0, 255, 255, 0.5);
+		}
 		.button-search{
 			width: 35%;
 		}

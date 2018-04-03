@@ -54,6 +54,9 @@ page-pantallatienda {
 	.row-banner-text{
 		margin-top: -5%;
 	}
+	.title-offert{
+		font-family: Acme;
+	}
 	.list-offert{
 		margin-top: 3%;
 		border: 1px solid #00298f;
@@ -62,6 +65,23 @@ page-pantallatienda {
 	}
 	.button-offert{
 		color:#00298f;
+	}
+	.container-main-offers{
+		margin-top: -32px;
+		border-bottom: 1px solid #00298f
+	}
+	.container-offers{
+		border-bottom: 1px solid #00298f;
+	}
+	.row-offers{
+		margin-top: -10px;
+	}
+	.row-infor-offers{
+		margin-top: -30px;
+	}
+	.button-infor{
+		border:0px;
+		font-size:14px;
 	}
 	.Shop-1{
 		border: 1px solid #00298f;
@@ -80,6 +100,7 @@ page-pantallatienda {
 	}
 	.text-shop{
 		line-height: 0px;
+		font-size: 15px;
 		display: inline-block;
 
 	}

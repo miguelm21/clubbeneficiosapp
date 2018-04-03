@@ -26,7 +26,7 @@
 			color: #fff;
 		}
 		.infor-user-section{
-			border-bottom: 2px outset;
+			border-bottom: 1px outset;
 		}
 		.user-img {
 			top: 0;
@@ -50,7 +50,7 @@
 			width: auto;
 			margin: auto;
 			vertical-align: middle;
-			border: 1px groove black;
+			border: 1px groove #00298f;
 			margin-top: 2%;
 		}
 
@@ -62,7 +62,7 @@
 			border-bottom: 2px outset;
 			height: 43%;
 			// background-color: black;
-			background-image: url('/assets/imgs/beneficios-cupon.jpg');
+			background-image: url('../assets/imgs/beneficios-cupon.jpg');
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 			position:relative;
@@ -71,7 +71,7 @@
 			border-bottom: 2px outset;
 			height: 42%;
 			// background-color: black;
-			background-image: url('/assets/imgs/beneficio-noticia.jpg');
+			background-image: url('../assets/imgs/beneficio-noticia.jpg');
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 			position:relative;
@@ -80,11 +80,12 @@
 			position:absolute;
 			bottom:5px;
 			right:10px;
-			color: black;
+			color: white;
+			background-color: #00A0E3;
 			font-weight: 800;
 			border-radius: 5%;
 			padding: 2px;
-			border: 1px solid #00298f;
+			border: 1px solid #00A0E3;
 			text-decoration: none;
 		}
 		// Medias Querys

@@ -1,16 +1,35 @@
 page-pantallados {
+	.toolbar-ios {
+		padding: 0 12px;
+		font-size: 2rem;
+		font-weight: 500;
+		color: white;
+	}
+	.toolbar-title-ios {
+		text-align: center;
+		font-size: 1.7rem;
+		font-weight: 600;
+		color: white;
+		pointer-events: auto;
+	}
+	.toolbar-title-md{
+		color: white;
+	}
 	.icon-nav{
 		width: 17px;
 	}
 	.container-header{
 		border-bottom: 1px outset;
-		color: black;
+		color: white;
 	}
 	.toolbar-title-md{
-		color:black;
+		color:white;
 	}
 	.toolbar-background{
 		background: #00298f;
+	}
+	.title-offert{
+		font-family: Acme;
 	}
 	#map{
 		width: 100%;
@@ -26,7 +45,7 @@ page-pantallados {
 		border-top: 0px !important;
 	}
 	.button-offert{
-		color:#00298f; 
+		color:white; 
 	}
 	// Media Querys
 	@media only screen and (min-width: 1201px) and (max-width: 1400px) {
@@ -34,7 +53,7 @@ page-pantallados {
 			text-align: center;
 			font-size: 3.2rem;
 			font-weight: 600;
-			color: black;
+			color: white;
 			pointer-events: auto;
 		}
 		ion-app.ios [padding] {
@@ -58,7 +77,7 @@ page-pantallados {
 			text-align: center;
 			font-size: 2.4rem;
 			font-weight: 600;
-			color: black;
+			color: white;
 			pointer-events: auto;
 		}
 		ion-app.ios [padding] {
@@ -82,7 +101,7 @@ page-pantallados {
 			text-align: center;
 			font-size: 2.4rem;
 			font-weight: 600;
-			color: #000;
+			color: white;
 			pointer-events: auto;
 		}
 		ion-app.ios [padding] {

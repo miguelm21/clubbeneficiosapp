@@ -1,7 +1,8 @@
 {
     "items": [
         {
-            "name": "Categoria 1",
+            "icon": "../assets/imgs/gastro2-icon.png",
+            "name": "Gastronomia",
             "children": [
                 {
                     "name": "Beneficio",
@@ -16,7 +17,8 @@
             ]
         },
         {
-            "name": "Categoria 2",
+            "icon": "../assets/imgs/entre-icon.png",
+            "name": "Entretenimiento",
             "children": [
                 {
                   
@@ -32,7 +34,56 @@
             ]
         },
         {
-            "name": "Categoria 3",
+            "icon": "../assets/imgs/turism-icon.png",
+            "name": "Turismo",
+            "children": [
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                },
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                }
+            ]
+        },
+         {
+            "icon": "../assets/imgs/fashion-icon.png",
+            "name": "Moda",
+            "children": [
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                },
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                }
+            ]
+        },
+         {
+            "icon": "../assets/imgs/belleza-icon.png",
+            "name": "Belleza",
+            "children": [
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                },
+                {
+                    "name": "Beneficio",
+                    "information": "Descripción.",
+                    "ver": "Ver"
+                }
+            ]
+        },
+         {
+            "icon": "../assets/imgs/decor-icon.png",
+            "name": "Deco y Hogar",
             "children": [
                 {
                     "name": "Beneficio",

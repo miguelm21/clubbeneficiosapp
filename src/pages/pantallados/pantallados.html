@@ -23,19 +23,19 @@
 	<ion-list class="list-offert">
 		<ion-item class="item-offert">
 			<ion-thumbnail item-start>
-				<img src="assets/imgs/user.png" #myImage (click)="presentImage(myImage)">
+				<img style="width: 50px;border-radius:50%;" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
 			</ion-thumbnail>
 			<h2 class="title-offert">Oferta 1</h2>
 			<p class="text-offert">Descripción</p>
-			<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
+			<button ion-button class="button-offert" color="cyan" item-end (tap)="MoveToPage()">Ver Más</button>
 		</ion-item>
 		<ion-item class="item-offert">
 			<ion-thumbnail item-start>
-				<img src="assets/imgs/user.png" #myImage2 (click)="presentImage2(myImage2)">
+				<img style="width: 50px;border-radius:50%;" src="assets/imgs/Mc-icon.png" #myImage2 (click)="presentImage2(myImage2)">
 			</ion-thumbnail>
 			<h2 class="title-offert">Oferta 2</h2>
 			<p class="text-offert">Descripción</p>
-			<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
+			<button ion-button class="button-offert" color="cyan" item-end (tap)="MoveToPage()">Ver Más</button>
 		</ion-item>
 	</ion-list>
 </ion-content>

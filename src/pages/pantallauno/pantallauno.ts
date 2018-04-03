@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Http } from '@angular/http';
+import { ViewChild } from '@angular/core';
+import { Slides } from 'ionic-angular';
+import { ImageViewerController } from 'ionic-img-viewer';
 import 'rxjs/add/operator/map'
 
 
@@ -17,9 +20,13 @@ import 'rxjs/add/operator/map'
   templateUrl: 'pantallauno.html',
 })
 export class PantallaunoPage {
+  _imageViewerCtrl: ImageViewerController;
 	information: any[];
+  @ViewChild(Slides) slides: Slides;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,imageViewerCtrl: ImageViewerController) {
+  this._imageViewerCtrl = imageViewerCtrl;
   let localData = http.get('assets/information.json').map(res => res.json().items);
     localData.subscribe(data => {
       this.information = data;
@@ -44,5 +51,9 @@ export class PantallaunoPage {
 Back(){
   this.navCtrl.push('HomePage');
 }
+presentImage(myImage) {
+    const imageViewer = this._imageViewerCtrl.create(myImage);
+    imageViewer.present();
+  }
 
 }

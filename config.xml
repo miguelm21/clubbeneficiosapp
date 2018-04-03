@@ -88,4 +88,5 @@
         <variable name="API_KEY_FOR_ANDROID" value="YOUR_ANDROID_API_KEY_IS_HERE" />
         <variable name="API_KEY_FOR_IOS" value="YOUR_IOS_API_KEY_IS_HERE" />
     </plugin>
+    <plugin name="cordova-plugin-email-composer" spec="^0.8.15" />
 </widget>

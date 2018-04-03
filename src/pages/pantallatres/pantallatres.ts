@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import { Slides } from 'ionic-angular';
+import { ImageViewerController } from 'ionic-img-viewer';
+
 
 
 /**
@@ -17,10 +19,12 @@ import { Slides } from 'ionic-angular';
   templateUrl: 'pantallatres.html',
 })
 export class PantallatresPage {
+  _imageViewerCtrl: ImageViewerController;
   @ViewChild(Slides) slides: Slides;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, imageViewerCtrl: ImageViewerController) {
+    this._imageViewerCtrl = imageViewerCtrl;
   }
 
   ionViewDidLoad() {
@@ -32,6 +36,9 @@ goToSlide() {
   MoveToPage(){
   	this.navCtrl.push('PantallatiendaPage');
   }
-
+presentImage(myImage) {
+    const imageViewer = this._imageViewerCtrl.create(myImage);
+    imageViewer.present();
+  }
 
 }

@@ -22,10 +22,16 @@ export class PantallatiendaPage {
     console.log('ionViewDidLoad PantallatiendaPage');
   }
 
+MoveInicio(){
+  this.navCtrl.push('HomePage');
+}
 MoveToPage(){
 	this.navCtrl.push('PantallatresPage');
 }
 MoveToPage2(){
 	this.navCtrl.push('PantallaunoPage');
+}
+Sendemail(){
+	this.navCtrl.push('MailPage');
 }
 }

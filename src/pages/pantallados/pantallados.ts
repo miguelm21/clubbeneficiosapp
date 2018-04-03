@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ImageViewerController } from 'ionic-img-viewer';
+import { Geolocation } from '@ionic-native/geolocation';
 
 
 declare var google;
@@ -19,32 +20,57 @@ selector: 'page-pantallados',
 templateUrl: 'pantallados.html',
 })
 export class PantalladosPage {
-  _imageViewerCtrl: ImageViewerController;
+_imageViewerCtrl: ImageViewerController;
+latitude;
+longitude;
 
-
-constructor(public navCtrl: NavController, public navParams: NavParams,imageViewerCtrl: ImageViewerController) {
-      this._imageViewerCtrl = imageViewerCtrl;
+constructor(public navCtrl: NavController, public navParams: NavParams,imageViewerCtrl: ImageViewerController, public geolocation: Geolocation) {
+this._imageViewerCtrl = imageViewerCtrl;
 
 }
 
 ionViewDidLoad() {
+this.getPosition();
 this.initMap();
 }
 
+getPosition(){
+  
+  
+}
+
 initMap() {
-var Guanare = {lat: 9.0329208, lng: -69.7465526};
-var Gato = {lat: 8.975953, lng: -69.738999};
+this.geolocation.getCurrentPosition().then((position) => {
+this.latitude=position.coords.latitude;
+this.longitude=position.coords.longitude;
+var Gastronomia = {lat: -32.899569, lng: -68.846949};
+var Entretenimiento = {lat: -32.879569, lng: -68.816949};
+var Turismo = {lat: -32.909569, lng: -68.876949};
+var Moda = {lat: -32.879569, lng: -68.876949};
+var Belleza = {lat: -32.909569, lng: -68.816949};
+var Hogar = {lat: -32.869569, lng: -68.846949};
+
+var Centro = {lat: -32.889459, lng: -68.845839}; 
+
+var Lat = this.latitude;
+var Lng = this.longitude;
+
+var latlng = {lat: Lat, lng: Lng};
+
+//let latLng = new google.maps.LatLng(lat: -32.889459, lng: -68.845839);
 
 var map = new google.maps.Map(document.getElementById('map'), {
 zoom: 13,
-center: Guanare,
+center: Centro,
 mapTypeId: google.maps.MapTypeId.ROADMAP
 });
+
+//InforWindows
 
 var contentString = '<div id="content">'+
 '<div id="siteNotice">'+
 '</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador2</h1>'+
+'<h1 id="firstHeading" class="firstHeading">Marcador1</h1>'+
 '<div id="bodyContent">'+
 
 '</div>'+
@@ -53,7 +79,43 @@ var contentString = '<div id="content">'+
 var contentString2 = '<div id="content">'+
 '<div id="siteNotice">'+
 '</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador1</h1>'+
+'<h1 id="firstHeading" class="firstHeading">Marcador2</h1>'+
+'<div id="bodyContent">'+
+
+'</div>'+
+'</div>';
+
+var contentString3 = '<div id="content">'+
+'<div id="siteNotice">'+
+'</div>'+
+'<h1 id="firstHeading" class="firstHeading">Marcador3</h1>'+
+'<div id="bodyContent">'+
+
+'</div>'+
+'</div>';
+
+var contentString4 = '<div id="content">'+
+'<div id="siteNotice">'+
+'</div>'+
+'<h1 id="firstHeading" class="firstHeading">Marcador4</h1>'+
+'<div id="bodyContent">'+
+
+'</div>'+
+'</div>';
+
+var contentString5 = '<div id="content">'+
+'<div id="siteNotice">'+
+'</div>'+
+'<h1 id="firstHeading" class="firstHeading">Marcador5</h1>'+
+'<div id="bodyContent">'+
+
+'</div>'+
+'</div>';
+
+var contentString6 = '<div id="content">'+
+'<div id="siteNotice">'+
+'</div>'+
+'<h1 id="firstHeading" class="firstHeading">Marcador6</h1>'+
 '<div id="bodyContent">'+
 
 '</div>'+
@@ -67,10 +129,27 @@ var infowindow2 = new google.maps.InfoWindow({
 content: contentString2
 });
 
+var infowindow3 = new google.maps.InfoWindow({
+content: contentString3
+});
 
+var infowindow4 = new google.maps.InfoWindow({
+content: contentString4
+});
+
+var infowindow5 = new google.maps.InfoWindow({
+content: contentString5
+});
+
+var infowindow6 = new google.maps.InfoWindow({
+content: contentString6
+});
+
+//Markers
 var marker = new google.maps.Marker({
-position: Guanare,
+position: Gastronomia,
 map: map,
+"icon": 'https://icon-icons.com/icons2/1151/PNG/32/1486505264-food-fork-kitchen-knife-meanns-restaurant_81404.png',
 title: ''
 });
 marker.addListener('click', function() {
@@ -79,27 +158,69 @@ infowindow.open(map, marker);
 
 
 var marker2 = new google.maps.Marker({
-position: Gato,
+position: Entretenimiento,
 map: map,
+icon: "https://icon-icons.com/icons2/1149/PNG/32/1486504374-clip-film-movie-multimedia-play-short-video_81330.png",
 title: ''
 });
 marker2.addListener('click', function() {
 infowindow2.open(map, marker2);
 });
+
+var marker3 = new google.maps.Marker({
+position: Turismo,
+map: map,
+icon: "https://icon-icons.com/icons2/1146/PNG/32/1486485566-airliner-rplane-flight-launch-rbus-plane_81166.png",
+title: ''
+});
+marker3.addListener('click', function() {
+infowindow3.open(map, marker3);
+});
+
+var marker4 = new google.maps.Marker({
+position: Moda,
+map: map,
+icon: "https://icon-icons.com/icons2/197/PNG/32/scissors_24029.png",
+title: ''
+});
+marker4.addListener('click', function() {
+infowindow4.open(map, marker4);
+});
+
+var marker5 = new google.maps.Marker({
+position: Belleza,
+map: map,
+icon: "https://icon-icons.com/icons2/1130/PNG/32/womaninacircle_80046.png",
+title: ''
+});
+marker5.addListener('click', function() {
+infowindow5.open(map, marker5);
+});
+
+var marker6 = new google.maps.Marker({
+position: Hogar,
+map: map,
+icon: "https://icon-icons.com/icons2/1151/PNG/32/1486505259-estate-home-house-building-property-real_81428.png",
+title: ''
+});
+marker6.addListener('click', function() {
+infowindow6.open(map, marker6);
+});
+
+});
 }
 
- presentImage(myImage) {
-    const imageViewer = this._imageViewerCtrl.create(myImage);
-    imageViewer.present();
-  }
-  presentImage2(myImage2) {
-    const imageViewer = this._imageViewerCtrl.create(myImage2);
-    imageViewer.present();
-  }
+presentImage(myImage) {
+const imageViewer = this._imageViewerCtrl.create(myImage);
+imageViewer.present();
+}
+presentImage2(myImage2) {
+const imageViewer = this._imageViewerCtrl.create(myImage2);
+imageViewer.present();
+}
 
-
-  MoveToPage(){
-  	this.navCtrl.push('PantallatresPage');
-  }
+MoveToPage(){
+	this.navCtrl.push('PantallatresPage');
+}
 
 }

@@ -3,11 +3,19 @@ page-pantallatres {
 		padding: 0 12px;
 		font-size: 2rem;
 		font-weight: 500;
-		color: #424242;
+		color: white;
 		height: 70px;
+	}
+	.toolbar-title-ios {
+		text-align: center;
+		font-size: 1.7rem;
+		font-weight: 600;
+		color: white;
+		pointer-events: auto;
 	}
 	.toolbar-title-md{
 		height: 50px;
+		color: white;
 	}
 	.container-header{
 		border-bottom: 1px outset;
@@ -20,23 +28,27 @@ page-pantallatres {
 		border-radius: 50%;
 	}
 	.contenedor-slider{
-		padding: 50px !important;
 		margin-top:-10%;
 	}
 	.slider{
-		width: 100%;
-		height:200px;
+		width: auto;
+		height:auto;
 		max-height: 200px;
 		border: 2px groove rgba(0, 255, 255, 0.5);
 	}
-	.img-slider{
-		padding: 50px;
+	.img-sliders{
+		width:100%;
+		height: 100%;
 	}
 	.infor-section{
 		margin-top: -15%;
 	}
+	.title-offert{
+		font-family: Acme;
+	}
 	.text-offert{
 		margin-top: -5%;
+		font-family: Acme;
 		font-size: 15px;
 	}
 	// Calendario Style
@@ -54,7 +66,8 @@ page-pantallatres {
 		text-align: center;
 		border: 1px solid #00298f;
 		line-height: 30px;
-		cursor: pointer
+		cursor: pointer;
+		font-family: Acme;
 	}
 	#Domingo:checked ~ label[for="Domingo"],
 	#Lunes:checked ~ label[for="Lunes"],
@@ -78,6 +91,7 @@ page-pantallatres {
 	}
 	.label-promo{
 		border: 1px groove #00298f;
+		font-family: Acme;
 	}
 	.label-category{
 		float: right !important;
@@ -270,12 +284,14 @@ page-pantallatres {
 		}
 		.slider{
 			width: 100%;
-			height:200px;
+			height: 200px;
 			max-height: 200px;
 			border: 2px groove #439b6e;
 		}
-		.img-slider{
-			padding: 50px;
+		.img-sliders{
+			width: 100%;
+			height:100%;
+			padding:20px;
 		}
 		.infor-section{
 			margin-top: -15%;

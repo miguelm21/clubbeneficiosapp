@@ -7,7 +7,7 @@
 <ion-header class="container-header">
 
 	<ion-navbar  hideBackButton>
-		<ion-title class="title-club">ClubUNO<ion-icon class="icon-search" ios="ios-search" md="md-search" (tap)="MoveToPage2()"></ion-icon></ion-title>
+		<ion-title class="title-club"><span (tap)="MoveInicio()">ClubUNO</span><ion-icon class="icon-search" ios="ios-search" md="md-search" (tap)="MoveToPage2()"></ion-icon></ion-title>
 	</ion-navbar>
 
 </ion-header>
@@ -15,48 +15,89 @@
 
 <ion-content>
 	<div class="cont-body">
-	<!-- Banner Section -->
-	<div class="contenedor-banner">
-		<div class="container" padding>
-			<img class="banner" src="assets/imgs/banner.jpg" alt="Imagen Principal">
+		<!-- Banner Section -->
+		<div class="contenedor-banner">
+			<div class="container" padding>
+				<img class="banner" src="assets/imgs/banner.jpg" alt="Imagen Principal">
+			</div>
+		</div>
+		<ion-row text-center class="row-banner-text">
+			<ion-col col-12>
+				<p>Descripción</p>
+			</ion-col>
+			<!-- Banner Section End -->
+		</ion-row>
+		<!-- Section offers -->
+		<ion-list class="list-offert">
+			<ion-item class="item-offert">
+				<ion-thumbnail item-start>
+					<img src="assets/imgs/Mc-icon.png" #myImage (click)="presentImage(myImage)">
+				</ion-thumbnail>
+				<h2 class="title-offert">Oferta 1</h2>
+				<p class="text-offert">Descripción Oferta 1</p>
+				<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
+			</ion-item>
+			<ion-item class="item-offert">
+				<ion-thumbnail item-start>
+					<img src="assets/imgs/burger-icon.png" #myImage2 (click)="presentImage2(myImage2)">
+				</ion-thumbnail>
+				<h2 class="title-offert">Oferta 2</h2>
+				<p class="text-offert">Descripción Oferta 2</p>
+				<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
+			</ion-item>
+		</ion-list>
+		<!-- Infor Offer 1 -->
+		<div class="container-main-offers">
+			<div class="container-offers">
+				<ion-row>
+					<ion-col col-12 text-center>
+						<h5 class="text-shop">CC Llano Mall, Local PA-125, Planta Alta</h5>
+					</ion-col>
+				</ion-row>
+				<ion-row class="row-offers">
+					<ion-col col-12 text-center>
+						<button class="button-infor" ion-button icon-start outline ng-href=“tel:+91-99123789446”>
+							<ion-icon ios="ios-call" md="ios-call"></ion-icon>
+							+91-99123789446
+						</button>
+					</ion-col>
+				</ion-row>
+				<ion-row class="row-infor-offers">
+					<ion-col col-12 text-center>
+						<button class="button-infor" ion-button icon-start outline>
+							<ion-icon ios="ios-mail" md="ios-mail"></ion-icon>
+							Example@example.com
+						</button>
+					</ion-col>
+				</ion-row>
+				<!-- END Infor Offer 1 -->
+			</div>
+			<!-- infor Offer 2 -->
+			<div class="container-offers">
+				<ion-row>
+					<ion-col col-12 text-center>
+						<h5 class="text-shop">Av. 13 de Junio</h5>
+					</ion-col>
+				</ion-row>
+				<ion-row class="row-offers">
+					<ion-col col-12 text-center>
+						<button class="button-infor" ion-button icon-start outline ng-href=“tel:+91-99123789446”>
+							<ion-icon ios="ios-call" md="ios-call"></ion-icon>
+							+91-99123789446
+						</button>
+					</ion-col>
+				</ion-row>
+				<ion-row>
+					<ion-col col-12 text-center>
+						<button class="button-infor" ion-button icon-start outline>
+							<ion-icon ios="ios-mail" md="ios-mail"></ion-icon>
+							Example@example.com
+						</button>
+					</ion-col>
+				</ion-row>
+				<!-- END infor offer 2 -->
+			</div>
 		</div>
 	</div>
-	<ion-row text-center class="row-banner-text">
-		<ion-col col-12>
-			<p>Descripción</p>
-		</ion-col>
-		<!-- Banner Section End -->
-	</ion-row>
-	<!-- Section offers -->
-	<ion-list class="list-offert">
-		<ion-item class="item-offert">
-			<ion-thumbnail item-start>
-				<img src="assets/imgs/user.png" #myImage (click)="presentImage(myImage)">
-			</ion-thumbnail>
-			<h2 class="title-offert">Oferta 1</h2>
-			<p class="text-offert">Descripción Oferta 1</p>
-			<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
-		</ion-item>
-		<ion-item class="item-offert">
-			<ion-thumbnail item-start>
-				<img src="assets/imgs/user.png" #myImage2 (click)="presentImage2(myImage2)">
-			</ion-thumbnail>
-			<h2 class="title-offert">Oferta 2</h2>
-			<p class="text-offert">Descripción Oferta 2</p>
-			<button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
-		</ion-item>
-		<!-- Section offers END -->
-	</ion-list>
-	<ion-row text-center class="Shop-1">
-	<ion-col col-12>
-		<h4 class="text-shop">Ubicación Tienda 1</h4>
-	</ion-col>
-	</ion-row>
-	<ion-row text-center class="shop-2" >
-	<ion-col col-12>
-		<h4 class="text-shop">Ubicación Tienda 2</h4>
-	</ion-col>
-	</ion-row>
-</div>
-
+	<!-- Section offers END -->
 </ion-content>
