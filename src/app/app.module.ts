@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { IonicPageModule } from 'ionic-angular';
 import { HttpModule } from '@angular/http';
+import { LocationAccuracy } from '@ionic-native/location-accuracy';
 
 import { EmailComposer } from '@ionic-native/email-composer';
 import { GoogleMaps } from '@ionic-native/google-maps';
@@ -36,6 +37,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     GoogleMaps,
+    LocationAccuracy,
     Geolocation,
     EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

@@ -2,10 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ImageViewerController } from 'ionic-img-viewer';
 import { Geolocation } from '@ionic-native/geolocation';
-
+import { LocationAccuracy } from '@ionic-native/location-accuracy';
 
 declare var google;
-
 
 /**
 * Generated class for the PantalladosPage page.
@@ -24,199 +23,212 @@ _imageViewerCtrl: ImageViewerController;
 latitude;
 longitude;
 
-constructor(public navCtrl: NavController, public navParams: NavParams,imageViewerCtrl: ImageViewerController, public geolocation: Geolocation) {
+constructor(public navCtrl: NavController, public navParams: NavParams,imageViewerCtrl: ImageViewerController, private locationAccuracy: LocationAccuracy, public geolocation: Geolocation) {
 this._imageViewerCtrl = imageViewerCtrl;
 
 }
 
 ionViewDidLoad() {
-this.getPosition();
-this.initMap();
-}
+    this.locationAccuracy.canRequest().then((canRequest: boolean) => {
+      if(canRequest) {
+        // the accuracy option will be ignored by iOS
+        this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(
+          () => console.log('Request successful'),
+          error => console.log('Error requesting location permissions', error)
+        );
+      }
 
-getPosition(){
-  
-  
+    });
+  }
+
+ionViewWillEnter() {
+	this.initMap();
 }
 
 initMap() {
-this.geolocation.getCurrentPosition().then((position) => {
-this.latitude=position.coords.latitude;
-this.longitude=position.coords.longitude;
-var Gastronomia = {lat: -32.899569, lng: -68.846949};
-var Entretenimiento = {lat: -32.879569, lng: -68.816949};
-var Turismo = {lat: -32.909569, lng: -68.876949};
-var Moda = {lat: -32.879569, lng: -68.876949};
-var Belleza = {lat: -32.909569, lng: -68.816949};
-var Hogar = {lat: -32.869569, lng: -68.846949};
+/*	this.geolocation.getCurrentPosition().then((position) => {
+		this.latitude = position.coords.latitude;
+		this.longitude  =position.coords.longitude;
 
-var Centro = {lat: -32.889459, lng: -68.845839}; 
+		alert(this.latitude);
+		alert(this.longitude);*/
+		
+		var Gastronomia = {lat: -32.899569, lng: -68.846949};
+		var Entretenimiento = {lat: -32.879569, lng: -68.816949};
+		var Turismo = {lat: -32.909569, lng: -68.876949};
+		var Moda = {lat: -32.879569, lng: -68.876949};
+		var Belleza = {lat: -32.909569, lng: -68.816949};
+		var Hogar = {lat: -32.869569, lng: -68.846949};
 
-var Lat = this.latitude;
-var Lng = this.longitude;
+		var Centro = {lat: -32.889459, lng: -68.845839}; 
+/*
+		var Lat = this.latitude;
+		var Lng = this.longitude;*/
+/*
+		var latlng = {lat: Lat, lng: Lng};*/
 
-var latlng = {lat: Lat, lng: Lng};
+		//let latLng = new google.maps.LatLng(lat: -32.889459, lng: -68.845839);
 
-//let latLng = new google.maps.LatLng(lat: -32.889459, lng: -68.845839);
+		var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 13,
+		center: Centro,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+		});
 
-var map = new google.maps.Map(document.getElementById('map'), {
-zoom: 13,
-center: Centro,
-mapTypeId: google.maps.MapTypeId.ROADMAP
-});
+		//InforWindows
 
-//InforWindows
+		var contentString = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h1 id="firstHeading" class="firstHeading">Marcador1</h1>'+
+		'<div id="bodyContent">'+
 
-var contentString = '<div id="content">'+
-'<div id="siteNotice">'+
-'</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador1</h1>'+
-'<div id="bodyContent">'+
+		'</div>'+
+		'</div>';
 
-'</div>'+
-'</div>';
+		var contentString2 = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h1 id="firstHeading" class="firstHeading">Marcador2</h1>'+
+		'<div id="bodyContent">'+
 
-var contentString2 = '<div id="content">'+
-'<div id="siteNotice">'+
-'</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador2</h1>'+
-'<div id="bodyContent">'+
+		'</div>'+
+		'</div>';
 
-'</div>'+
-'</div>';
+		var contentString3 = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h1 id="firstHeading" class="firstHeading">Marcador3</h1>'+
+		'<div id="bodyContent">'+
 
-var contentString3 = '<div id="content">'+
-'<div id="siteNotice">'+
-'</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador3</h1>'+
-'<div id="bodyContent">'+
+		'</div>'+
+		'</div>';
 
-'</div>'+
-'</div>';
+		var contentString4 = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h1 id="firstHeading" class="firstHeading">Marcador4</h1>'+
+		'<div id="bodyContent">'+
 
-var contentString4 = '<div id="content">'+
-'<div id="siteNotice">'+
-'</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador4</h1>'+
-'<div id="bodyContent">'+
+		'</div>'+
+		'</div>';
 
-'</div>'+
-'</div>';
+		var contentString5 = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h1 id="firstHeading" class="firstHeading">Marcador5</h1>'+
+		'<div id="bodyContent">'+
 
-var contentString5 = '<div id="content">'+
-'<div id="siteNotice">'+
-'</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador5</h1>'+
-'<div id="bodyContent">'+
+		'</div>'+
+		'</div>';
 
-'</div>'+
-'</div>';
+		var contentString6 = '<div id="content">'+
+		'<div id="siteNotice">'+
+		'</div>'+
+		'<h1 id="firstHeading" class="firstHeading">Marcador6</h1>'+
+		'<div id="bodyContent">'+
 
-var contentString6 = '<div id="content">'+
-'<div id="siteNotice">'+
-'</div>'+
-'<h1 id="firstHeading" class="firstHeading">Marcador6</h1>'+
-'<div id="bodyContent">'+
+		'</div>'+
+		'</div>';
 
-'</div>'+
-'</div>';
+		var infowindow = new google.maps.InfoWindow({
+		content: contentString
+		});
 
-var infowindow = new google.maps.InfoWindow({
-content: contentString
-});
+		var infowindow2 = new google.maps.InfoWindow({
+		content: contentString2
+		});
 
-var infowindow2 = new google.maps.InfoWindow({
-content: contentString2
-});
+		var infowindow3 = new google.maps.InfoWindow({
+		content: contentString3
+		});
 
-var infowindow3 = new google.maps.InfoWindow({
-content: contentString3
-});
+		var infowindow4 = new google.maps.InfoWindow({
+		content: contentString4
+		});
 
-var infowindow4 = new google.maps.InfoWindow({
-content: contentString4
-});
+		var infowindow5 = new google.maps.InfoWindow({
+		content: contentString5
+		});
 
-var infowindow5 = new google.maps.InfoWindow({
-content: contentString5
-});
+		var infowindow6 = new google.maps.InfoWindow({
+		content: contentString6
+		});
 
-var infowindow6 = new google.maps.InfoWindow({
-content: contentString6
-});
+		//Markers
+		var marker = new google.maps.Marker({
+		position: Gastronomia,
+		map: map,
+		"icon": 'https://icon-icons.com/icons2/1151/PNG/32/1486505264-food-fork-kitchen-knife-meanns-restaurant_81404.png',
+		title: ''
+		});
+		marker.addListener('click', function() {
+		infowindow.open(map, marker);
+		});
 
-//Markers
-var marker = new google.maps.Marker({
-position: Gastronomia,
-map: map,
-"icon": 'https://icon-icons.com/icons2/1151/PNG/32/1486505264-food-fork-kitchen-knife-meanns-restaurant_81404.png',
-title: ''
-});
-marker.addListener('click', function() {
-infowindow.open(map, marker);
-});
+		var marker2 = new google.maps.Marker({
+		position: Entretenimiento,
+		map: map,
+		icon: "https://icon-icons.com/icons2/1149/PNG/32/1486504374-clip-film-movie-multimedia-play-short-video_81330.png",
+		title: ''
+		});
+		marker2.addListener('click', function() {
+		infowindow2.open(map, marker2);
+		});
 
+		var marker3 = new google.maps.Marker({
+		position: Turismo,
+		map: map,
+		icon: "https://icon-icons.com/icons2/1146/PNG/32/1486485566-airliner-rplane-flight-launch-rbus-plane_81166.png",
+		title: ''
+		});
+		marker3.addListener('click', function() {
+		infowindow3.open(map, marker3);
+		});
 
-var marker2 = new google.maps.Marker({
-position: Entretenimiento,
-map: map,
-icon: "https://icon-icons.com/icons2/1149/PNG/32/1486504374-clip-film-movie-multimedia-play-short-video_81330.png",
-title: ''
-});
-marker2.addListener('click', function() {
-infowindow2.open(map, marker2);
-});
+		var marker4 = new google.maps.Marker({
+		position: Moda,
+		map: map,
+		icon: "https://icon-icons.com/icons2/197/PNG/32/scissors_24029.png",
+		title: ''
+		});
+		marker4.addListener('click', function() {
+		infowindow4.open(map, marker4);
+		});
 
-var marker3 = new google.maps.Marker({
-position: Turismo,
-map: map,
-icon: "https://icon-icons.com/icons2/1146/PNG/32/1486485566-airliner-rplane-flight-launch-rbus-plane_81166.png",
-title: ''
-});
-marker3.addListener('click', function() {
-infowindow3.open(map, marker3);
-});
+		var marker5 = new google.maps.Marker({
+		position: Belleza,
+		map: map,
+		icon: "https://icon-icons.com/icons2/1130/PNG/32/womaninacircle_80046.png",
+		title: ''
+		});
+		marker5.addListener('click', function() {
+		infowindow5.open(map, marker5);
+		});
 
-var marker4 = new google.maps.Marker({
-position: Moda,
-map: map,
-icon: "https://icon-icons.com/icons2/197/PNG/32/scissors_24029.png",
-title: ''
-});
-marker4.addListener('click', function() {
-infowindow4.open(map, marker4);
-});
+		var marker6 = new google.maps.Marker({
+		position: Hogar,
+		map: map,
+		icon: "https://icon-icons.com/icons2/1151/PNG/32/1486505259-estate-home-house-building-property-real_81428.png",
+		title: ''
+		});
+		marker6.addListener('click', function() {
+		infowindow6.open(map, marker6);
+		});
 
-var marker5 = new google.maps.Marker({
-position: Belleza,
-map: map,
-icon: "https://icon-icons.com/icons2/1130/PNG/32/womaninacircle_80046.png",
-title: ''
-});
-marker5.addListener('click', function() {
-infowindow5.open(map, marker5);
-});
-
-var marker6 = new google.maps.Marker({
-position: Hogar,
-map: map,
-icon: "https://icon-icons.com/icons2/1151/PNG/32/1486505259-estate-home-house-building-property-real_81428.png",
-title: ''
-});
-marker6.addListener('click', function() {
-infowindow6.open(map, marker6);
-});
-
-});
+/*	}).catch((error) => {
+      alert('Error getting location');
+    });*/
 }
 
 presentImage(myImage) {
-const imageViewer = this._imageViewerCtrl.create(myImage);
-imageViewer.present();
+	const imageViewer = this._imageViewerCtrl.create(myImage);
+	imageViewer.present();
 }
+
 presentImage2(myImage2) {
-const imageViewer = this._imageViewerCtrl.create(myImage2);
-imageViewer.present();
+	const imageViewer = this._imageViewerCtrl.create(myImage2);
+	imageViewer.present();
 }
 
 MoveToPage(){
