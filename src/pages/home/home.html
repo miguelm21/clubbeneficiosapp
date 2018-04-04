@@ -18,23 +18,23 @@
 	<div class="infor-user-section">
 		<ion-row class="user-text">
 			<ion-col col-6>
-				<p>Tom Ellis</p>
-				<p>Miembro Premium</p>
+				<p class="user-font">Tom Ellis</p>
+				<p class="member-font">Miembro Premium</p>
 			</ion-col>
 			<ion-col col-6 class="container">
-				<img class="user-img" src="assets/imgs/user.png" #myImage (tap)="presentImage(myImage)">
+				<img class="user-img" src="assets/imgs/img-profile.png" #myImage (tap)="presentImage(myImage)">
 			</ion-col>
 		</ion-row>
 		<!-- END Section User Information -->
 	</div>
 	<!-- Section Background Beneficios -->
 	<div class="beneficios-section" (tap)="MoveToPageBeneficios()">
-		<a class="title-background" (tap)="MoveToPageBeneficios()">Beneficios</a>
+		<button ion-button color="cyan" class="title-background" (tap)="MoveToPageBeneficios()">Beneficios </button>
 		<!-- END Section Background Beneficios -->
 	</div>
 	<!-- Section Background Noticias -->
 	<div class="noticias-section" (tap)="MoveToPageNoticias()">
-		<a class="title-background" (tap)="MoveToPageNoticias()">Noticias</a>
+		<button ion-button color="cyan" class="title-background" (tap)="MoveToPageNoticias()">Noticias </button>
 		<!-- END Section Background Noticias -->
 	</div>
 </ion-content>

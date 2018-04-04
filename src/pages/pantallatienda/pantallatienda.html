@@ -5,11 +5,16 @@
   Ionic pages and navigation.
 -->
 <ion-header class="container-header">
-
 	<ion-navbar  hideBackButton>
-		<ion-title class="title-club"><span (tap)="MoveInicio()">ClubUNO</span><ion-icon class="icon-search" ios="ios-search" md="md-search" (tap)="MoveToPage2()"></ion-icon></ion-title>
+		<ion-row>
+			<ion-col col-2>
+				<button ion-button color="cyan" class="button-cancel" icon-only (tap)="Back()">
+					<ion-icon ios="md-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-title class="title-club"><span (tap)="MoveInicio()">ClubUNO</span><ion-icon class="icon-search" ios="ios-search" md="md-search" (tap)="MoveToPage2()"></ion-icon></ion-title>
+		</ion-row>
 	</ion-navbar>
-
 </ion-header>
 
 
@@ -73,30 +78,30 @@
 				<!-- END Infor Offer 1 -->
 			</div>
 			<!-- infor Offer 2 -->
-			<div class="container-offers">
-				<ion-row>
-					<ion-col col-12 text-center>
-						<h5 class="text-shop">Av. 13 de Junio</h5>
-					</ion-col>
-				</ion-row>
-				<ion-row class="row-offers">
-					<ion-col col-12 text-center>
-						<button class="button-infor" ion-button icon-start outline ng-href=“tel:+91-99123789446”>
-							<ion-icon ios="ios-call" md="ios-call"></ion-icon>
-							+91-99123789446
-						</button>
-					</ion-col>
-				</ion-row>
-				<ion-row>
-					<ion-col col-12 text-center>
-						<button class="button-infor" ion-button icon-start outline>
-							<ion-icon ios="ios-mail" md="ios-mail"></ion-icon>
-							Example@example.com
-						</button>
-					</ion-col>
-				</ion-row>
-				<!-- END infor offer 2 -->
-			</div>
+		</div>
+		<div class="container-offers">
+			<ion-row>
+				<ion-col col-12 text-center>
+					<h5 class="text-shop">CC Llano Mall, Local PA-125, Planta Alta</h5>
+				</ion-col>
+			</ion-row>
+			<ion-row class="row-offers">
+				<ion-col col-12 text-center>
+					<button class="button-infor" ion-button icon-start outline ng-href=“tel:+91-99123789446”>
+						<ion-icon ios="ios-call" md="ios-call"></ion-icon>
+						+91-99123789446
+					</button>
+				</ion-col>
+			</ion-row>
+			<ion-row class="row-infor-offers">
+				<ion-col col-12 text-center>
+					<button class="button-infor" ion-button icon-start outline>
+						<ion-icon ios="ios-mail" md="ios-mail"></ion-icon>
+						Example@example.com
+					</button>
+				</ion-col>
+			</ion-row>
+			<!-- infor Offer 2 -->
 		</div>
 	</div>
 	<!-- Section offers END -->

@@ -66,8 +66,15 @@ page-pantallatienda {
 	.button-offert{
 		color:#00298f;
 	}
+	.button-cancel{
+		width: 60%;
+		font-size: 12px;
+		padding: 0px;
+		background: transparent;
+		border:0px;
+	}
 	.container-main-offers{
-		margin-top: -32px;
+		margin-top: -20px;
 		border-bottom: 1px solid #00298f
 	}
 	.container-offers{

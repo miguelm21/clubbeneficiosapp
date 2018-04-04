@@ -6,8 +6,15 @@
 -->
 <ion-header class="container-header">
 
-	<ion-navbar>
-		<ion-title text-center class="title-nav"><img class="icon-nav" src="assets/imgs/pin.png">&nbsp;&nbsp;Cercanos</ion-title>
+	<ion-navbar hideBackButton>
+		<ion-row>
+			<ion-col col-2>
+				<button ion-button color="cyan" class="button-cancel" icon-only (tap)="Back()">
+					<ion-icon ios="md-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+				</button>
+			</ion-col>
+				<ion-title text-center class="title-nav"><img class="icon-nav" src="assets/imgs/pin.png">&nbsp;&nbsp;Cercanos</ion-title>
+		</ion-row>
 	</ion-navbar>
 
 </ion-header>

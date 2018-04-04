@@ -7,7 +7,14 @@
 <ion-header class="container-header">
 
 	<ion-navbar  hideBackButton>
-		<ion-title class="title-club">ClubUNO<ion-icon class="icon-search" ios="ios-search" md="md-search" (tap)="MoveToPage()"></ion-icon></ion-title>
+		<ion-row>
+			<ion-col col-2>
+				<button ion-button color="cyan" class="button-cancel" icon-only (tap)="Back()">
+					<ion-icon ios="md-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-title class="title-club">ClubUNO<ion-icon class="icon-search" ios="ios-search" md="md-search" (tap)="MoveToPage()"></ion-icon></ion-title>
+		</ion-row>
 	</ion-navbar>
 
 </ion-header>
@@ -23,17 +30,17 @@
 			<ion-col text-center col-12>
 				<h2 class="title-noticia">Titulo</h2>
 			</ion-col>
-		<!-- Title Card End -->
+			<!-- Title Card End -->
 		</ion-row>
 		<!-- 	Img Noticia -->
 		<div class="col-md-3 container">
 			<img class="img-noticias" src="assets/imgs/beneficio-noticia.jpg" alt="Imagen Principal">
-		<!-- Img Noticia End -->
+			<!-- Img Noticia End -->
 		</div>
 		<!-- Text Preview -->
 		<ion-card-content>
 			<p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-		<!-- Text Preview End -->
+			<!-- Text Preview End -->
 		</ion-card-content>
 		<!-- Infor Card (Autor/Fecha) -->
 		<ion-row>
@@ -43,7 +50,7 @@
 			<ion-col center text-center>
 				<p class="text-day">November 5, 1955</p>
 			</ion-col>
-		<!-- Infor Card End -->
+			<!-- Infor Card End -->
 		</ion-row>
 	</ion-card>
 	<ion-card>
@@ -52,17 +59,17 @@
 			<ion-col text-center col-12>
 				<h2 class="title-noticia">Titulo</h2>
 			</ion-col>
-		<!-- Title Card End -->
+			<!-- Title Card End -->
 		</ion-row>
 		<!-- 	Img Noticia -->
 		<div class="col-md-3 container">
 			<img class="img-noticias" src="assets/imgs/beneficio-noticia.jpg" alt="Imagen Principal">
-		<!-- Img Noticia End -->
+			<!-- Img Noticia End -->
 		</div>
 		<!-- Text Preview -->
 		<ion-card-content>
 			<p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-		<!-- Text Preview End -->
+			<!-- Text Preview End -->
 		</ion-card-content>
 		<!-- Infor Card (Autor/Fecha) -->
 		<ion-row>
@@ -72,7 +79,7 @@
 			<ion-col center text-center>
 				<p class="text-day">November 5, 1955</p>
 			</ion-col>
-		<!-- Infor Card End -->
+			<!-- Infor Card End -->
 		</ion-row>
 	</ion-card>
 </ion-content>

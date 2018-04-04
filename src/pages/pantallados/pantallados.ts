@@ -80,7 +80,7 @@ initMap() {
 		var contentString = '<div id="content">'+
 		'<div id="siteNotice">'+
 		'</div>'+
-		'<h1 id="firstHeading" class="firstHeading">Marcador1</h1>'+
+		'<h3 id="firstHeading" class="firstHeading">Gastronomia</h3>'+
 		'<div id="bodyContent">'+
 
 		'</div>'+
@@ -89,7 +89,7 @@ initMap() {
 		var contentString2 = '<div id="content">'+
 		'<div id="siteNotice">'+
 		'</div>'+
-		'<h1 id="firstHeading" class="firstHeading">Marcador2</h1>'+
+		'<h3 id="firstHeading" class="firstHeading">Entretenimiento</h3>'+
 		'<div id="bodyContent">'+
 
 		'</div>'+
@@ -98,7 +98,7 @@ initMap() {
 		var contentString3 = '<div id="content">'+
 		'<div id="siteNotice">'+
 		'</div>'+
-		'<h1 id="firstHeading" class="firstHeading">Marcador3</h1>'+
+		'<h3 id="firstHeading" class="firstHeading">Turismo</h3>'+
 		'<div id="bodyContent">'+
 
 		'</div>'+
@@ -107,7 +107,7 @@ initMap() {
 		var contentString4 = '<div id="content">'+
 		'<div id="siteNotice">'+
 		'</div>'+
-		'<h1 id="firstHeading" class="firstHeading">Marcador4</h1>'+
+		'<h3 id="firstHeading" class="firstHeading">Moda</h3>'+
 		'<div id="bodyContent">'+
 
 		'</div>'+
@@ -116,7 +116,7 @@ initMap() {
 		var contentString5 = '<div id="content">'+
 		'<div id="siteNotice">'+
 		'</div>'+
-		'<h1 id="firstHeading" class="firstHeading">Marcador5</h1>'+
+		'<h3 id="firstHeading" class="firstHeading">Belleza</h3>'+
 		'<div id="bodyContent">'+
 
 		'</div>'+
@@ -125,7 +125,7 @@ initMap() {
 		var contentString6 = '<div id="content">'+
 		'<div id="siteNotice">'+
 		'</div>'+
-		'<h1 id="firstHeading" class="firstHeading">Marcador6</h1>'+
+		'<h3 id="firstHeading" class="firstHeading">Deco y Hogar</h3>'+
 		'<div id="bodyContent">'+
 
 		'</div>'+
@@ -233,6 +233,9 @@ presentImage2(myImage2) {
 
 MoveToPage(){
 	this.navCtrl.push('PantallatresPage');
+}
+Back(){
+	this.navCtrl.push('PantallaunoPage');
 }
 
 }

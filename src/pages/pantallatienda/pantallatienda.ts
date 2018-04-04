@@ -34,4 +34,7 @@ MoveToPage2(){
 Sendemail(){
 	this.navCtrl.push('MailPage');
 }
+Back(){
+  this.navCtrl.push('PantallatiendaPage');
+}
 }

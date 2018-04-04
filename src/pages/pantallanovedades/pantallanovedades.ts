@@ -28,5 +28,7 @@ export class PantallanovedadesPage {
   MoveToPage() {
   this.navCtrl.push('PantallaunoPage');
 }
-
+Back(){
+  this.navCtrl.push('HomePage');
+}
 }

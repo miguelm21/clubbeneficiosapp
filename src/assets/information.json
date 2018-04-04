@@ -1,7 +1,7 @@
 {
     "items": [
         {
-            "icon": "../assets/imgs/gastro2-icon.png",
+            "icon": "./assets/imgs/gastro2-icon.png",
             "name": "Gastronomia",
             "children": [
                 {
@@ -17,7 +17,7 @@
             ]
         },
         {
-            "icon": "../assets/imgs/entre-icon.png",
+            "icon": "./assets/imgs/entre-icon.png",
             "name": "Entretenimiento",
             "children": [
                 {
@@ -34,7 +34,7 @@
             ]
         },
         {
-            "icon": "../assets/imgs/turism-icon.png",
+            "icon": "./assets/imgs/turism-icon.png",
             "name": "Turismo",
             "children": [
                 {
@@ -50,7 +50,7 @@
             ]
         },
          {
-            "icon": "../assets/imgs/fashion-icon.png",
+            "icon": "./assets/imgs/fashion-icon.png",
             "name": "Moda",
             "children": [
                 {
@@ -66,7 +66,7 @@
             ]
         },
          {
-            "icon": "../assets/imgs/belleza-icon.png",
+            "icon": "./assets/imgs/belleza-icon.png",
             "name": "Belleza",
             "children": [
                 {
@@ -82,7 +82,7 @@
             ]
         },
          {
-            "icon": "../assets/imgs/decor-icon.png",
+            "icon": "./assets/imgs/decor-icon.png",
             "name": "Deco y Hogar",
             "children": [
                 {

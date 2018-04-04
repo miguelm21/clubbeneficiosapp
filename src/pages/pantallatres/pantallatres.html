@@ -6,13 +6,20 @@
 -->
 <ion-header class="container-header">
 
-	<ion-navbar>
-		<ion-title style="line-height: 50px;">
-			Beneficio
-			<button ion-button icon-only round style="float:right;"  (tap)="MoveToPage()">
-				<img  style="width: 40px" src="assets/imgs/shop-icon.png">
-			</button>
-		</ion-title>
+	<ion-navbar hideBackButton>
+		<ion-row>
+			<ion-col col-2>
+				<button ion-button color="cyan" class="button-cancel" icon-only (tap)="Back()">
+					<ion-icon ios="md-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+				</button>
+			</ion-col>
+			<ion-title style="line-height: 50px;">
+				Beneficio
+				<button ion-button icon-only round style="float:right;"  (tap)="MoveToPage()">
+					<img  style="width: 40px" src="assets/imgs/shop-icon.png">
+				</button>
+			</ion-title>
+		</ion-row>
 	</ion-navbar>
 
 </ion-header>

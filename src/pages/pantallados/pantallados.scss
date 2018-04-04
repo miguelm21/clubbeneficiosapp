@@ -15,6 +15,20 @@ page-pantallados {
 	.toolbar-title-md{
 		color: white;
 	}
+	.button-cancel{
+		width: 60%;
+		font-size: 12px;
+		padding: 0px;
+		background: transparent;
+		border:0px;
+	}
+	.title-nav{
+		paddding-top: 10%;
+	}
+	.item-md ion-thumbnail ion-img, .item-md ion-thumbnail img {
+		width: 80px !important;
+		height: 80px;
+	}
 	.icon-nav{
 		width: 17px;
 	}

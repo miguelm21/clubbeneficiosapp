@@ -40,5 +40,8 @@ presentImage(myImage) {
     const imageViewer = this._imageViewerCtrl.create(myImage);
     imageViewer.present();
   }
+  Back(){
+    this.navCtrl.push('PantalladosPage');
+  }
 
 }
