@@ -1,1 +1,114 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu [content]="content" class="menu-o">
+  <ion-header>
+    <ion-toolbar color="bluep">
+      <button ion-button menuToggle>
+        <ion-icon name="arrow-round-back"></ion-icon>
+      </button>
+      <ion-item no-lines>
+        <h2 text-center>Bienvenido Usuario</h2>
+        <ion-avatar item-right>
+          <ion-icon name="contact" style="font-size:40px;"></ion-icon>
+        </ion-avatar>
+      </ion-item>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <button menuClose ion-button block color="light" (click)="openPage(pages[0])">
+            <div>
+              <ion-icon name="person" color="bluep"></ion-icon>
+              <label>Perfil</label>
+            </div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+            <div>
+            <ion-icon name="key" color="bluep"></ion-icon>
+            <label>Cambiar Contraseña</label>
+          </div>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+            <div>
+              <ion-icon name="pricetags" color="bluep"></ion-icon>
+              <label>Beneficios</label>
+            </div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+            <div>
+              <ion-icon name="search" color="bluep"></ion-icon>
+              <label>Buscar</label>
+            </div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button block color="light">
+            <div>
+              <ion-icon name="paper" color="bluep"></ion-icon>
+              <label>Noticias</label>
+            </div>
+
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col width-50>
+          <button ion-button block color="light" >
+          <div>
+            <ion-icon name="card" color="bluep"></ion-icon>
+            <label>Tienda</label>
+          </div>
+          </button>
+        </ion-col>
+        <ion-col width-25>
+          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+            <div>
+            <ion-icon name="cloud" color="bluep"></ion-icon>
+            <label>Web Site</label>
+          </div>
+          </button>
+        </ion-col>
+        <ion-col width-25>
+          <button ion-button block color="light">
+            <div>
+            <ion-icon name="help-circle" color="bluep"></ion-icon>
+            <label>Ayuda</label>
+          </div>
+          </button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <button ion-button block color="light">
+            <div>
+            <ion-icon name="cog" color="bluep"></ion-icon>
+            <label>Opciones</label>
+          </div>
+          </button>
+        </ion-col>
+        <ion-col width-67>
+
+          <button ion-button block color="light" >
+            <div>
+            <ion-icon name="exit" color="bluep"></ion-icon>
+            <label>Salir</label>
+          </div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

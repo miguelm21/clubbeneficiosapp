@@ -1,4 +1,27 @@
 	page-home {
+		shrinking-segment-header {
+
+        background-color: #363636;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            border-radius: 50%;
+            width: 75px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+    }
+    .icon-category{
+		width: 35px;
+		height: 40px;
+	}
+		.body{
+			height:100vh;
+		}
 		.container-header{
 			border-bottom: 1px outset;
 		}
@@ -21,8 +44,8 @@
 			color: #fff;
 		}
 		.icon-search{
-			width: 5%;
-			float: right;
+			font-size: 30px;
+			float: left;
 			color: #fff;
 		}
 		.infor-user-section{
@@ -35,12 +58,12 @@
 			bottom: 0;
 			width: auto;
 			height: auto;
-			max-height: 100%;
+			max-height: 80%;
 			max-width: 40%;
 			object-fit: contain;
 			position: absolute;
 			margin: 0 auto;
-			float: right;
+			float: left;
 		}
 
 		.container img {
@@ -50,7 +73,6 @@
 			width: auto;
 			margin: auto;
 			vertical-align: middle;
-			border: 1px groove #00298f;
 			margin-top: 2%;
 		}
 		.user-font{
@@ -68,7 +90,7 @@
 			line-height: 1.2;
 		}
 		.beneficios-section{
-			border-bottom: 2px outset;
+			border-bottom: 1px solid;
 			height: 43%;
 			// background-color: black;
 			background-image: url('../assets/imgs/hero.png');
@@ -77,19 +99,19 @@
 			position:relative;
 		}
 		.noticias-section{
-			border-bottom: 2px outset;
-			height: 42%;
+			border-bottom: 1px solid;
+			height: 100%;
 			// background-color: black;
 			background-image: url('../assets/imgs/news_1.jpg');
 			background-size: 100% 100%;
 			background-repeat: no-repeat;
 			position:relative;
+
 		}
 		.title-background{
-			position:absolute;
-			bottom:5px;
-			right:10px;
-			height: 25px;
+			bottom:-25px;
+			height: 40px;
+			font-size: 30px;
 			color: white;
 			font-weight: 800;
 			padding: 5px;
@@ -214,7 +236,7 @@
 				height: 40vh;
 			}
 			.noticias-section{
-				height: 39vh;
+				height: 50vh;
 			}
 
 		}

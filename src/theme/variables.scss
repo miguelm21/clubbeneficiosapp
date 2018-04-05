@@ -14,6 +14,9 @@ $app-direction: ltr;
 
 @import "ionic.globals";
 
+$text-color:        #000;
+$background-color:  #fff;
+$menu-o: #e23602;
 
 // Shared Variables
 // --------------------------------------------------
@@ -40,7 +43,10 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222,
   cyan:       #00A0E3,
-  bluep:      #00298f
+  bluep:      #00298f,
+  azulito:    #0c3fbf,
+  menu-o: $menu-o,
+  menu-o-t: transparentize($color: darken($color: $menu-o, $amount: 30%) , $amount: 0.15)
 );
 
 

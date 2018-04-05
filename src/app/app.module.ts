@@ -10,6 +10,8 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { ShrinkingSegmentHeader } from '../components/shrinking-segment-header/shrinking-segment-header';
+
 
 
 
@@ -21,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp
+    MyApp,
+    ShrinkingSegmentHeader
   ],
   imports: [
     BrowserModule,
