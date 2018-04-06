@@ -14,11 +14,23 @@
             margin-right: 15px;
         }
 
+        .header{
+			color: #00298f;
+		}
+
     }
     .icon-category{
 		width: 35px;
 		height: 40px;
 	}
+
+	.arrow{
+		z-index:999;
+		background-color: #00A0E3;
+		clip-path: polygon(41% 0, 100% 1%, 100% 100%, 41% 100%, 20% 51%);
+		height:70px;
+	}
+
 		.body{
 			height:100vh;
 		}

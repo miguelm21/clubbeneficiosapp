@@ -63,3 +63,10 @@
 .medal {
     background-image: url('https://drscdn.500px.org/photo/105368653/m%3D2048/2b0ff083bbdac854fa43aaace96afe98');
 }
+
+.arrow{
+    z-index:999;
+    background-color: #00A0E3;
+    clip-path: polygon(41% 0, 100% 1%, 100% 100%, 41% 100%, 20% 51%);
+    height:70px;
+}
