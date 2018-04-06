@@ -35,4 +35,6 @@ export class MyApp {
     navCtrl.setRoot(page.component);
 
   }*/
+
+  
 }
