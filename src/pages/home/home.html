@@ -14,10 +14,8 @@
         </button>
       </ion-col>
       <ion-col col-10>
-        <button ion-button clear color="light">
-          <ion-icon name="search" color="light" style="font-size: 25px;"></ion-icon>
-          &nbsp;&nbsp;Buscar
-        </button>
+        <ion-searchbar class="searchbar-input" style="background-color:transparent;" [(ngModel)]="myInput" [showCancelButton]="false" [animated]="true" [cancelButtonText]="cancelButtonText" [spellcheck]="true">
+        </ion-searchbar>
       </ion-col>
     </ion-row>
   </ion-col>
@@ -28,16 +26,13 @@
 
 <ion-toolbar color="light" mode="md" class="scrollable-segments">
   <ion-segment color="bluep" mode="md" [(ngModel)]="section">
-    <ion-segment-button value="one">
+    <ion-segment-button value="one" style="width:33%;">
       <h6 style="text-transform:none;">Cercanos a Mí</h6>
     </ion-segment-button>
-    <ion-segment-button value="two">
+    <ion-segment-button value="two" style="width:33%;">
       <h6 style="text-transform:none;">Beneficios</h6>
     </ion-segment-button>
-    <ion-segment-button value="three">
-      <h6 style="text-transform:none;">Tienda</h6>
-    </ion-segment-button>
-    <ion-segment-button value="four">
+    <ion-segment-button value="three" style="width:33%;">
       <h6 style="text-transform:none;">Novedades</h6>
     </ion-segment-button>
   </ion-segment>
@@ -50,51 +45,71 @@
     <ion-list *ngSwitchCase="'one'">
       <!--  Page Cercanos a Mí -->
       <!-- Contenedor Google-map -->
-      <div padding class="contenedor-map">
+      <div class="contenedor-map">
         <div text-center #map id="map">
         </div>
       </div>
       <!-- End Contenedor Google-map -->
-      <ion-list class="list-offert">
-        <ion-item class="item-offert">
-          <ion-thumbnail item-start>
-            <img style="width: 50px;border-radius:50%;" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
-          </ion-thumbnail>
-          <h2 class="title-offert">Oferta 1</h2>
-          <p class="text-offert">Descripción</p>
-          <button ion-button class="button-offert" color="cyan" item-end (tap)="MoveToPage()">Ver Más</button>
-        </ion-item>
-        <ion-item class="item-offert">
-          <ion-thumbnail item-start>
-            <img style="width: 50px;border-radius:50%;" src="assets/imgs/Mc-icon.png" #myImage2 (click)="presentImage2(myImage2)">
-          </ion-thumbnail>
-          <h2 class="title-offert">Oferta 2</h2>
-          <p class="text-offert">Descripción</p>
-          <button ion-button class="button-offert" color="cyan" item-end (tap)="MoveToPage()">Ver Más</button>
-        </ion-item>
-      </ion-list>
+      <div padding>
+        <ion-card>
+            <ion-card-content>
+          <ion-row>
+              <ion-col col-3>
+                <ion-thumbnail item-start>
+                  <img style="width: 50px;border-radius:50%;" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-9>
+                <div style="margin-top:10px;">
+                <h2 class="title-offert">Oferta 1</h2>
+                <p class="text-offert">Descripción</p>
+              </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </div>
+       <div padding>
+        <ion-card>
+            <ion-card-content>
+          <ion-row>
+              <ion-col col-3>
+                <ion-thumbnail item-start>
+                  <img style="width: 50px;border-radius:50%;" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
+                </ion-thumbnail>
+              </ion-col>
+              <ion-col col-9>
+                <div style="margin-top:10px;">
+                <h2 class="title-offert">Oferta 1</h2>
+                <p class="text-offert">Descripción</p>
+              </div>
+              </ion-col>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </div>
       <!--  Page Cercanos a Mi END -->
     </ion-list>
     <!-- Page Search -->
     <ion-list *ngSwitchCase="'two'">
       <ion-slides class="slider" autoplay="3000" loop="true" speed="2000">
         <ion-slide class="container" >
-          <img class="img-slider" src="../assets/imgs/moda.jpg" alt="Imagen slider">
+          <img class="img-slider" src="assets/imgs/moda.jpg" alt="Imagen slider">
         </ion-slide>
         <ion-slide class="container">
-          <img class="img-slider" src="../assets/imgs/cine-combo.jpg" alt="Imagen slider">
+          <img class="img-slider" src="assets/imgs/cine-combo.jpg" alt="Imagen slider">
         </ion-slide>
         <ion-slide class="container">
-          <img class="img-slider" src="../assets/imgs/burger-combo.png" alt="Imagen slider">
+          <img class="img-slider" src="assets/imgs/burger-combo.png" alt="Imagen slider">
         </ion-slide>
         <ion-slide class="container">
-          <img class="img-slider" src="../assets/imgs/turismo.jpg" alt="Imagen slider">
+          <img class="img-slider" src="assets/imgs/turismo.jpg" alt="Imagen slider">
         </ion-slide>
         <ion-slide class="container">
-          <img class="img-slider" src="../assets/imgs/beauty.jpg" alt="Imagen slider">
+          <img class="img-slider" src="assets/imgs/beauty.jpg" alt="Imagen slider">
         </ion-slide>
         <ion-slide class="container">
-          <img class="img-slider" src="../assets/imgs/deco.jpg" alt="Imagen slider">
+          <img class="img-slider" src="assets/imgs/deco.jpg" alt="Imagen slider">
         </ion-slide>
       </ion-slides>
       <ion-list>
@@ -131,93 +146,7 @@
       </ion-list>
       <!-- Page Search End -->
     </ion-list>
-    <!--  Page Tienda -->
     <ion-list *ngSwitchCase="'three'">
-      <!-- Banner Section -->
-      <div class="contenedor-banner">
-        <div class="container-banner" padding>
-          <img class="banner" src="assets/imgs/banner.jpg" alt="Imagen Principal">
-        </div>
-      </div>
-      <ion-row text-center class="row-banner-text">
-        <ion-col col-12>
-          <p>Descripción</p>
-        </ion-col>
-        <!-- Banner Section End -->
-      </ion-row>
-      <!-- Section offers -->
-      <ion-list class="list-offert">
-        <ion-item class="item-offert">
-          <ion-thumbnail item-start>
-            <img src="assets/imgs/Mc-icon.png" #myImage (click)="presentImage(myImage)">
-          </ion-thumbnail>
-          <h2 class="title-offert">Oferta 1</h2>
-          <p class="text-offert">Descripción Oferta 1</p>
-          <button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
-        </ion-item>
-        <ion-item class="item-offert">
-          <ion-thumbnail item-start>
-            <img src="assets/imgs/burger-icon.png" #myImage2 (click)="presentImage2(myImage2)">
-          </ion-thumbnail>
-          <h2 class="title-offert">Oferta 2</h2>
-          <p class="text-offert">Descripción Oferta 2</p>
-          <button ion-button class="button-offert" clear item-end (tap)="MoveToPage()">Ver</button>
-        </ion-item>
-      </ion-list>
-      <!-- Infor Offer 1 -->
-      <div class="container-main-offers">
-        <div class="container-offers">
-          <ion-row>
-            <ion-col col-12 text-center>
-              <h5 class="text-shop">CC Llano Mall, Local PA-125, Planta Alta</h5>
-            </ion-col>
-          </ion-row>
-          <ion-row class="row-offers">
-            <ion-col col-12 text-center>
-              <button class="button-infor" ion-button icon-start outline ng-href=“tel:+91-99123789446”>
-                <ion-icon ios="ios-call" md="ios-call"></ion-icon>
-                +91-99123789446
-              </button>
-            </ion-col>
-          </ion-row>
-          <ion-row class="row-infor-offers">
-            <ion-col col-12 text-center>
-              <button class="button-infor" ion-button icon-start outline>
-                <ion-icon ios="ios-mail" md="ios-mail"></ion-icon>
-                Example@example.com
-              </button>
-            </ion-col>
-          </ion-row>
-          <!-- END Infor Offer 1 -->
-        </div>
-        <!-- infor Offer 2 -->
-      </div>
-      <div class="container-offers">
-        <ion-row>
-          <ion-col col-12 text-center>
-            <h5 class="text-shop">CC Llano Mall, Local PA-125, Planta Alta</h5>
-          </ion-col>
-        </ion-row>
-        <ion-row class="row-offers">
-          <ion-col col-12 text-center>
-            <button class="button-infor" ion-button icon-start outline ng-href=“tel:+91-99123789446”>
-              <ion-icon ios="ios-call" md="ios-call"></ion-icon>
-              +91-99123789446
-            </button>
-          </ion-col>
-        </ion-row>
-        <ion-row class="row-infor-offers">
-          <ion-col col-12 text-center>
-            <button class="button-infor" ion-button icon-start outline>
-              <ion-icon ios="ios-mail" md="ios-mail"></ion-icon>
-              Example@example.com
-            </button>
-          </ion-col>
-        </ion-row>
-        <!-- infor Offer 2 -->
-      </div>
-    </ion-list>
-    <ion-list *ngSwitchCase="'four'">
      <!--  <h2 style="padding-left: 30px">Novedades</h2> -->
      <ion-row>
       <ion-col col-1 text-center>
@@ -237,18 +166,42 @@
        <ion-card (tap)="MoveToPageNoticia()">
         <!-- Title Card -->
         <h2 style="color:#00298f;font-weight: bold;padding-left: 5px;padding-top:4px;">Titulo</h2>
+        <!-- Title Card end -->
         <!-- Text Preview -->
         <ion-card-content>
           <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
           <!-- Text Preview End -->
-        </ion-card-content>
-        <!--  Img Noticia -->
-        <div no-padding no-margin class="container-novedades" tex-center>
-          <img class="img-noticias" src="assets/imgs/noticia-imagen.jpg" alt="Imagen Principal">
-          <div no-padding no-margin class="title-background"><p style="float:right;color:#fff;font-size:15px;line-height: 16px;font-weight: bold;">Luis Ortega</p></div>
-          <!-- Img Noticia End -->
-        </div>
-        <!-- Title Card End -->
+          <!-- Img Noticia Section -->
+          <div no-padding no-margin class="container-novedades" tex-center>
+            <img class="img-noticias" src="assets/imgs/noticia-imagen.jpg" alt="Imagen Principal">
+            <div no-padding no-margin class="title-background"><p style="float:right;color:#fff;font-size:15px;line-height: 16px;font-weight: bold;">Luis Ortega</p></div>
+            <!-- Img Noticia End -->
+          </div>
+          <!-- Social Section -->
+          <ion-row np-padding>
+            <ion-col   col-3>
+              <button ion-fab color="googleplus-logo" style="width:27px;height:27px;">
+                <ion-icon name="logo-googleplus" style="padding:10px;font-size:17px;"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col   col-3 style="    padding-left: 17px;">
+              <button ion-fab  item-right color="facebook-logo" style="width:27px;height:27px;">
+                <ion-icon name="logo-facebook" style="padding:10px;font-size:17px;"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col   col-3 style="    padding-left: 34px;">
+              <button ion-fab  item-right color="instagram-logo" style="width:27px;height:27px;">
+                <ion-icon name="logo-instagram" style="padding:10px;font-size:17px;"></ion-icon>
+              </button>
+            </ion-col>
+            <ion-col   col-3 style="    padding-left: 44px;">
+              <button ion-fab item-right color="twitter-logo" style="width:27px;height:27px;" >
+                <ion-icon name="logo-twitter" style="padding:10px;font-size:17px;"></ion-icon>
+              </button>
+            </ion-col>
+          </ion-row>
+          <!-- Social Section End -->
+        </ion-card-content>        
       </ion-card>
     </ion-col>
   </ion-row>
@@ -268,19 +221,44 @@
     </ion-col>
     <ion-col col-11 style="padding-left: 10px;">
      <ion-card (tap)="MoveToPageNoticia()">
-      <!-- Title Card -->
-      <h2 style="color:#00298f;font-weight: bold;padding-left: 5px;padding-top:4px;">Titulo</h2>
-      <!-- Text Preview -->
-      <ion-card-content>
+       <!-- Title Card -->
+       <h2 style="color:#00298f;font-weight: bold;padding-left: 5px;padding-top:4px;">Titulo</h2>
+       <!-- Title Card end -->
+       <!-- Text Preview -->
+       <ion-card-content>
         <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
         <!-- Text Preview End -->
+        <!--  Img Noticia -->
+        <div no-padding no-margin class="container-novedades" tex-center>
+          <img class="img-noticias" src="assets/imgs/modan.jpg" alt="Imagen Principal">
+          <div no-padding no-margin class="title-background"><p style="float:right;color:#fff;font-size:15px;line-height: 16px;font-weight: bold;">María Silva</p></div>
+          <!-- Img Noticia End -->
+        </div>
+        <!-- Social Section -->
+        <ion-row np-padding>
+          <ion-col   col-3>
+            <button ion-fab color="googleplus-logo" style="width:27px;height:27px;">
+              <ion-icon name="logo-googleplus" style="padding:10px;font-size:17px;"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col   col-3 style="    padding-left: 17px;">
+            <button ion-fab  item-right color="facebook-logo" style="width:27px;height:27px;">
+              <ion-icon name="logo-facebook" style="padding:10px;font-size:17px;"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col   col-3 style="    padding-left: 34px;">
+            <button ion-fab  item-right color="instagram-logo" style="width:27px;height:27px;">
+              <ion-icon name="logo-instagram" style="padding:10px;font-size:17px;"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col   col-3 style="    padding-left: 44px;">
+            <button ion-fab item-right color="twitter-logo" style="width:27px;height:27px;" >
+              <ion-icon name="logo-twitter" style="padding:10px;font-size:17px;"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <!--  Social Section End -->
       </ion-card-content>
-      <!--  Img Noticia -->
-      <div no-padding no-margin class="container-novedades" tex-center>
-        <img class="img-noticias" src="assets/imgs/modan.jpg" alt="Imagen Principal">
-        <div no-padding no-margin class="title-background"><p style="float:right;color:#fff;font-size:15px;line-height: 16px;font-weight: bold;">María Silva</p></div>
-        <!-- Img Noticia End -->
-      </div>
       <!-- Title Card End -->
     </ion-card>
   </ion-col>

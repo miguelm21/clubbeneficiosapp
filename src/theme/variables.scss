@@ -45,6 +45,11 @@ $colors: (
   cyan:       #00A0E3,
   bluep:      #00298f,
   azulito:    #0c3fbf,
+  facebook-logo: #3b5999,
+  googleplus-logo: #dd4b39,
+  instagram-logo: #e4405f,
+  twitter-logo: #55acee,
+
   menu-o: $menu-o,
   menu-o-t: transparentize($color: darken($color: $menu-o, $amount: 30%) , $amount: 0.15)
 );

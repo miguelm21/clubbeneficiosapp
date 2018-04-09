@@ -20,6 +20,38 @@
 
 		}
 		// Main Header
+		.searchbar-md .searchbar-search-icon {
+			left: 25px;
+			top: 9px;
+			width: 21px;
+			height: 21px;
+		}
+		.searchbar-ios .searchbar-input{
+			background: #fff !important;
+			border-radius: 28px;
+		}
+		.searchbar-ios{
+			width: 114%;
+		}
+		.box-shadow{
+			content: "";
+		}
+		.searchbar-md .searchbar-input {
+			margin-top: -5px;
+			margin-left: 20px;
+			padding: 0px 22px;
+			border-radius: 28px;
+			border: 2px solid #2CB5E8;
+			background-position: left 8px center;
+			height: 37px;
+			font-size: 1.6rem;
+			font-weight: 400;
+			line-height: 0rem;
+			color: #141414;
+			background-color: #fff;
+			-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+		}
 		ion-toolbar.scrollable-segments {
 			ion-segment {
 				display: block;
@@ -52,7 +84,7 @@
 		.arrow{
 			z-index:999;
 			background-color: #00A0E3;
-			clip-path: polygon(41% 0, 100% 1%, 100% 100%, 41% 100%, 20% 51%);
+			clip-path: polygon(41% 0, 100% 0%, 100% 100%, 41% 100%, 20% 51%);
 			height:70px;
 		}
 		.Header-title{
@@ -64,10 +96,21 @@
 		}
 		// Main Header End
 		// Page Cercanos a mi
+		.contenedor-map{
+			margin-top: 3%;
+		}
+		.list-md .item-block .item-inner {
+			border-bottom: 0px;
+		}
+		ion-avatar img, ion-thumbnail img {
+    display: block;
+    box-shadow: 2px 3px 3px black;
+}
 		#map{
 			width: 100%;
 			height: 100%;
-			border: 2px groove;
+			border-top: 2px groove;
+			border-bottom: 2px groove;
 			padding: 135px;
 		}
 		.list-offert{
@@ -108,93 +151,6 @@
 			vertical-align: middle;
 		}
 		// Search Page Section End
-		// Page Tienda Section
-		.banner {
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: auto;
-			height: auto;
-			max-height: 100px;
-			max-width: 100%;
-			position: absolute;
-			margin: 0 auto;
-		}
-		.contenedor-banner{
-			padding-left: 17px;
-			margin-top: 5%;
-		}
-		.container-banner .banner {
-			position: relative;
-			height: 100px;
-			width: auto;
-			min-height: 100px;
-			border: 1px solid #ccc;
-			border-radius: 6px;
-			margin: auto;
-			vertical-align: middle;
-		}
-		.row-banner-text{
-			margin-top: -5%;
-		}
-		.title-offert{
-			font-family: Acme;
-		}
-		.list-offert{
-			margin-top: 3%;
-			border: 1px solid #00298f;
-			border-left:0px;
-			border-right:0px;
-		}
-		.button-offert{
-			color:#00298f;
-		}
-		.button-cancel{
-			width: 60%;
-			font-size: 12px;
-			padding: 0px;
-			background: transparent;
-			border:0px;
-		}
-		.container-main-offers{
-			margin-top: -20px;
-			border-bottom: 1px solid #00298f
-		}
-		.container-offers{
-			border-bottom: 1px solid #00298f;
-		}
-		.row-offers{
-			margin-top: -10px;
-		}
-		.row-infor-offers{
-			margin-top: -30px;
-		}
-		.button-infor{
-			border:0px;
-			font-size:14px;
-		}
-		.Shop-1{
-			border: 1px solid #00298f;
-			border-left:0px;
-			border-right:0px;
-			border-top:0px;
-			height: 37px;
-			margin-top: -7%;
-		}
-		.shop-2{
-			border: 1px solid #00298f;
-			border-left:0px;
-			border-right:0px;
-			border-top:0px;
-			height: 37px;
-		}
-		.text-shop{
-			line-height: 0px;
-			font-size: 15px;
-			display: inline-block;
-		}
-		// Page Tienda section End
 		// Page Novedades Section
 		.img-noticias {
 			top: 0;
@@ -209,11 +165,12 @@
 			margin: 0 auto;
 		}
 		.title-background{
-			position: absolute;
-			bottom: 17px;
+			position: relative;
+			bottom: 15px;
 			background-color: rgba(0, 41, 143, 0.5);
-			left: 34px;
-			width: 100%;
+			left: 0px;
+			width: 103%;
+			max-width: 269px !important;
 			height: 25px;
 			color: white;
 			font-weight: 800;
@@ -243,6 +200,7 @@
 			position: relative;
 			height: auto;
 			width: auto;
+			top: 10px;
 			min-width:270px;
 			max-width: 270px;
 			min-height: 100px;
