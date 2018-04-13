@@ -5,7 +5,7 @@ import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
 
-import { ExpandableHeader } from '../components/expandable-header/expandable-header';
+/*import { ExpandableHeader } from '../components/expandable-header/expandable-header';*/
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
@@ -19,11 +19,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    ExpandableHeader
+/*    ExpandableHeader*/
   ],
-  schemas: [
+/*  schemas: [
   CUSTOM_ELEMENTS_SCHEMA
-  ],
+  ],*/
   imports: [
     BrowserModule,
     HttpModule,

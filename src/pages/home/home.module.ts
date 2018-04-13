@@ -7,7 +7,7 @@ import { HomePage } from './home';
     HomePage,
   ],
   schemas: [
-  CUSTOM_ELEMENTS_SCHEMA
+  	CUSTOM_ELEMENTS_SCHEMA
   ],
   imports: [
     IonicPageModule.forChild(HomePage),
