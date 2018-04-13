@@ -8,6 +8,7 @@ import { Slides } from 'ionic-angular';
 import { ViewChild } from '@angular/core';
 import 'rxjs/add/operator/map'
 
+
 declare var google;
 declare var map;
 
@@ -25,7 +26,7 @@ declare var map;
   templateUrl: 'home.html',
 })
 export class HomePage {
-section: string = 'two';
+  section: string = 'one';
   somethings: any = new Array(20);
   _imageViewerCtrl: ImageViewerController;
     @ViewChild(Slides) slides: Slides;
@@ -78,7 +79,7 @@ initMap() {
     //let latLng = new google.maps.LatLng(lat: -32.889459, lng: -68.845839);
 
     var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 13,
+    zoom: 12,
     center: Centro,
     mapTypeId: google.maps.MapTypeId.ROADMAP
     });
@@ -228,6 +229,10 @@ initMap() {
       alert('Error getting location');
     });*/
 }
+
+ MoveToCategory(){
+     this.navCtrl.push('CategoryPage');
+ }
   
 
  presentImage(myImage) {

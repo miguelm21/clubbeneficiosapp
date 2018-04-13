@@ -5,22 +5,22 @@
   Ionic pages and navigation.
 -->
 <ion-header class="Bg-header">
-  <expandable-header [scrollArea]="mycontent" headerHeight="70">
+  <expandable-header [scrollArea]="mycontent" headerHeight="60">
    <ion-row class="header-row">
-    <ion-col col-8 class="first-col">
+    <ion-col col-8 col-md-10 class="first-col">
       <ion-row>
-        <ion-col col-2>
+        <ion-col col-2 col-md-2>
           <button ion-button menuToggle clear color="light">
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-col>
-        <ion-col col-10>
+        <ion-col col-10 col-md-9>
           <ion-searchbar class="searchbar-input" style="background-color:transparent;" [(ngModel)]="myInput" [showCancelButton]="false" [animated]="true" [cancelButtonText]="cancelButtonText" [spellcheck]="true">
           </ion-searchbar>
         </ion-col>
       </ion-row>
     </ion-col>
-    <ion-col col-4 class="arrow">
+    <ion-col col-4  col-md-2 class="arrow">
       <p class="Header-title">ClubUno</p>
     </ion-col>
   </ion-row>
@@ -28,14 +28,14 @@
 
 <ion-toolbar color="light" mode="md" class="scrollable-segments">
   <ion-segment color="bluep" mode="md" [(ngModel)]="section">
-    <ion-segment-button value="one" style="width:33%;">
-      <h6 style="text-transform:none;">Cercanos a Mí</h6>
+    <ion-segment-button value="one" style="width:35%;">
+      <h6 class="title-segment" style="text-transform:none;">Cercanos a Mí</h6>
     </ion-segment-button>
-    <ion-segment-button value="two" style="width:33%;">
-      <h6 style="text-transform:none;">Beneficios</h6>
+    <ion-segment-button value="two" style="width:35%;">
+      <h6 class="title-segment" style="text-transform:none;">Beneficios</h6>
     </ion-segment-button>
-    <ion-segment-button value="three" style="width:33%;">
-      <h6 style="text-transform:none;">Novedades</h6>
+    <ion-segment-button value="three" style="width:35%;">
+      <h6 class="title-segment" style="text-transform:none;">Novedades</h6>
     </ion-segment-button>
   </ion-segment>
 </ion-toolbar>
@@ -44,217 +44,239 @@
 <ion-content fullscreen #mycontent>
   <div [ngSwitch]="section">
 
-    <ion-list *ngSwitchCase="'one'" class="Theme-bg">
+    <ion-list [style.display]="section == 'one' ? 'block' : 'none'" class="Theme-bg">
       <!--  Page Cercanos a Mí -->
       <!-- Contenedor Google-map -->
       <div class="contenedor-map">
         <div text-center #map id="map">
         </div>
+        <div style="display:none;"></div>
       </div>
       <!-- End Contenedor Google-map -->
-      <div padding>
-        <ion-card class="Border-card">
-          <ion-item class="item-offert">
-            <ion-thumbnail item-start>
-              <img style="width: 50px;border-radius:50%;" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
+      <div class="contenedor-cards">
+        <!-- Card offer 1 -->
+        <div class="card-style">
+          <ion-row class="row-card">
+            <ion-col col-3 col-md-2>
+             <ion-thumbnail item-start>
+              <img class="img-card" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
             </ion-thumbnail>
-            <ion-card-content>
-              <h2 class="title-offert">Oferta 1</h2>
-              <p class="text-offert">Descripción</p>
-              <button ion-button class="button-offert" color="bluep" item-end>Ver Más</button>
-            </ion-card-content>
-          </ion-item>
-        </ion-card>
-      </div>
-      <div padding>
-        <ion-card class="Border-card">
-          <ion-item class="item-offert">
-            <ion-thumbnail item-start>
-              <img style="width: 50px;border-radius:50%;" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
-            </ion-thumbnail>
-            <ion-card-content>
-              <h2 class="title-offert">Oferta 1</h2>
-              <p class="text-offert">Descripción</p>
-              <button ion-button class="button-offert" color="bluep" item-end>Ver Más</button>
-            </ion-card-content>
-          </ion-item>
-        </ion-card>
-      </div>
-      <!--  Page Cercanos a Mi END -->
-    </ion-list>
-    <!-- Page Search -->
-    <ion-list *ngSwitchCase="'two'">
-      <ion-slides class="slider" autoplay="3000" loop="true" speed="2000">
-        <ion-slide class="container" >
-          <img class="img-slider" src="assets/imgs/moda.jpg" alt="Imagen slider">
-        </ion-slide>
-        <ion-slide class="container">
-          <img class="img-slider" src="assets/imgs/cine-combo.jpg" alt="Imagen slider">
-        </ion-slide>
-        <ion-slide class="container">
-          <img class="img-slider" src="assets/imgs/burger-combo.png" alt="Imagen slider">
-        </ion-slide>
-        <ion-slide class="container">
-          <img class="img-slider" src="assets/imgs/turismo.jpg" alt="Imagen slider">
-        </ion-slide>
-        <ion-slide class="container">
-          <img class="img-slider" src="assets/imgs/beauty.jpg" alt="Imagen slider">
-        </ion-slide>
-        <ion-slide class="container">
-          <img class="img-slider" src="assets/imgs/deco.jpg" alt="Imagen slider">
-        </ion-slide>
-      </ion-slides>
-      <ion-list>
-        <ion-list-header>
-          <button ion-fab color="bluep" style="font-size:14px" item-start><ion-icon name="restaurant"></ion-icon>
-          </button>
-          <span style="font-size:14px;">Gastronomia</span>
-        </ion-list-header>
-        <ion-list-header>
-          <button ion-fab color="bluep" style="font-size:14px" item-start><ion-icon name="film"></ion-icon>
-          </button>
-          <span style="font-size:14px;">Entretenimiento</span>
-        </ion-list-header>
-        <ion-list-header>
-          <button ion-fab color="bluep" style="font-size:14px" item-start><ion-icon name="plane"></ion-icon>
-          </button>
-          <span style="font-size:14px;">Turismo</span>
-        </ion-list-header>
-        <ion-list-header>
-          <button ion-fab color="bluep" style="font-size:14px" item-start><ion-icon name="cut"></ion-icon>
-          </button>
-          <span style="font-size:14px;">Moda</span>
-        </ion-list-header>
-        <ion-list-header>
-          <button ion-fab color="bluep" style="font-size:14px" item-start><ion-icon name="woman"></ion-icon>
-          </button>
-          <span style="font-size:14px;">Belleza</span>
-        </ion-list-header>
-        <ion-list-header>
-          <button ion-fab color="bluep" style="font-size:14px" item-start><ion-icon name="home"></ion-icon>
-          </button>
-          <span style="font-size:14px;">Deco y Hogar</span>
-        </ion-list-header>
-      </ion-list>
-      <!-- Page Search End -->
-    </ion-list>
-    <ion-list *ngSwitchCase="'three'">
-     <!--  <h2 style="padding-left: 30px">Novedades</h2> -->
-     <ion-row>
-      <ion-col col-1 text-center>
-        <div style="border-radius:50%;border:1px solid #00298f;width:37px;height: 40px;background-color:#00298f;color:#fff;">
-          <ion-row style="padding-top: 3px;">
-            <ion-col no-margin no-padding col-12>
-              <span style="font-size:15px;font-weight: bold;">14</span>
-            </ion-col>
-            <ion-col no-margin no-padding style="line-height: 10px;" col-12>
-              <span style="font-size:11px;font-weight: bold;">Feb</span>
-            </ion-col>
-          </ion-row>
-        </div>
-        <hr>
-      </ion-col>
-      <ion-col col-11 style="padding-left: 10px;">
-       <ion-card>
-        <!-- Title Card -->
-        <h2 style="color:#00298f;font-weight: bold;padding-left: 5px;padding-top:4px;">Titulo</h2>
-        <!-- Title Card end -->
-        <!-- Text Preview -->
-        <ion-card-content>
-          <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-          <!-- Text Preview End -->
-          <!-- Img Noticia Section -->
-          <div no-padding no-margin class="container-novedades" tex-center>
-            <img class="img-noticias" src="assets/imgs/noticia-imagen.jpg" alt="Imagen Principal">
-            <div no-padding no-margin class="title-background"><p style="float:right;color:#fff;font-size:15px;line-height: 16px;font-weight: bold;">Luis Ortega</p></div>
-            <!-- Img Noticia End -->
-          </div>
-          <!-- Social Section -->
-          <ion-row np-padding>
-            <ion-col   col-3>
-              <button ion-fab color="googleplus-logo" style="width:27px;height:27px;">
-                <ion-icon name="logo-googleplus" style="padding:10px;font-size:17px;"></ion-icon>
-              </button>
-            </ion-col>
-            <ion-col   col-3 style="    padding-left: 17px;">
-              <button ion-fab  item-right color="facebook-logo" style="width:27px;height:27px;">
-                <ion-icon name="logo-facebook" style="padding:10px;font-size:17px;"></ion-icon>
-              </button>
-            </ion-col>
-            <ion-col   col-3 style="    padding-left: 34px;">
-              <button ion-fab  item-right color="instagram-logo" style="width:27px;height:27px;">
-                <ion-icon name="logo-instagram" style="padding:10px;font-size:17px;"></ion-icon>
-              </button>
-            </ion-col>
-            <ion-col   col-3 style="    padding-left: 44px;">
-              <button ion-fab item-right color="twitter-logo" style="width:27px;height:27px;" >
-                <ion-icon name="logo-twitter" style="padding:10px;font-size:17px;"></ion-icon>
-              </button>
-            </ion-col>
-          </ion-row>
-          <!-- Social Section End -->
-        </ion-card-content>        
-      </ion-card>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col col-1 text-center>
-      <div style="border-radius:50%;border:1px solid #00298f;width:37px;height: 40px;background-color:#00298f;color:#fff;">
-        <ion-row style="padding-top: 3px;">
-          <ion-col no-margin no-padding col-12>
-            <span style="font-size:15px;font-weight: bold;">12</span>
           </ion-col>
-          <ion-col no-margin no-padding style="line-height: 10px;" col-12>
-            <span style="font-size:11px;font-weight: bold;">Feb</span>
-          </ion-col>
-        </ion-row>
-      </div>
-      <hr>
-    </ion-col>
-    <ion-col col-11 style="padding-left: 10px;">
-     <ion-card>
-       <!-- Title Card -->
-       <h2 style="color:#00298f;font-weight: bold;padding-left: 5px;padding-top:4px;">Titulo</h2>
-       <!-- Title Card end -->
-       <!-- Text Preview -->
-       <ion-card-content>
-        <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-        <!-- Text Preview End -->
-        <!--  Img Noticia -->
-        <div no-padding no-margin class="container-novedades" tex-center>
-          <img class="img-noticias" src="assets/imgs/modan.jpg" alt="Imagen Principal">
-          <div no-padding no-margin class="title-background"><p style="float:right;color:#fff;font-size:15px;line-height: 16px;font-weight: bold;">María Silva</p></div>
-          <!-- Img Noticia End -->
-        </div>
-        <!-- Social Section -->
-        <ion-row np-padding>
-          <ion-col   col-3>
-            <button ion-fab color="googleplus-logo" style="width:27px;height:27px;">
-              <ion-icon name="logo-googleplus" style="padding:10px;font-size:17px;"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col   col-3 style="    padding-left: 17px;">
-            <button ion-fab  item-right color="facebook-logo" style="width:27px;height:27px;">
-              <ion-icon name="logo-facebook" style="padding:10px;font-size:17px;"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col   col-3 style="    padding-left: 34px;">
-            <button ion-fab  item-right color="instagram-logo" style="width:27px;height:27px;">
-              <ion-icon name="logo-instagram" style="padding:10px;font-size:17px;"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col   col-3 style="    padding-left: 44px;">
-            <button ion-fab item-right color="twitter-logo" style="width:27px;height:27px;" >
-              <ion-icon name="logo-twitter" style="padding:10px;font-size:17px;"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        <!--  Social Section End -->
-      </ion-card-content>
-      <!-- Title Card End -->
-    </ion-card>
+          <ion-col col-6 col-md-8>
+           <h2 class="title-offert">Oferta 1</h2>
+           <p class="text-offert">Descripción</p>
+         </ion-col>
+         <ion-col col-3 col-md-2 class="second-col-card">
+           <div class="card-text">
+             <p class="font-text">Ver</p>
+             <p class="font-text">Más</p>
+           </div>
+         </ion-col>
+       </ion-row>
+       <!-- Card offer 1 End -->
+     </div>
+     <!-- Card offer 2 -->
+     <div class="card-style">
+       <ion-row class="row-card">
+        <ion-col col-3 col-md-2>
+         <ion-thumbnail item-start>
+          <img class="img-card" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
+        </ion-thumbnail>
+         </ion-col>
+      <ion-col col-6 col-md-8>
+       <h2 class="title-offert">Oferta 1</h2>
+       <p class="text-offert">Descripción</p>
+     </ion-col>
+     <ion-col col-3 col-md-2 class="second-col-card">
+      <div class="card-text">
+       <p class="font-text">Ver</p>
+       <p class="font-text">Más</p>
+     </div>
+   </ion-col>
+ </ion-row>
+ <!-- Card Offer 2 End -->
+</div>
+</div>
+<!--  Page Cercanos a Mi END -->
+</ion-list>
+<!-- Page Search -->
+<ion-list *ngSwitchCase="'two'">
+  <ion-slides class="slider" autoplay="3000" loop="true" speed="2000">
+    <ion-slide class="container" >
+      <img class="img-slider" src="assets/imgs/moda.jpg" alt="Imagen slider">
+    </ion-slide>
+    <ion-slide class="container">
+      <img class="img-slider" src="assets/imgs/cine-combo.jpg" alt="Imagen slider">
+    </ion-slide>
+    <ion-slide class="container">
+      <img class="img-slider" src="assets/imgs/burger-combo.png" alt="Imagen slider">
+    </ion-slide>
+    <ion-slide class="container">
+      <img class="img-slider" src="assets/imgs/turismo.jpg" alt="Imagen slider">
+    </ion-slide>
+    <ion-slide class="container">
+      <img class="img-slider" src="assets/imgs/beauty.jpg" alt="Imagen slider">
+    </ion-slide>
+    <ion-slide class="container">
+      <img class="img-slider" src="assets/imgs/deco.jpg" alt="Imagen slider">
+    </ion-slide>
+  </ion-slides>
+  <ion-list class="list-category">
+    <ion-list-header (tap)="MoveToCategory()">
+      <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="restaurant"></ion-icon>
+      </button>
+      <span class="title-category">Gastronomia</span>
+    </ion-list-header>
+    <ion-list-header (tap)="MoveToCategory()">
+      <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="film"></ion-icon>
+      </button>
+      <span class="title-category">Entretenimiento</span>
+    </ion-list-header>
+    <ion-list-header (tap)="MoveToCategory()">
+      <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="plane"></ion-icon>
+      </button>
+      <span class="title-category">Turismo</span>
+    </ion-list-header>
+    <ion-list-header (tap)="MoveToCategory()">
+      <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="cut"></ion-icon>
+      </button>
+      <span class="title-category">Moda</span>
+    </ion-list-header>
+    <ion-list-header (tap)="MoveToCategory()">
+      <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="woman"></ion-icon>
+      </button>
+      <span class="title-category">Belleza</span>
+    </ion-list-header>
+    <ion-list-header (tap)="MoveToCategory()">
+      <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="home"></ion-icon>
+      </button>
+      <span class="title-category">Deco y Hogar</span>
+    </ion-list-header>
+  </ion-list>
+  <!-- Page Search End -->
+</ion-list>
+<!-- Page Novedades -->
+<ion-list *ngSwitchCase="'three'">
+ <!--  <h2 style="padding-left: 30px">Novedades</h2> -->
+ <ion-row>
+  <ion-col col-1 text-center>
+    <div class="circle-day">
+      <ion-row class="row-day">
+        <ion-col no-margin no-padding col-12>
+          <span class="day-text-style">14</span>
+        </ion-col>
+        <ion-col no-margin no-padding style="line-height: 10px;" col-12>
+          <span class="month-text-style">Feb</span>
+        </ion-col>
+      </ion-row>
+    </div>
+    <hr class="hr-novedades">
   </ion-col>
+  <ion-col col-11 class="cold-card-novedades">
+   <ion-card>
+    <!-- Title Card -->
+    <h2 class="title-card-novedades">Titulo</h2>
+    <!-- Title Card end -->
+    <!-- Text Preview -->
+    <ion-card-content>
+      <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      <!-- Text Preview End -->
+      <!-- Img Noticia Section -->
+      <div no-padding no-margin class="container-novedades" tex-center>
+        <img class="img-noticias" src="assets/imgs/noticia-imagen.jpg" alt="Imagen Principal">
+        <div no-padding no-margin class="title-background">
+          <p class="text-autor-novedades">Luis Ortega</p>
+        </div>
+        <!-- Img Noticia End -->
+      </div>
+      <!-- Social Section -->
+      <ion-row np-padding class="social-row-style">
+        <ion-col   col-3>
+          <button class="social-button" ion-fab color="googleplus-logo">
+            <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col   col-3 class="facebook-padding">
+          <button class="social-button" ion-fab  item-right color="facebook-logo">
+            <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col   col-3 class="instagram-padding">
+          <button class="social-button" ion-fab  item-right color="instagram-logo">
+            <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col   col-3 class="twitter-padding">
+          <button class="social-button" ion-fab item-right color="twitter-logo" >
+            <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <!-- Social Section End -->
+    </ion-card-content>        
+  </ion-card>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-1 text-center>
+    <div class="circle-day">
+      <ion-row class="row-day">
+        <ion-col no-margin no-padding col-12>
+          <span class="day-text-style">13</span>
+        </ion-col>
+        <ion-col no-margin no-padding style="line-height: 10px;" col-12>
+          <span class="month-text-style">Feb</span>
+        </ion-col>
+      </ion-row>
+    </div>
+    <hr class="hr-novedades">
+  </ion-col>
+  <ion-col col-11 class="cold-card-novedades">
+   <ion-card>
+    <!-- Title Card -->
+    <h2 class="title-card-novedades">Titulo</h2>
+    <!-- Title Card end -->
+    <!-- Text Preview -->
+    <ion-card-content>
+      <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      <!-- Text Preview End -->
+      <!-- Img Noticia Section -->
+      <div no-padding no-margin class="container-novedades" tex-center>
+        <img class="img-noticias" src="assets/imgs/modan.jpg" alt="Imagen Principal">
+        <div no-padding no-margin class="title-background">
+          <p class="text-autor-novedades">Maria Silva</p>
+        </div>
+        <!-- Img Noticia End -->
+      </div>
+      <!-- Social Section -->
+      <ion-row np-padding>
+        <ion-col   col-3>
+          <button class="social-button" ion-fab color="googleplus-logo">
+            <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col   col-3 class="facebook-padding">
+          <button class="social-button" ion-fab  item-right color="facebook-logo">
+            <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col   col-3 class="instagram-padding">
+          <button class="social-button" ion-fab  item-right color="instagram-logo">
+            <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col   col-3 class="twitter-padding">
+          <button class="social-button" ion-fab item-right color="twitter-logo" >
+            <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <!-- Social Section End -->
+    </ion-card-content>        
+  </ion-card>
+</ion-col>
 </ion-row>
 </ion-list>
+<!-- Page Novedades End -->
 </div>
 </ion-content>

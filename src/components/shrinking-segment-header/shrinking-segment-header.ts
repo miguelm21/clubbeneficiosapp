@@ -1,10 +1,13 @@
 import { Component, Input, ElementRef, Renderer } from '@angular/core';
 
+
 @Component({
   selector: 'shrinking-segment-header',
   templateUrl: 'shrinking-segment-header.html'
 })
 export class ShrinkingSegmentHeader {
+    latitude;
+  longitude;
 
   @Input('headerHeight') headerHeight: number;
 
@@ -14,8 +17,7 @@ export class ShrinkingSegmentHeader {
 
   }
 
-  ngAfterViewInit(){
-
+  ionViewDidLoad(){
     this.renderer.setElementStyle(this.element.nativeElement, 'height', this.headerHeight + 'px');
 
     /*this.scrollArea.ionScroll.subscribe((ev) => {
@@ -23,6 +25,8 @@ export class ShrinkingSegmentHeader {
     });*/
 
   }
+
+ 
 
   resizeHeader(ev){
 

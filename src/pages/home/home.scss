@@ -1,13 +1,13 @@
 	page-home {
 		ion-item {
-            width: 92%;
-            margin: 4%;
-            padding-left: 10px !important;
-            margin-bottom: 10px;
-            opacity: 1;
-            font-size: 0.9em;
-            transition: 0.2s linear;
-        }
+			width: 92%;
+			margin: 4%;
+			padding-left: 10px !important;
+			margin-bottom: 10px;
+			opacity: 1;
+			font-size: 0.9em;
+			transition: 0.2s linear;
+		}
 		shrinking-segment-header {
 
 			background-color: #363636;
@@ -24,6 +24,16 @@
 			}
 
 			.header{
+				color: #00298f;
+			}
+			.toolbar-md {
+				padding: 4px;
+			}
+			ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
+				display: inline-block;
+				width: auto;
+			}
+			.segment-md-bluep .segment-button {
 				color: #00298f;
 			}
 
@@ -94,7 +104,7 @@
 			z-index:999;
 			background-color: #00A0E3;
 			clip-path: polygon(41% 0, 100% 0%, 100% 100%, 41% 100%, 20% 51%);
-			height:70px;
+			height:64px !important;
 		}
 		.Header-title{
 			padding: 0px 0 0 42px; 
@@ -111,13 +121,6 @@
 		.contenedor-map{
 			// margin-top: 3%;
 		}
-		.list-md .item-block .item-inner {
-			border-bottom: 0px;
-		}
-		ion-avatar img, ion-thumbnail img {
-			display: block;
-			box-shadow: 2px 3px 3px black;
-		}
 		#map{
 			width: 100%;
 			height: 100%;
@@ -125,29 +128,84 @@
 			border-bottom: 2px groove;
 			padding: 135px;
 		}
-		.list-offert{
-			margin-top: 3%;
+		.gm-style .gm-style-cc span, a {
+			font-size: 10px;
+			display: none;
+		}
+		.card-style{
+			margin-bottom:8%;
+			border-left:4px solid #00298f;
+			background-color:white;
+			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+			border-radius:2px;
+		}
+		.row-card{
+			height: 100px;
+		}
+		.img-card{
+			width: 60px;
+			border-radius:50%;
+		}
+		.card-text{
+			margin-top:40px;
+			font-weight: bold;
+			color: white;
+		}
+		.font-text{
+			font-size:18px;
+		}
+		.second-col-card{
+			line-height: 0px;
+			text-align: center;
+			height: 123px; 
+			background-color:#00298f;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
+			clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
+		}
+		.list-md .item-block .item-inner {
+			border-bottom: 0px;
+		}
+		ion-avatar img, ion-thumbnail img {
+			display: block;
+			box-shadow: 2px 3px 3px black;
+		}
+		ion-avatar, ion-thumbnail {
+			margin-top: 14px;
+			padding-left: 8px;
+		}
+		.text-offert{
+			line-height:0px;
 		}
 		.item-offert{
 			border-bottom: 1px outset;
 			border-top: 0px !important;
 		}
 		.item-md ion-thumbnail ion-img, .item-md ion-thumbnail img {
-			width: 70px !important;
+			width: 60px !important;
 			height: 80px;
-			max-width: 70px;
+			max-width: 60px;
 			max-height: 80px;
+		}
+		.contenedor-cards{
+			margin-top:2%;
 		}
 		.Border-card{
 			border-bottom: 0;
 			border-left: 3px solid #00298f;
+			margin:0px;
+			width: 100%;
+			margin-bottom: 10px;
 		}
 		.button-offert{
 			color:white; 
 		}
 		// Search Page Section
+		ion-list-header {
+			margin-top: 0px !important;
+		}
 		.slider{
-			height: 250px;border-bottom: 1px solid #00A0E3;
+			height: 250px;
+			border-bottom: 1px solid #00A0E3;
 			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 		}
 		.img-slider {
@@ -172,8 +230,66 @@
 			margin: auto;
 			vertical-align: middle;
 		}
+		.icon-category{
+			font-size:14px;
+		}
+		.title-category{
+			font-size:16px;
+			font-weight: bold;
+		}
 		// Search Page Section End
 		// Page Novedades Section
+		.circle-day{
+			border-radius:50%;
+			border:1px solid #00298f;
+			width:37px;height: 40px;
+			background-color:#00298f;
+			color:#fff;
+		}
+		.row-day{
+			padding-top: 3px;
+		}
+		.day-text-style{
+			font-size:15px;
+			font-weight: bold;
+		}
+		.month-text-style{
+			font-size:11px;
+			font-weight: bold;
+		}
+		.col-card-novedades{
+			padding-left: 10px;
+		}
+		.title-card-novedades{
+			color:#00298f;
+			font-weight: bold;
+			padding-left: 5px;
+			padding-top:4px;
+		}
+		.text-autor-novedades{
+			float:right;
+			color:#fff;
+			font-size:15px;
+			line-height: 16px;
+			font-weight: bold;
+		}
+		.social-button{
+			width:27px;
+			height:27px;
+		}
+		.social-logo{
+			padding:10px;
+			font-size:17px;
+		}
+		.facebook-padding{
+			padding-left: 17px;
+		}
+		.instagram-padding{
+			padding-left: 34px;
+		}
+		.twitter-padding{
+			padding-left: 44px;
+		}
 		.img-noticias {
 			top: 0;
 			left: 0;
@@ -233,126 +349,388 @@
 		// Page Novedades Section End
 		// Medias Querys
 		@media only screen and (min-width: 1201px) and (max-width: 1400px) {
-			.toolbar-title {
-				display: block;
-				/* overflow: hidden; */
-				width: 100%;
-				font-size: 24px;
-				text-overflow: ellipsis;
-				white-space: nowrap;
+			// Main-header 
+			.ion-ios-menu:before {
+				content: "\f1c3";
+				font-size: 30px;
 			}
-			.user-text{
-				font-weight: 500;
-				line-height: 1.2;
+			.ion-md-menu:before {
+				content: "\f32a";
+				font-size: 30px;
+			}
+			.searchbar-input-container {
+				margin-top:0px;
+			}
+			ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
+				display: inline-block;
+				width: auto;
+				height: auto;
+			}
+			.searchbar-ios .searchbar-input{
+				font-size: 2.2rem;
+				margin-top: 5px;
+			}
+			.searchbar-md .searchbar-input {
+				margin-top: 0px;
+				font-size: 2.2rem;
+				font-weight: 400;
+			}
+			.Header-title{
+				padding: 0px 0 0 94px;
+				margin-top: 12px;
 				font-size: 27px;
 			}
-			.user-img {
-				max-width: 25%;
-				border: 1px solid !important;
+			.title-segment{
+				font-size: 2.8rem;
 			}
-			.title-background{
+			.arrow{
+				-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+				clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+			}
+			// Main-header End
+			// Page cercanos a Mi
+			.contenedor-map{
+				height: 550px;
+			}
+			.row-card{
+				height: auto;
+			}
+			.card-style{
+				margin-bottom:2%;
+			}
+			ion-avatar,ion-thumbnail {
+				margin-top: 14px;
+				padding-left: 43px;
+			}
+			.title-offert{
+				font-size: 3.8rem;
+			}
+			.text-offert{
 				font-size: 24px;
 			}
-			.beneficios-section{
-				height: 50vh;
+			.font-text{
+				font-size:27px;
 			}
-			.noticias-section{
-				height: 50vh;
+			// Page cercanos a Mi End
+			// Page Search
+			.slider{
+				height: 450px;
+			}
+			.list-category{
+				margin-top:2%;
+			}
+			.title-category{
+				font-size: 23px !important;
+			}
+			.icon-category {
+				width: 44px;
+				height: 47px;
+				// Page Search End
 			}
 		}
 		@media only screen and (min-width: 993px) and (max-width: 1200px) {
-			.toolbar-title {
-				display: block;
-				/* overflow: hidden; */
-				width: 100%;
-				font-size: 24px;
-				text-overflow: ellipsis;
-				white-space: nowrap;
+			// Main-header 
+			.ion-ios-menu:before {
+				content: "\f1c3";
+				font-size: 30px;
 			}
-			.user-text{
-				font-weight: 500;
-				line-height: 1.2;
-				font-size: 20px;
+			.ion-md-menu:before {
+				content: "\f32a";
+				font-size: 30px;
 			}
-			.user-img {
-				max-width: 25%;
-				border: 1px solid !important;
+			.searchbar-input-container {
+				margin-top: 6px;
 			}
-			.title-background{
-				font-size: 19px;
+			.searchbar-ios .searchbar-input{
+				font-size: 1.8rem;
+				margin-top: 0px;
 			}
-			.beneficios-section{
-				height: 60vh;
+			.searchbar-md .searchbar-input {
+				margin-top: 0px;
+				font-size: 1.8rem;
+				font-weight: 400;
 			}
-			.noticias-section{
-				height: 60vh;
+			.Header-title{
+				padding: 0px 0 0 67px;
+				margin-top: 15px;
+				font-size: 21px;
 			}
+			.title-segment{
+				font-size: 2.2rem;
+			}
+			.arrow{
+				-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+				clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+			}
+			// Main-header End
+			// Page cercanos a Mi
+			.contenedor-map{
+				height: 550px;
+			}
+			.card-style{
+				margin-bottom:5%;
+			}
+			ion-avatar,ion-thumbnail {
+				margin-top: 14px;
+				padding-left: 43px;
+			}
+			.title-offert{
+				font-size: 2.8rem;
+			}
+			.text-offert{
+				font-size:18px;
+			}
+			.font-text{
+				font-size:27px;
+			}
+			// Page cercanos a Mi End
+			// Page Search
+			.slider{
+				height: 450px;
+			}
+			.list-category{
+				margin-top:2%;
+			}
+			// Page Search End
 		}
 		@media only screen and (min-width: 768px) and (max-width: 992px) {
-			.toolbar-title {
-				display: block;
-				/* overflow: hidden; */
-				width: 100%;
-				font-size: 24px;
-				text-overflow: ellipsis;
-				white-space: nowrap;
+			// Main-header 
+			.ion-ios-menu:before {
+				content: "\f1c3";
+				font-size: 30px;
 			}
-			.user-text{
-				font-weight: 500;
-				line-height: 1.2;
-				font-size: 20px;
+			.ion-md-menu:before {
+				content: "\f32a";
+				font-size: 30px;
 			}
-			.user-img {
-				max-width: 25%;
+			.ion-ios-menu:before {
+				content: "\f1c3";
+				font-size: 30px;
+				margin-top: -9px;
+				margin-left: -8px;
 			}
-			.title-background{
-				font-size: 17px;
+			.searchbar-input-container {
+				margin-top: 0px;
 			}
-			.beneficios-section{
-				height: 42vh;
+			.searchbar-ios .searchbar-input{
+				font-size: 1.8rem;
+				margin-top: 0px !important;
 			}
-			.noticias-section{
-				height: 40.8vh;
+			.searchbar-md .searchbar-input {
+				margin-top: 0px !important;
+				font-size: 1.8rem;
+				font-weight: 400;
 			}
+			.Header-title{
+				padding: 0px 0 0 35px;
+				margin-top: 15px;
+				font-size: 21px;
+			}
+			.title-segment{
+				font-size: 2.2rem;
+			}
+			.arrow{
+				-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+				clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+			}
+			// Main-header End
+			// Page cercanos a Mi
+			.contenedor-map{
+				height: 550px;
+			}
+			.card-style{
+				margin-bottom:5%;
+			}
+			ion-avatar,ion-thumbnail {
+				margin-top: 14px;
+				padding-left: 43px;
+			}
+			.title-offert{
+				font-size: 2.8rem;
+			}
+			.text-offert{
+				font-size:18px;
+			}
+			.font-text{
+				font-size:27px;
+			}
+			// Page cercanos a Mi End
+			// Page Search
+			.slider{
+				height: 450px;
+			}
+			.list-category{
+				margin-top:2%;
+			}
+			// Page Search End
 		}
 		@media (min-width: 501px) and (max-width: 767px) {
-			.beneficios-section{
-				height: 40vh;
-			}
-			.noticias-section{
-				height: 39.9vh;
-			}
+
 		}
 		@media (min-width: 401px) and (max-width: 500px) {
-			.beneficios-section{
-				height: 40vh;
+			// Main-header
+			.Header-title {
+				padding: 0px 0 0 56px;
+				margin-top: 19px;
+				font-size: 17px;
 			}
-			.noticias-section{
-				height: 39.9vh;
+			.searchbar-ios{
+				margin-top:6px;
+			}
+			.ion-ios-menu:before {
+				content: "\f1c3";
+				font-size: 30px;
+				margin-top: -9px;
+				margin-left: -8px;
+			}
+			// Main-header End
+			// Page Search
+			.container img {
+				padding: 9%;
+			}
+			.container-novedades .img-noticias {
+				min-width: 320px;
+				max-width: 320px;
+				min-height: 100px;
+			}
+			.title-background {
+				left: 0px;
+				width: 100%;
+				min-width: 319px;
+				max-width: 319px;
+			}
+			.hr-novedades{
+				left: -160px;
+				top: 171px;
+				width: 355px;
+			}
+			// Page Search End
+		}
+		@media (min-width: 375px) and (max-height: 667px){
+			.title-background {
+				left: 5px !important;
+				width: 103%;
+				max-width: 269px !important;
+				min-width: 269px;
 			}
 		}
 		@media screen and (min-width: 320px) and (max-height: 640px) {
-			.user-img {
-				max-width: 25%;
+			// Main-header
+			.Header-title {
+				padding: 0px 0 0 84px;
+				margin-top: 13px;
+				font-size: 23px;
 			}
-			.beneficios-section{
-				height: 70vh;
+			.searchbar-ios{
+				margin-top:6px;
 			}
-			.noticias-section{
-				height: 70vh;
+			.ion-ios-menu:before {
+				content: "\f1c3";
+				font-size: 30px;
+				margin-top: -9px;
+				margin-left: -8px;
+			}
+			// Main-header End
+			// Page cercanos a Mi
+			.img-card{
+				width: 60px;
+				border-radius:50%;
+				margin-left:30px;
+			}
+			.card-style{
+				margin-bottom:5%;
+			}
+			// Page cercanos a Mi End
+			// Page Search
+			.container img {
+				padding: 21%;
+			}
+			// Page Search End
+			.container-novedades .img-noticias {
+				min-width: 470px;
+				max-width: 470px;
+			}
+			.title-background {
+				left: 27px;
+				width: 100%;
+				min-width:468px;
+				max-width: 468px;
+			}
+			.social-row-style{
+				margin-left: 50px;
+			}
+			.hr-novedades{
+				left: -195px;
+				top: 207px;
+				width: 427px;
+			}
+		}
+		@media (max-width: 320px) and (min-height: 568px) {
+			.container-novedades .img-noticias {
+				min-width: 240px !important;
+				max-width: 240px !important;
+				min-height: 100px !important;
+			}
+			.title-background {
+				left:0px;
+				width: 103%;
+				max-width: 239px !important;
+				min-width: 239px !important;
 			}
 		}
 		@media (max-width: 400px) and (orientation: portrait) {
-			.user-img {
-				max-width: 40%;
+			// Main-header
+			.Header-title{
+				padding: 0px 0 0 39px; 
+				margin-top:20px;
+				font-size: 15px;
 			}
-			.beneficios-section{
-				height: 40vh;
+			.searchbar-ios{
+				margin-top:6px;
 			}
-			.noticias-section{
-				height: 50vh;
+			.ion-ios-menu:before {
+				content: "\f1c3";
+				font-size: 30px;
+				margin-top: -9px;
+				margin-left: -8px;
 			}
-
+			// Main-header End
+			// Page cercanos a Mi
+			.img-card{
+				width: 60px;
+				border-radius:50%;
+				margin-left:0px;
+			}
+			.card-style{
+				margin-bottom:8%;
+			}
+			// Page cercanos a Mi End
+			// Page Search
+			.container img {
+				padding: 3%;
+			}
+			// Page Search End
+			// Page Novedades
+			.hr-novedades{
+				left: -157px;
+				top: 169px;
+				width: 350px;
+			}
+			.container-novedades .img-noticias {
+				min-width: 270px;
+				max-width: 270px;
+				min-height: 100px;
+			}
+			.title-background {
+				left:0px;
+				width: 103%;
+				max-width: 269px !important;
+				min-width: 269px;
+			}
+			.social-row-style{
+				margin-left: 0px;
+			}
+			// Page Novedades End
 		}
 
 

@@ -18,6 +18,11 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+page-category ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
+    display: inline-block;
+    width: 35%;
+    height: 60px;
+}
 .menu-o {
     ion-content {
         background-color: #0c3fbf;
