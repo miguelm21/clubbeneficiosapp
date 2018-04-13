@@ -25,8 +25,8 @@ export class CategoryPage {
     console.log('ionViewDidLoad CategoryPage');
   }
 
-  // MoveToHome(){
-  // 	this.navCtrl.push('HomePage');
-  // }
+  MoveToHome(){
+  	this.navCtrl.push('HomePage');
+  }
 
 }

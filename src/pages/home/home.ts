@@ -39,7 +39,7 @@ export class HomePage {
       this._imageViewerCtrl = imageViewerCtrl;   
   }
 
- ionViewDidLoad() {
+ ionViewWillEnter() {
     this.locationAccuracy.canRequest().then((canRequest: boolean) => {
       if(canRequest) {
         // the accuracy option will be ignored by iOS
