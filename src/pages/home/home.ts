@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { ImageViewerController } from 'ionic-img-viewer';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
 import { Http } from '@angular/http';
 import { Slides } from 'ionic-angular';
-import { ViewChild } from '@angular/core';
 import 'rxjs/add/operator/map'
+
 
 
 declare var google;
@@ -52,6 +52,14 @@ export class HomePage {
     });
     this.initMap();
   }
+
+  ionViewDidLoad() {
+    this.initMap();
+  }
+
+  // ngAfterViewInit(){
+  //    this.initMap();
+  // }
 
 
 initMap() {

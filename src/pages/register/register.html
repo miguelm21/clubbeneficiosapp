@@ -1,0 +1,62 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header transparent>
+	<ion-navbar transparent style="background: linear-gradient(to right, rgba(0,160,227, 0.4),rgba(0,160,227, 0.7));">
+	</ion-navbar>
+</ion-header>
+<ion-content class="bg-theme">
+	<div padding class="bg-color"  style="height: auto;">
+		<ion-row text-center>
+			<ion-col col-12>
+				<img style="width: 50%;" src="assets/imgs/logo-club.png">
+			</ion-col>
+		</ion-row>
+		<ion-row padding>
+			<ion-col col-12>
+				<ion-item style="background-color: transparent;color:white;padding-left:0px;">
+					<ion-label style="color:white" floating>Nombre</ion-label>
+					<ion-input type="text" (keyup.enter)="keytab($event)"></ion-input>
+				</ion-item>
+			</ion-col>
+			<ion-col col-12>
+				<ion-item style="background-color: transparent;color:white;padding-left:0px;">
+					<ion-label style="color:white" floating>Email</ion-label>
+					<ion-input type="text" (keyup.enter)="keytab($event)"></ion-input>
+				</ion-item>
+			</ion-col>
+			<ion-col col-12>
+				<ion-item style="background-color: transparent;color:white;padding-left:0px;">
+					<ion-label style="color:white" floating>Contraseña</ion-label>
+					<ion-input type="password" (keyup.enter)="keytab($event)"></ion-input>
+				</ion-item>
+			</ion-col>
+			<ion-col col-12>
+				<ion-item style="background-color: transparent;color:white;padding-left:0px;">
+					<ion-label style="color:white" floating>Confirmación de Contraseña</ion-label>
+					<ion-input type="password" (keyup.enter)="keytab($event)"></ion-input>
+				</ion-item>
+			</ion-col>
+			<ion-col col-12 style="margin-top: 5%;">
+				<button ion-button color="cyan" style="height: 42px;font-size:1.8rem;" icon-start block>
+					Registrar
+				</button>
+			</ion-col>
+		</ion-row>
+		<ion-row padding style="margin-top:2%;">
+			<ion-col col-12>
+				<button ion-button class="loginBtn loginBtn--facebook" block>
+					Conectar con&nbsp;&nbsp;<b>FACEBOOK</b>
+				</button>
+			</ion-col>
+			<ion-col col-12>
+				<button ion-button class="loginBtn loginBtn--google" block>
+					Conectar con&nbsp;&nbsp;<b>GOOGLE+</b>
+				</button>
+			</ion-col>
+		</ion-row>
+	</div>
+</ion-content>

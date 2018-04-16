@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 
+
 /**
  * Generated class for the CategoryPage page.
  *
@@ -26,7 +27,7 @@ export class CategoryPage {
   }
 
   MoveToHome(){
-  	this.navCtrl.push('HomePage');
+  	this.navCtrl.popToRoot();
   }
 
 }

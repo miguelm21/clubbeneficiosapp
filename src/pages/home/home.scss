@@ -1,14 +1,14 @@
 	page-home {
 		ion-item {
-            width: 92%;
-            margin: 4%;
-            padding-left: 10px !important;
-            margin-bottom: 10px;
-            background-color: #fff;
-            opacity: 0;
-            font-size: 0.9em;
-            transition: 0.2s linear;
-        }
+			width: 92%;
+			margin: 4%;
+			padding-left: 10px !important;
+			margin-bottom: 10px;
+			background-color: #fff;
+			opacity: 0;
+			font-size: 0.9em;
+			transition: 0.2s linear;
+		}
 		shrinking-segment-header {
 
 			background-color: #363636;
@@ -577,7 +577,29 @@
 			// Page Search End
 		}
 		@media (min-width: 501px) and (max-width: 767px) {
-
+			.club-logo {
+				margin-left: 70px;
+				margin-top: 4px;
+			}
+			.container-novedades .img-noticias {
+				min-width: 396px;
+				max-width: 396px;
+			}
+			.title-background {
+				max-width: 396px !important;
+				max-width: 396px;
+			}
+			.hr-novedades {
+				left: -184px;
+				top: 195px;
+				width: 405px;
+			}
+			.instagram-padding {
+				padding-left: 50px;
+			}
+			.twitter-padding {
+				padding-left: 69px;
+			}
 		}
 		@media (min-width: 401px) and (max-width: 500px) {
 			// Main-header
