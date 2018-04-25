@@ -16,6 +16,14 @@ import { LoginPageModule } from '../pages/login/login.module';
 import { RegisterPageModule } from '../pages/register/register.module';
 import { HomePageModule } from '../pages/home/home.module';
 import { CategoryPageModule } from '../pages/category/category.module';
+import { NoticiaPageModule } from '../pages/noticia/noticia.module';
+import { PerfilPageModule } from '../pages/perfil/perfil.module';
+import { EditperfilPageModule } from '../pages/editperfil/editperfil.module';
+import { PasswordPageModule } from '../pages/password/password.module';
+import { ContraseñaPageModule } from '../pages/contraseña/contraseña.module';
+
+
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -35,6 +43,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     IonicImageViewerModule,
     LoginPageModule,
     RegisterPageModule,
+    NoticiaPageModule,
+    PerfilPageModule,
+    EditperfilPageModule,
+    PasswordPageModule,
     CategoryPageModule,
     HomePageModule,
     IonicModule.forRoot(MyApp),
@@ -50,7 +62,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GoogleMaps,
     LocationAccuracy,
     Geolocation,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]
 })
 export class AppModule {}

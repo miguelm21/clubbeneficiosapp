@@ -1,0 +1,140 @@
+page-perfil {
+// Main Header
+    .searchbar-md .searchbar-search-icon {
+        left: 25px;
+        top: 9px;
+        width: 21px;
+        height: 21px;
+    }
+    .searchbar-ios .searchbar-input{
+        background: #fff !important;
+        border-radius: 28px;
+    }
+    .searchbar-ios{
+        width: 114%;
+    }
+    .box-shadow{
+        content: "";
+    }
+    .searchbar-md .searchbar-input {
+        margin-top: -5px;
+        margin-left: 20px;
+        padding: 0px 22px;
+        border-radius: 28px;
+        border: 2px solid #2CB5E8;
+        background-position: left 8px center;
+        height: 37px;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 0rem;
+        color: #141414;
+        background-color: #fff;
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    }
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+        display:none;
+    }
+    .Bg-header{
+        background-color: #133F6D;
+    }
+    .header-row{
+        height: 60px;
+    }
+    .first-col{
+        background-color: #133F6D;
+        height:60px;
+    }
+    .icon-category{
+        width: 35px;
+        height: 40px;
+    }
+    .arrow{
+        z-index:999;
+        background-color: #00A0E3;
+        clip-path: polygon(40% 0, 100% 0%, 100% 100%, 40% 100%, 20% 51%);       
+        height:64px;
+    }
+    .club-logo{
+        width: 54%;
+        margin-left: 49px;
+        margin-top: 11px;
+    }
+    // Main Header End
+
+
+    .pantalla-1 {
+        width: 150px;
+        height: auto;
+        max-height: 145px;
+        max-width: 100%;
+        object-fit: contain;
+        margin: 0 auto;
+    }
+
+    .container img {
+        background-color: white;
+        padding: 1%;
+        height: auto;
+        width: auto;
+        min-height: 145px;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        margin: auto;
+        vertical-align: middle;
+    }
+    ion-icon {
+        color: black;
+        right: 7px;
+        top: 2px;
+        position: relative;
+    }
+    .loginBtn {
+        box-sizing: border-box;
+        position: relative;
+        width:100%; 
+        // margin: 0.2em;
+        padding: 0 0px 0 15px;
+        text-align: left !important;
+        line-height: 45px;
+        font-weight: 600;
+        text-transform: none;
+        shadow-text: 1px 1px black;
+        white-space: nowrap;
+        // border-radius: 0.2em;
+        font-size: 18px;
+        color: black;
+    }
+    .loginBtn:before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 34px;
+        height: 100%;
+    }
+    .loginBtn:focus {
+        outline: none;
+    }
+    .loginBtn:active {
+        box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+    }
+
+
+    /* Facebook */
+    .loginBtn--facebook {
+        background-color: transparent;
+        // background-image: linear-gradient(#4C69BA, #3B55A0);
+        /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+    }
+    .loginBtn--facebook:before {
+        border-right: white 1px black;
+    }
+    // .loginBtn--facebook:hover,
+    // .loginBtn--facebook:focus {
+    //     background-color: transparent;
+    //     background-image: linear-gradient(#5B7BD5, #4864B1);
+    // }
+}
+

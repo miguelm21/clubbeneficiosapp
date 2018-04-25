@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
+import { PerfilPage } from '../pages/perfil/perfil';
+import { ContraseñaPage } from '../pages/contraseña/contraseña';
 import { LoginPage } from '../pages/login/login';
 
 @Component({
@@ -13,7 +15,7 @@ import { LoginPage } from '../pages/login/login';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage:any = HomePage;
+  rootPage:any = LoginPage;
 
   pages: Array<{ title: string, component: any }>;
 
@@ -26,7 +28,9 @@ export class MyApp {
     });
     this.pages = [
       { title: 'Login', component: LoginPage },
-      { title: 'Register', component: RegisterPage }
+      { title: 'Register', component: RegisterPage },
+      { title: 'Perfil', component: PerfilPage },
+      { title: 'Contraseña', component: ContraseñaPage }
     ];
   }
 
@@ -35,5 +39,30 @@ export class MyApp {
     // we wouldn't want the back button to show in this scenario
     this.nav.push(page.component);
   }
+
+
+
+  // navigateToBuscar(){
+  //   this.nav.push('HomePage', {param1: '1'});
+  // }
+  // navigateToBeneficios(){
+  //   this.nav.push('HomePage', {param1: '2'});
+  // }
+  // navigateToNovedades(){
+  //   this.nav.push('HomePage', {param1: '3'});
+  // }
+
+
+  // onSegmentChange(event)
+  // {
+  //     if(event)
+  //     {
+  //         this.nav.push('HomePage', {param1: '1'});
+  //         console.log(event);
+          
+  //     }
+  //     this.initMap();
+  // }
+    
 }
 

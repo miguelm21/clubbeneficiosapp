@@ -1,795 +1,1104 @@
 	page-home {
-		ion-item {
-			width: 92%;
-			margin: 4%;
-			padding-left: 10px !important;
-			margin-bottom: 10px;
-			background-color: #fff;
-			opacity: 0;
-			font-size: 0.9em;
-			transition: 0.2s linear;
-		}
-		shrinking-segment-header {
-
-			background-color: #363636;
-			color: #fff;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			img {
-				border-radius: 50%;
-				width: 75px;
-				height: auto;
-				margin-right: 15px;
+		// ion-item {
+			// 	width: 92%;
+			// 	margin: 4%;
+			// 	padding-left: 10px !important;
+			// 	margin-bottom: 10px;
+			// 	background-color: #fff;
+			// 	opacity: 0;
+			// 	font-size: 0.9em;
+			// 	transition: 0.2s linear;
+			// }
+			/*Page styles*/
+			.boxes {
+				margin: auto;
 			}
 
-			.header{
-				color: #00298f;
-			}
-			.toolbar-md {
-				padding: 4px;
-			}
-			ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
-				display: inline-block;
-				width: auto;
-			}
-			.segment-md-bluep .segment-button {
-				color: #00298f;
-			}
 
-		}
-		// Main Header
-		.searchbar-md .searchbar-search-icon {
-			left: 25px;
-			top: 9px;
-			width: 21px;
-			height: 21px;
-		}
-		.searchbar-ios .searchbar-input{
-			background: #fff !important;
-			border-radius: 28px;
-		}
-		.searchbar-ios{
-			width: 114%;
-		}
-		.box-shadow{
-			content: "";
-		}
-		.searchbar-md .searchbar-input {
-			margin-top: -5px;
-			margin-left: 20px;
-			padding: 0px 22px;
-			border-radius: 28px;
-			border: 2px solid #2CB5E8;
-			background-position: left 8px center;
-			height: 37px;
-			font-size: 1.6rem;
-			font-weight: 400;
-			line-height: 0rem;
-			color: #141414;
-			background-color: #fff;
-			-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-		}
-		ion-toolbar.scrollable-segments {
-			ion-segment {
-				display: block;
-				overflow-x: auto;
-				white-space: nowrap;
+			shrinking-segment-header {
 
-				ion-segment-button.segment-button {
+				background-color: #363636;
+				color: #fff;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				img {
+					border-radius: 50%;
+					width: 75px;
+					height: auto;
+					margin-right: 15px;
+				}
+
+				.header{
+					color: #001E42;
+				}
+				.toolbar-md {
+					padding: 4px;
+				}
+				ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
 					display: inline-block;
 					width: auto;
 				}
+				.segment-md-bluep .segment-button {
+					color: #00298f;
+				}
+
 			}
-		}
-		.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
-			display:none;
-		}
-		.Bg-header{
-			background-color: #00298f;
-		}
-		.header-row{
-			height: 60px;
-		}
-		.first-col{
-			background-color: #00298f;
-			height:60px;
-		}
-		.icon-category{
-			width: 35px;
-			height: 40px;
-		}
-		.arrow{
-			z-index:999;
-			background-color: #00A0E3;
-			clip-path: polygon(41% 0, 100% 0%, 100% 100%, 41% 100%, 20% 51%);
-			height:64px !important;
-		}
-		.club-logo{
-			width: 54%;
-			margin-left: 49px;
-			margin-top: 11px;
-		}
-		.Header-title{
-			padding: 0px 0 0 42px; 
-			margin-top:20px;
-			font-size: 15px;
-			font-weight: bold;
-			color:#fff;
-		}
-		// Main Header End
-		// Page Cercanos a mi
-		.Theme-bg{
-			background-color:#f1f1f1;
-		}
-		.contenedor-map{
-			// margin-top: 3%;
-		}
-		#map{
-			width: 100%;
-			height: 100%;
-			border-top: 2px groove;
-			border-bottom: 2px groove;
-			padding: 135px;
-		}
-		.gm-style .gm-style-cc span, a {
-			font-size: 10px;
-			display: none;
-		}
-		.card-style{
-			margin-bottom:8%;
-			border-left:4px solid #00298f;
-			background-color:white;
-			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-			border-radius:2px;
-		}
-		.row-card{
-			height: 100px;
-		}
-		.img-card{
-			width: 60px;
-			height: 60px;
-			border-radius:50%;
-		}
-		.card-text{
-			margin-top:40px;
-			font-weight: bold;
-			color: white;
-		}
-		.font-text{
-			font-size:18px;
-		}
-		.second-col-card{
-			line-height: 0px;
-			text-align: center;
-			height: 123px; 
-			background-color:#00298f;
-			-webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
-			clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
-		}
-		.list-md .item-block .item-inner {
-			border-bottom: 0px;
-		}
-		ion-avatar img, ion-thumbnail img {
-			display: block;
-			box-shadow: 2px 3px 3px black;
-		}
-		ion-avatar, ion-thumbnail {
-			margin-top: 14px;
-			padding-left: 8px;
-		}
-		.text-offert{
-			line-height:0px;
-		}
-		.item-offert{
-			border-bottom: 1px outset;
-			border-top: 0px !important;
-		}
-		.item-md ion-thumbnail ion-img, .item-md ion-thumbnail img {
-			width: 60px !important;
-			height: 80px;
-			max-width: 60px;
-			max-height: 80px;
-		}
-		.contenedor-cards{
-			margin-top:2%;
-		}
-		.Border-card{
-			border-bottom: 0;
-			border-left: 3px solid #00298f;
-			margin:0px;
-			width: 100%;
-			margin-bottom: 10px;
-		}
-		.button-offert{
-			color:white; 
-		}
-		// Search Page Section
-		ion-list-header {
-			margin-top: 0px !important;
-		}
-		.slider{
-			height: 250px;
-			border-bottom: 1px solid #00A0E3;
-			box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-		}
-		.img-slider {
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: auto;
-			height: auto;
-			max-height: 500px;
-			max-width: 100%;
-			object-fit: contain;
-			position: absolute;
-			margin: 0 auto;
-		}
-		.container img {
-			padding: 3%;
-			position: relative;
-			height: auto;
-			width: auto;
-			min-height: 500px;
-			margin: auto;
-			vertical-align: middle;
-		}
-		.icon-category{
-			font-size:14px;
-		}
-		.title-category{
-			font-size:16px;
-			font-weight: bold;
-		}
-		// Search Page Section End
-		// Page Novedades Section
-		.circle-day{
-			border-radius:50%;
-			border:1px solid #00298f;
-			width:37px;height: 40px;
-			background-color:#00298f;
-			color:#fff;
-		}
-		.row-day{
-			padding-top: 3px;
-		}
-		.day-text-style{
-			font-size:15px;
-			font-weight: bold;
-		}
-		.month-text-style{
-			font-size:11px;
-			font-weight: bold;
-		}
-		.col-card-novedades{
-			padding-left: 10px;
-		}
-		.title-card-novedades{
-			color:#00298f;
-			font-weight: bold;
-			padding-left: 5px;
-			padding-top:4px;
-		}
-		.text-autor-novedades{
-			float:right;
-			color:#fff;
-			font-size:15px;
-			line-height: 16px;
-			font-weight: bold;
-		}
-		.social-button{
-			width:27px;
-			height:27px;
-		}
-		.social-logo{
-			padding:10px;
-			font-size:17px;
-		}
-		.facebook-padding{
-			padding-left: 17px;
-		}
-		.instagram-padding{
-			padding-left: 34px;
-		}
-		.twitter-padding{
-			padding-left: 44px;
-		}
-		.img-noticias {
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 5px;
-			width: auto;
-			height: auto;
-			min-width: 270px;
-			max-width: 100%;
-			position: absolute;
-			margin: 0 auto;
-		}
-		.title-background{
-			position: relative;
-			bottom: 15px;
-			background-color: rgba(0, 41, 143, 0.5);
-			left: 0px;
-			width: 103%;
-			max-width: 269px !important;
-			height: 25px;
-			color: white;
-			font-weight: 800;
-			padding: 5px;
-			text-decoration: none;
-			max-width: 266px;
-		}
-		hr {
-			height: 2px;
-			z-index: 2;
-			left: -127px;
-			top: 137px;
-			background-color:gray !important;
-			/* border-width: 0; */
-			/* -webkit-box-sizing: content-box; */
-			transform: rotate(90deg);
-			position: relative !important;
-			width: 291px;
-			box-sizing: content-box;
-		}
-		.card-content-md .card-content-ios {
-			padding: no-padding;
-			font-size: 1.4rem;
-			line-height: 1.5;
-		}
-		.container-novedades .img-noticias {
-			position: relative;
-			height: auto;
-			width: auto;
-			top: 10px;
-			min-width:270px;
-			max-width: 270px;
-			min-height: 100px;
-			border: 1px solid #ccc;
-			margin: auto;
-			vertical-align: middle;
-		}
-		// Page Novedades Section End
-		// Medias Querys
-		@media only screen and (min-width: 1201px) and (max-width: 1400px) {
-			// Main-header 
-			.ion-ios-menu:before {
-				content: "\f1c3";
-				font-size: 30px;
-			}
-			.ion-md-menu:before {
-				content: "\f32a";
-				font-size: 30px;
-			}
-			.searchbar-input-container {
-				margin-top:0px;
-			}
-			ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
-				display: inline-block;
-				width: auto;
-				height: auto;
-			}
-			.searchbar-ios .searchbar-input{
-				font-size: 2.2rem;
-				margin-top: 5px;
-			}
-			.searchbar-md .searchbar-input {
-				margin-top: 0px;
-				font-size: 2.2rem;
-				font-weight: 400;
-			}
-			.Header-title{
-				padding: 0px 0 0 94px;
-				margin-top: 12px;
-				font-size: 27px;
+			// Main Header
+			.searchbar-md .searchbar-search-icon {
+				left: 25px;
+				top: 9px;
+				width: 21px;
+				height: 21px;
 			}
 			.title-segment{
-				font-size: 2.8rem;
-			}
-			.arrow{
-				-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
-				clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
-			}
-			// Main-header End
-			// Page cercanos a Mi
-			.contenedor-map{
-				height: 550px;
-			}
-			.row-card{
-				height: auto;
-			}
-			.card-style{
-				margin-bottom:2%;
-			}
-			ion-avatar,ion-thumbnail {
-				margin-top: 14px;
-				padding-left: 43px;
-			}
-			.title-offert{
-				font-size: 3.8rem;
-			}
-			.text-offert{
-				font-size: 24px;
-			}
-			.font-text{
-				font-size:27px;
-			}
-			// Page cercanos a Mi End
-			// Page Search
-			.slider{
-				height: 450px;
-			}
-			.list-category{
-				margin-top:2%;
-			}
-			.title-category{
-				font-size: 23px !important;
-			}
-			.icon-category {
-				width: 44px;
-				height: 47px;
-				// Page Search End
-			}
-		}
-		@media only screen and (min-width: 993px) and (max-width: 1200px) {
-			// Main-header 
-			.ion-ios-menu:before {
-				content: "\f1c3";
-				font-size: 30px;
-			}
-			.club-logo {
-				width: 56% !important;
-				margin-left: 68px !important;
-				margin-top: 3px;
-			}
-			.ion-md-menu:before {
-				content: "\f32a";
-				font-size: 30px;
-			}
-			.searchbar-input-container {
-				margin-top: 6px;
+				font-family: Monserrat;
+				font-size: 18px;
 			}
 			.searchbar-ios .searchbar-input{
-				font-size: 1.8rem;
-				margin-top: 0px;
-			}
-			.searchbar-md .searchbar-input {
-				margin-top: 0px;
-				font-size: 1.8rem;
-				font-weight: 400;
-			}
-			.Header-title{
-				padding: 0px 0 0 67px;
-				margin-top: 15px;
-				font-size: 21px;
-			}
-			.title-segment{
-				font-size: 2.2rem;
-			}
-			.arrow{
-				-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
-				clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
-			}
-			// Main-header End
-			// Page cercanos a Mi
-			.contenedor-map{
-				height: 550px;
-			}
-			.card-style{
-				margin-bottom:5%;
-			}
-			ion-avatar,ion-thumbnail {
-				margin-top: 14px;
-				padding-left: 43px;
-			}
-			.title-offert{
-				font-size: 2.8rem;
-			}
-			.text-offert{
-				font-size:18px;
-			}
-			.font-text{
-				font-size:27px;
-			}
-			// Page cercanos a Mi End
-			// Page Search
-			.slider{
-				height: 450px;
-			}
-			.list-category{
-				margin-top:2%;
-			}
-			// Page Search End
-		}
-		@media only screen and (min-width: 768px) and (max-width: 992px) {
-			// Main-header 
-			.ion-ios-menu:before {
-				content: "\f1c3";
-				font-size: 30px;
-			}
-			.ion-md-menu:before {
-				content: "\f32a";
-				font-size: 30px;
-			}
-			.ion-ios-menu:before {
-				content: "\f1c3";
-				font-size: 30px;
-				margin-top: -9px;
-				margin-left: -8px;
-			}
-			.searchbar-input-container {
-				margin-top: 0px;
-			}
-			.searchbar-ios .searchbar-input{
-				font-size: 1.8rem;
-				margin-top: 0px !important;
-			}
-			.searchbar-md .searchbar-input {
-				margin-top: 0px !important;
-				font-size: 1.8rem;
-				font-weight: 400;
-			}
-			.Header-title{
-				padding: 0px 0 0 35px;
-				margin-top: 15px;
-				font-size: 21px;
-			}
-			.title-segment{
-				font-size: 2.2rem;
-			}
-			.arrow{
-				-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
-				clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
-			}
-			// Main-header End
-			// Page cercanos a Mi
-			.contenedor-map{
-				height: 550px;
-			}
-			.card-style{
-				margin-bottom:5%;
-			}
-			ion-avatar,ion-thumbnail {
-				margin-top: 14px;
-				padding-left: 43px;
-			}
-			.title-offert{
-				font-size: 2.8rem;
-			}
-			.text-offert{
-				font-size:18px;
-			}
-			.font-text{
-				font-size:27px;
-			}
-			// Page cercanos a Mi End
-			// Page Search
-			.slider{
-				height: 450px;
-			}
-			.list-category{
-				margin-top:2%;
-			}
-			// Page Search End
-		}
-		@media (min-width: 501px) and (max-width: 767px) {
-			.club-logo {
-				margin-left: 70px;
-				margin-top: 4px;
-			}
-			.container-novedades .img-noticias {
-				min-width: 396px;
-				max-width: 396px;
-			}
-			.title-background {
-				max-width: 396px !important;
-				max-width: 396px;
-			}
-			.hr-novedades {
-				left: -184px;
-				top: 195px;
-				width: 405px;
-			}
-			.instagram-padding {
-				padding-left: 50px;
-			}
-			.twitter-padding {
-				padding-left: 69px;
-			}
-		}
-		@media (min-width: 401px) and (max-width: 500px) {
-			// Main-header
-			.Header-title {
-				padding: 0px 0 0 56px;
-				margin-top: 19px;
-				font-size: 17px;
-			}
-			.club-logo {
-				width: 54%;
-				margin-left: 57px;
-				margin-top: 11px;
+				background: #fff !important;
+				border-radius: 28px;
 			}
 			.searchbar-ios{
-				margin-top:6px;
+				width: 114%;
 			}
-			.ion-ios-menu:before {
-				content: "\f1c3";
-				font-size: 30px;
-				margin-top: -9px;
-				margin-left: -8px;
+			.box-shadow{
+				content: "";
 			}
-			// Main-header End
-			// Page Search
-			.container img {
-				padding: 9%;
+			.searchbar-md .searchbar-input {
+				margin-top: -5px;
+				margin-left: 20px;
+				padding: 0px 22px;
+				border-radius: 28px;
+				border: 2px solid #2CB5E8;
+				background-position: left 8px center;
+				height: 37px;
+				font-size: 1.6rem;
+				font-weight: 400;
+				line-height: 0rem;
+				color: #141414;
+				background-color: #fff;
+				-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 			}
-			.container-novedades .img-noticias {
-				min-width: 320px;
-				max-width: 320px;
-				min-height: 100px;
+			ion-toolbar.scrollable-segments {
+				ion-segment {
+					display: block;
+					overflow-x: auto;
+					white-space: nowrap;
+
+					ion-segment-button.segment-button {
+						display: inline-block;
+						width: auto;
+					}
+				}
 			}
-			.title-background {
-				left: 0px;
-				width: 100%;
-				min-width: 319px;
-				max-width: 319px;
+			.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+				display:none;
 			}
-			.hr-novedades{
-				left: -160px;
-				top: 171px;
-				width: 355px;
+			.Bg-header{
+				background-color: #133F6D;
 			}
-			// Page Search End
-		}
-		@media (min-width: 375px) and (max-height: 667px){
-			.title-background {
-				left: 5px !important;
-				width: 103%;
-				max-width: 269px !important;
-				min-width: 269px;
-			}
-		}
-		@media screen and (min-width: 320px) and (max-height: 640px) {
-			// Main-header
-			.Header-title {
-				padding: 0px 0 0 84px;
-				margin-top: 13px;
-				font-size: 23px;
-			}
-			.club-logo{
-				width: 39%;
-				margin-left: 103px;
-				margin-top: 5px;
-			}
-			.searchbar-ios{
-				margin-top:6px;
-			}
-			.ion-ios-menu:before {
-				content: "\f1c3";
-				font-size: 30px;
-				margin-top: -9px;
-				margin-left: -8px;
-			}
-			// Main-header End
-			// Page cercanos a Mi
-			.img-card{
-				width: 60px;
+			.header-row{
 				height: 60px;
-				border-radius:50%;
-				margin-left:30px;
 			}
-			.card-style{
-				margin-bottom:5%;
+			.first-col{
+				background-color: #133F6D;
+				height:60px;
 			}
-			// Page cercanos a Mi End
-			// Page Search
-			.container img {
-				padding: 21%;
+			.icon-category{
+				width: 35px;
+				height: 40px;
 			}
-			// Page Search End
-			.container-novedades .img-noticias {
-				min-width: 470px;
-				max-width: 470px;
-			}
-			.title-background {
-				left: 27px;
-				width: 100%;
-				min-width:468px;
-				max-width: 468px;
-			}
-			.social-row-style{
-				margin-left: 50px;
-			}
-			.hr-novedades{
-				left: -195px;
-				top: 207px;
-				width: 427px;
-			}
-		}
-		@media (max-width: 320px) and (min-height: 568px) {
-			.club-logo {
-				width: 60% !important;
-				margin-left: 40px !important;
-				margin-top: 5px;
-			}
-			.container-novedades .img-noticias {
-				min-width: 240px !important;
-				max-width: 240px !important;
-				min-height: 100px !important;
-			}
-			.title-background {
-				left:0px;
-				width: 103%;
-				max-width: 239px !important;
-				min-width: 239px !important;
-			}
-		}
-		@media (max-width: 400px) and (orientation: portrait) {
-			// Main-header
-			.Header-title{
-				padding: 0px 0 0 39px; 
-				margin-top:20px;
-				font-size: 15px;
-			}
-			.searchbar-ios{
-				margin-top:6px;
-			}
-			.ion-ios-menu:before {
-				content: "\f1c3";
-				font-size: 30px;
-				margin-top: -9px;
-				margin-left: -8px;
+			.arrow{
+				z-index:999;
+				background-color: #00AEEF;
+				clip-path: polygon(41% 0, 100% 0%, 100% 100%, 41% 100%, 20% 51%);
+				height:64px !important;
 			}
 			.club-logo{
 				width: 54%;
 				margin-left: 49px;
 				margin-top: 11px;
 			}
-			// Main-header End
-			// Page cercanos a Mi
+			// Main Header End
+
+			// Page Cercanos a mi
+			.Theme-bg{
+				background-color:#f1f1f1;
+			}
+			/*Checkboxes styles*/
+			.checkbox-edit { 
+				display: none; 
+			}
+
+			.checkbox-edit + label {
+				display: block;
+				position: relative;
+				padding-left: 35px;
+				margin-top: 5px;
+				color:black;
+				margin-bottom: 20px;
+				font-family: Monserrat;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+			}
+
+			.checkbox-edit + label:last-child { margin-bottom: 0; }
+
+			.checkbox-edit + label:before {
+				content: '';
+				display: block;
+				width: 20px;
+				height: 20px;
+				border: 2px solid #133F6D;
+				position: absolute;
+				left: 0;
+				top: 0;
+				opacity: .6;
+				-webkit-transition: all .12s, border-color .08s;
+				transition: all .12s, border-color .08s;
+			}
+
+			.checkbox-edit:checked + label:before {
+				width: 10px;
+				top: -5px;
+				left: 5px;
+				border-radius: 0;
+				opacity: 1;
+				border-top-color: transparent;
+				border-left-color: transparent;
+				-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			.accordion-list {
+				background: white;
+				height: 100%;
+			}
+			.title-filtro{
+				font-family: Monserrat;
+				font-size:18px;
+			}
+			.section {
+				background: white;
+				color: #000;
+				font-family: Monserrat;
+				font-size:20px;
+				margin-bottom: 0px;
+			}
+			.section-active {
+				background: #133F6D;
+				color: #fff;
+				font-family: Monserrat;
+				font-size:20px;
+			}
+
+			.child {
+				background: white;
+				color: #000;
+				margin-bottom: 0px;
+			}
+			.child-item {
+				background: white;
+				padding: 10px;
+				margin-top: 0px;
+				border:0px;
+				padding-bottom:0px;
+				width:100%;
+				height:100%;
+			}
+			.divider-checkboxs{
+				margin-top:-16px;
+			}
+			.row-checkboxs{
+				margin-bottom:14px;
+			}
+			.label-checkboxs{
+				line-height: 24px;
+			}
+			.input-filtro{
+				border:1px solid #133F6D;
+				height: 30px;
+				color:black;
+			}
+			.text-input {
+				margin: 4px 8px;
+				padding: 0;
+				width: calc(100% - 8px - 8px);
+			}
+			.label {
+				margin: 0px;
+			}
+			.list {
+				margin-bottom: -10px;
+			}
+			.contenedor-map{
+				// margin-top: 3%;
+			}
+			#map{
+				width: 100%;
+				height: 100%;
+				border-top: 2px groove;
+				border-bottom: 2px groove;
+				padding: 135px;
+			}
+			.gm-style .gm-style-cc span, a {
+				font-size: 10px;
+				display: none;
+			}
+			.card-style{
+				margin-bottom:8%;
+				border-left:4px solid #001E42;
+				background-color:white;
+				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+				border-radius:2px;
+			}
+			.row-card{
+				height: 100px;
+			}
 			.img-card{
 				width: 60px;
 				height: 60px;
 				border-radius:50%;
-				margin-left:0px;
 			}
-			.card-style{
-				margin-bottom:8%;
+			.card-text{
+				margin-top:40px;
+				font-weight: bold;
+				color: white;
 			}
-			// Page cercanos a Mi End
-			// Page Search
+			.title-offert{
+				font-family: Sueca-bold;
+			}
+			.text-offert{
+				font-family: Sueca-bold;
+			}
+			.font-text{
+				font-size:18px;
+				font-family: Sueca-bold;
+			}
+			.second-col-card{
+				line-height: 0px;
+				text-align: center;
+				height: 123px; 
+				background-color:#133F6D;
+				-webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
+				clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
+			}
+			.list-md .item-block .item-inner {
+				border-bottom: 0px;
+			}
+			ion-avatar img, ion-thumbnail img {
+				display: block;
+				box-shadow: 2px 3px 3px black;
+			}
+			ion-avatar, ion-thumbnail {
+				margin-top: 14px;
+				padding-left: 8px;
+			}
+			.text-offert{
+				line-height:0px;
+			}
+			.item-offert{
+				border-bottom: 1px outset;
+				border-top: 0px !important;
+			}
+			.item-md ion-thumbnail ion-img, .item-md ion-thumbnail img {
+				width: 60px !important;
+				height: 80px;
+				max-width: 60px;
+				max-height: 80px;
+			}
+			.contenedor-cards{
+				margin-top:2%;
+			}
+			.Border-card{
+				border-bottom: 0;
+				border-left: 3px solid #00298f;
+				margin:0px;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.button-offert{
+				color:white; 
+			}
+			// Search Page Section
+			ion-list-header {
+				margin-top: 0px !important;
+			}
+			.slider{
+				height: 250px;
+				border-bottom: 1px solid #00A0E3;
+				box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+			}
+			.img-slider {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				width: auto;
+				height: auto;
+				max-height: 500px;
+				max-width: 100%;
+				object-fit: contain;
+				position: absolute;
+				margin: 0 auto;
+			}
 			.container img {
 				padding: 3%;
+				position: relative;
+				height: auto;
+				width: auto;
+				min-height: 500px;
+				margin: auto;
+				vertical-align: middle;
 			}
-			// Page Search End
-			// Page Novedades
-			.hr-novedades{
-				left: -157px;
-				top: 169px;
-				width: 350px;
+			.icon-category{
+				font-size:14px;
+			}
+			.title-category{
+				font-size:18px;
+				font-family: Sueca-bold;
+				font-weight: bold;
+			}
+			// Search Page Section End
+			// Page Novedades Section
+			.circle-day{
+				border-radius:50%;
+				border:1px solid #00298f;
+				width:37px;height: 40px;
+				background-color:#00298f;
+				color:#fff;
+			}
+			.row-day{
+				padding-top: 3px;
+			}
+			.day-text-style{
+				font-size:15px;
+				font-weight: bold;
+			}
+			.month-text-style{
+				font-size:11px;
+				font-weight: bold;
+			}
+			.col-card-novedades{
+				padding-left: 10px;
+			}
+			.title-card-novedades{
+				color:#00298f;
+				font-family: Monserrat;
+				font-size: 18px;
+				font-weight: bold;
+				padding-left: 5px;
+				padding-top:4px;
+			}
+			.text-noticia{
+				font-family: Sueca-bold;
+			}
+			.text-autor-novedades{
+				float:right;
+				color:#fff;
+				font-family: Monserrat;
+				font-size:15px;
+				line-height: 16px;
+				font-weight: bold;
+			}
+			.social-button{
+				width:27px;
+				height:27px;
+			}
+			.social-logo{
+				padding:10px;
+				font-size:17px;
+			}
+			.facebook-padding{
+				padding-left: 17px;
+			}
+			.instagram-padding{
+				padding-left: 34px;
+			}
+			.twitter-padding{
+				padding-left: 44px;
+			}
+			.img-noticias {
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 5px;
+				width: auto;
+				height: auto;
+				min-width: 270px;
+				max-width: 100%;
+				position: absolute;
+				margin: 0 auto;
+			}
+			.title-background{
+				position: relative;
+				bottom: 15px;
+				background-color: rgba(0, 41, 143, 0.5);
+				left: 0px;
+				width: 100%;
+				max-width: 269px !important;
+				height: 25px;
+				color: white;
+				font-weight: 800;
+				padding: 5px;
+				text-decoration: none;
+				max-width: 266px;
+			}
+			hr {
+				height: 2px;
+				z-index: 2;
+				left: -127px;
+				top: 137px;
+				background-color:gray !important;
+				/* border-width: 0; */
+				/* -webkit-box-sizing: content-box; */
+				transform: rotate(90deg);
+				position: relative !important;
+				width: 291px;
+				box-sizing: content-box;
+			}
+			.card-content-md .card-content-ios {
+				padding: no-padding;
+				font-size: 1.4rem;
+				line-height: 1.5;
 			}
 			.container-novedades .img-noticias {
-				min-width: 270px;
+				position: relative;
+				height: auto;
+				width: auto;
+				top: 10px;
+				min-width:270px;
 				max-width: 270px;
 				min-height: 100px;
+				border: 1px solid #ccc;
+				margin: auto;
+				vertical-align: middle;
 			}
-			.title-background {
-				left:0px;
-				width: 103%;
-				max-width: 269px !important;
-				min-width: 269px;
+			// Page Novedades Section End
+			// Medias Querys
+			@media only screen and (min-width: 1201px) and (max-width: 1400px) {
+				// Main-header 
+				.ion-ios-menu:before {
+					content: "\f1c3";
+					font-size: 30px;
+				}
+				.club-logo {
+					width: 46% !important;
+					margin-left: 89px !important;
+					margin-top: 0px;
+				}
+				.ion-md-menu:before {
+					content: "\f32a";
+					font-size: 30px;
+				}
+				.searchbar-input-container {
+					margin-top: 6px;
+				}
+				.ion-ios-menu:before {
+					content: "\f1c3";
+					font-size: 40px;
+				}
+				.searchbar-ios .searchbar-input{
+					font-size: 2.4rem;
+					margin-top: 0px;
+				}
+				.searchbar-md .searchbar-input {
+					margin-top: 0px;
+					font-size: 1.8rem;
+					font-weight: 400;
+				}
+				.Header-title{
+					padding: 0px 0 0 67px;
+					margin-top: 15px;
+					font-size: 21px;
+				}
+				.title-segment{
+					font-size: 2.8rem;
+				}
+				ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
+					display: inline-block;
+					// width: auto;
+					height: 35%;
+				}
+				.arrow{
+					-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+					clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+				}
+				// Main-header End
+				// Page cercanos a Mi
+				.contenedor-map{
+					height: 550px;
+				}
+				.row-card{
+					height: auto;
+				}
+				.card-style{
+					margin-bottom:2%;
+				}
+				ion-avatar,ion-thumbnail {
+					margin-top: 14px;
+					padding-left: 43px;
+				}
+				.title-offert{
+					font-size: 3.8rem;
+				}
+				.text-offert{
+					font-size: 24px;
+				}
+				.font-text{
+					font-size:27px;
+				}
+				// Page cercanos a Mi End
+				// Page Search
+				.slider{
+					height: 450px;
+				}
+				.list-category{
+					margin-top:2%;
+				}
+				.title-category{
+					font-size: 23px !important;
+				}
+				.icon-category {
+					width: 44px;
+					height: 47px;
+				}
+				// Page Search End
+				// Page Novedades
+				.circle-day{
+					width: 65px;
+					height:65px;
+				}
+				.row-day{
+					padding-top: 6px;
+				}
+				.day-text-style{
+					font-size:20px;
+					font-weight: bold;
+				}
+				.month-text-style{
+					font-size:17px;
+					font-weight: bold;
+				}
+				.hr-novedades {
+					height:3px;
+					left: -298px;
+					top: 322px;
+					width: 660px;
+				}
+				.title-card-novedades{
+					font-size:27px;
+				}
+				.text-noticia{
+					font-size:22px;
+				}
+				.text-autor-novedades{
+					font-size:25px;
+				}
+				.social-row-style{
+					margin-left: 50px;
+				}
+				.container-novedades .img-noticias {
+					min-width: 800px;
+					max-width: 800px;
+				}
+				.title-background {
+					margin:auto;
+					max-width: 800px !important;
+					max-width: 800px;
+				}
+				.social-button{
+					width: 50px;
+					height: 50px;
+				}
+				.social-logo {
+					padding: 10px;
+					font-size: 27px;
+				}
+				.facebook-padding{
+					padding-left:60px;
+				}
+				.instagram-padding {
+					padding-left: 100px;
+				}
+				.twitter-padding {
+					padding-left: 116px;
+				}
+				// Page Novedades End
 			}
-			.social-row-style{
-				margin-left: 0px;
+			@media only screen and (min-width: 993px) and (max-width: 1200px) {
+				// Main-header 
+				.ion-ios-menu:before {
+					content: "\f1c3";
+					font-size: 30px;
+				}
+				.club-logo {
+					width: 56% !important;
+					margin-left: 68px !important;
+					margin-top: 3px;
+				}
+				.ion-md-menu:before {
+					content: "\f32a";
+					font-size: 30px;
+				}
+				.searchbar-input-container {
+					margin-top: 6px;
+				}
+				.searchbar-ios .searchbar-input{
+					font-size: 1.8rem;
+					margin-top: 0px;
+				}
+				.searchbar-md .searchbar-input {
+					margin-top: 0px;
+					font-size: 1.8rem;
+					font-weight: 400;
+				}
+				.Header-title{
+					padding: 0px 0 0 67px;
+					margin-top: 15px;
+					font-size: 21px;
+				}
+				.title-segment{
+					font-size: 2.8rem;
+				}
+				ion-toolbar.scrollable-segments ion-segment ion-segment-button.segment-button {
+					display: inline-block;
+					// width: auto;
+					height: 35%;
+				}
+				.arrow{
+					-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+					clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+				}
+				// Main-header End
+				// Page cercanos a Mi
+				.contenedor-map{
+					height: 550px;
+				}
+				.card-style{
+					margin-bottom:5%;
+				}
+				ion-avatar,ion-thumbnail {
+					margin-top: 14px;
+					padding-left: 43px;
+				}
+				.title-offert{
+					font-size: 2.8rem;
+				}
+				.text-offert{
+					font-size:18px;
+				}
+				.font-text{
+					font-size:27px;
+				}
+				// Page cercanos a Mi End
+				// Page Search
+				.slider{
+					height: 450px;
+				}
+				.list-category{
+					margin-top:2%;
+				}
+				// Page Search End
+				// Page Novedades
+				.circle-day{
+					width: 65px;
+					height:65px;
+				}
+				.row-day{
+					padding-top: 6px;
+				}
+				.day-text-style{
+					font-size:20px;
+					font-weight: bold;
+				}
+				.month-text-style{
+					font-size:17px;
+					font-weight: bold;
+				}
+				.hr-novedades {
+					height:3px;
+					left: -298px;
+					top: 322px;
+					width: 660px;
+				}
+				.title-card-novedades{
+					font-size:27px;
+				}
+				.text-noticia{
+					font-size:22px;
+				}
+				.text-autor-novedades{
+					font-size:25px;
+				}
+				.social-row-style{
+					margin-left: 50px;
+				}
+				.container-novedades .img-noticias {
+					min-width: 800px;
+					max-width: 800px;
+				}
+				.title-background {
+					margin:auto;
+					max-width: 800px !important;
+					max-width: 800px;
+				}
+				.social-button{
+					width: 50px;
+					height: 50px;
+				}
+				.social-logo {
+					padding: 10px;
+					font-size: 27px;
+				}
+				.facebook-padding{
+					padding-left:60px;
+				}
+				.instagram-padding {
+					padding-left: 100px;
+				}
+				.twitter-padding {
+					padding-left: 116px;
+				}
+				// Page Novedades End
 			}
-			// Page Novedades End
-		}
+			@media only screen and (min-width: 768px) and (max-width: 992px) {
+				// Main-header 
+				.ion-ios-menu:before {
+					content: "\f1c3";
+					font-size: 30px;
+				}
+				.ion-md-menu:before {
+					content: "\f32a";
+					font-size: 30px;
+				}
+				.ion-ios-menu:before {
+					content: "\f1c3";
+					font-size: 30px;
+					margin-top: -9px;
+					margin-left: -8px;
+				}
+				.searchbar-input-container {
+					margin-top: 0px;
+				}
+				.searchbar-ios .searchbar-input{
+					font-size: 1.8rem;
+					margin-top: 0px !important;
+				}
+				.searchbar-md .searchbar-input {
+					margin-top: 0px !important;
+					font-size: 1.8rem;
+					font-weight: 400;
+				}
+				.Header-title{
+					padding: 0px 0 0 35px;
+					margin-top: 15px;
+					font-size: 21px;
+				}
+				.title-segment{
+					font-size: 2.2rem;
+				}
+				.arrow{
+					-webkit-clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+					clip-path: polygon(36% 0, 100% 0%, 100% 100%, 38% 100%, 20% 51%);
+				}
+				// Main-header End
+				// Page cercanos a Mi
+				.contenedor-map{
+					height: 550px;
+				}
+				.card-style{
+					margin-bottom:5%;
+				}
+				ion-avatar,ion-thumbnail {
+					margin-top: 14px;
+					padding-left: 43px;
+				}
+				.title-offert{
+					font-size: 2.8rem;
+				}
+				.text-offert{
+					font-size:18px;
+				}
+				.font-text{
+					font-size:27px;
+				}
+				// Page cercanos a Mi End
+				// Page Search
+				.slider{
+					height: 450px;
+				}
+				.list-category{
+					margin-top:2%;
+				}
+				// Page Search End
+				// Page Novedades
+				.hr-novedades {
+					height:3px;
+					left: -256px;
+					top: 268px;
+					width: 550px;
+				}
+				.title-card-novedades{
+					font-size:24px;
+				}
+				.text-noticia{
+					font-size:18px;
+				}
+				.text-autor-novedades{
+					font-size:20px;
+				}
+				.container-novedades .img-noticias {
+					min-width: 620px;
+					max-width: 620px;
+				}
+				.title-background {
+					margin:auto;
+					max-width: 620px !important;
+					max-width: 620px;
+				}
+				.social-button{
+					width: 40px;
+					height: 40px;
+				}
+				.social-logo {
+					padding: 10px;
+					font-size: 24px;
+				}
+				.facebook-padding{
+					padding-left:60px;
+				}
+				.instagram-padding {
+					padding-left: 100px;
+				}
+				.twitter-padding {
+					padding-left: 116px;
+				}
+				// Page Novedades End
+			}
+			@media (min-width: 501px) and (max-width: 767px) {
+				.club-logo {
+					margin-left: 70px;
+					margin-top: 4px;
+				}
+				.container-novedades .img-noticias {
+					min-width: 396px;
+					max-width: 396px;
+				}
+				.title-background {
+					margin:auto;
+					max-width: 396px !important;
+					max-width: 396px;
+				}
+				.hr-novedades {
+					left: -184px;
+					top: 195px;
+					width: 405px;
+				}
+				.instagram-padding {
+					padding-left: 50px;
+				}
+				.twitter-padding {
+					padding-left: 69px;
+				}
+			}
+			@media (min-width: 401px) and (max-width: 500px) {
+				// Main-header
+				.Header-title {
+					padding: 0px 0 0 56px;
+					margin-top: 19px;
+					font-size: 17px;
+				}
+				.club-logo {
+					width: 54%;
+					margin-left: 57px;
+					margin-top: 11px;
+				}
+				.searchbar-ios{
+					margin-top:6px;
+				}
+				.ion-ios-menu:before {
+					content: "\f1c3";
+					font-size: 30px;
+					margin-top: -9px;
+					margin-left: -8px;
+				}
+				// Main-header End
+				// Page Search
+				.container img {
+					padding: 9%;
+				}
+				.container-novedades .img-noticias {
+					min-width: 320px;
+					max-width: 320px;
+					min-height: 100px;
+				}
+				.title-background {
+					left: 0px;
+					width: 100%;
+					min-width: 319px;
+					max-width: 319px;
+				}
+				.hr-novedades{
+					left: -160px;
+					top: 171px;
+					width: 355px;
+				}
+				// Page Search End
+			}
+			@media (min-width: 375px) and (max-height: 667px){
+				// .container-novedades .img-noticias {
+					// 	min-width: 520px;
+					// 	max-width: 520px;
+					// }
+					.title-background {
+						margin:auto;
+						width: 100%;
+						max-width: 269px !important;
+						min-width: 269px;
+					}
+				}
+				@media screen and (min-width: 320px) and (max-height: 640px) {
+					// Main-header
+					.Header-title {
+						padding: 0px 0 0 84px;
+						margin-top: 13px;
+						font-size: 23px;
+					}
+					.club-logo{
+						width: 39%;
+						margin-left: 103px;
+						margin-top: 5px;
+					}
+					.searchbar-ios{
+						margin-top:6px;
+					}
+					.ion-ios-menu:before {
+						content: "\f1c3";
+						font-size: 30px;
+						margin-top: -9px;
+						margin-left: -8px;
+					}
+					// Main-header End
+					// Page cercanos a Mi
+					.img-card{
+						width: 60px;
+						height: 60px;
+						border-radius:50%;
+						margin-left:30px;
+					}
+					.card-style{
+						margin-bottom:5%;
+					}
+					// Page cercanos a Mi End
+					// Page Search
+					.container img {
+						padding: 21%;
+					}
+					// Page Search End
+					.container-novedades .img-noticias {
+						min-width: 470px;
+						max-width: 470px;
+					}
+					.title-background {
+						margin:auto;
+						width: 100%;
+						min-width:468px;
+						max-width: 468px;
+					}
+					.social-row-style {
+						margin-left: 26px;
+					}
+					.hr-novedades{
+						left: -195px;
+						top: 207px;
+						width: 427px;
+					}
+				}
+				@media (max-width: 320px) and (min-height: 568px) {
+					.club-logo {
+						width: 60% !important;
+						margin-left: 40px !important;
+						margin-top: 5px;
+					}
+					.container-novedades .img-noticias {
+						min-width: 240px !important;
+						max-width: 240px !important;
+						min-height: 100px !important;
+					}
+					.title-background {
+						margin:auto;
+						width: 100%;
+						max-width: 239px !important;
+						min-width: 239px !important;
+					}
+				}
+				@media (max-width: 400px) and (orientation: portrait) {
+					// Main-header
+					.Header-title{
+						padding: 0px 0 0 39px; 
+						margin-top:20px;
+						font-size: 15px;
+					}
+					.searchbar-ios{
+						margin-top:6px;
+					}
+					.ion-ios-menu:before {
+						content: "\f1c3";
+						font-size: 30px;
+						margin-top: -9px;
+						margin-left: -8px;
+					}
+					.club-logo{
+						width: 54%;
+						margin-left: 49px;
+						margin-top: 11px;
+					}
+					// Main-header End
+					// Page cercanos a Mi
+					.img-card{
+						width: 60px;
+						height: 60px;
+						border-radius:50%;
+						margin-left:0px;
+					}
+					.card-style{
+						margin-bottom:8%;
+					}
+					// Page cercanos a Mi End
+					// Page Search
+					.container img {
+						padding: 3%;
+					}
+					// Page Search End
+					// Page Novedades
+					.hr-novedades{
+						left: -149px;
+						top: 159px;
+						width: 333px;
+					}
+					.container-novedades .img-noticias {
+						min-width: 270px;
+						max-width: 270px;
+						min-height: 100px;
+					}
+					.title-background {
+						margin:auto;
+						width: 100%;
+						max-width: 269px !important;
+						min-width: 269px;
+					}
+					.social-row-style{
+						margin-left: 0px;
+					}
+					// Page Novedades End
+				}
 
 
-	}
+			}
 
 

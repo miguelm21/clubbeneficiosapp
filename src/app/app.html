@@ -17,73 +17,72 @@
     <ion-grid>
        <ion-row>
         <ion-col>
-          <button menuClose ion-button block color="light" (click)="openPage(pages[0])">
+          <button menuClose ion-button block color="light" (tap)="openPage(pages[0])">
             <div>
               <ion-icon name="log-in" color="bluep"></ion-icon>
-              <label>Login</label>
+              <label >Login</label>
             </div>
           </button>
         </ion-col>
         <ion-col>
-          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+          <button menuClose ion-button block color="light" (tap)="openPage(pages[1])">
             <div>
             <ion-icon name="person-add" color="bluep"></ion-icon>
-            <label>Registrarse</label>
+            <label >Registrarse</label>
           </div>
           </button>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <button menuClose ion-button block color="light" (click)="openPage(pages[0])">
+          <button menuClose ion-button block color="light" (tap)="openPage(pages[2])">
             <div>
               <ion-icon name="person" color="bluep"></ion-icon>
-              <label>Perfil</label>
+              <label >Perfil</label>
             </div>
           </button>
         </ion-col>
         <ion-col>
-          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+          <button menuClose ion-button block color="light" (tap)="openPage(pages[3])">
             <div>
             <ion-icon name="key" color="bluep"></ion-icon>
-            <label>Cambiar Contraseña</label>
+            <label >Cambiar Contraseña</label>
           </div>
           </button>
         </ion-col>
       </ion-row>
-      <ion-row>
+     <!--  <ion-row>
         <ion-col>
-          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+          <button menuClose ion-button block color="light" (tap)="navigateToBeneficios()">
             <div>
               <ion-icon name="pricetags" color="bluep"></ion-icon>
-              <label>Beneficios</label>
+              <label >Beneficios</label>
             </div>
           </button>
         </ion-col>
         <ion-col>
-          <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
+          <button menuClose ion-button block color="light" (tap)="navigateToBuscar()">
             <div>
               <ion-icon name="search" color="bluep"></ion-icon>
-              <label>Buscar</label>
+              <label >Buscar</label>
             </div>
           </button>
         </ion-col>
         <ion-col>
-          <button ion-button block color="light">
+          <button ion-button block color="light" (tap)="navigateToNovedades()">
             <div>
               <ion-icon name="paper" color="bluep"></ion-icon>
-              <label>Noticias</label>
+              <label >Novedades</label>
             </div>
-
           </button>
         </ion-col>
-      </ion-row>
+      </ion-row> -->
       <ion-row>
         <ion-col width-50>
           <button ion-button block color="light" >
           <div>
             <ion-icon name="card" color="bluep"></ion-icon>
-            <label>Tienda</label>
+            <label >Tienda</label>
           </div>
           </button>
         </ion-col>
@@ -91,7 +90,7 @@
           <button menuClose ion-button block color="light" (click)="openPage(pages[1])">
             <div>
             <ion-icon name="cloud" color="bluep"></ion-icon>
-            <label>Web Site</label>
+            <label >Web Site</label>
           </div>
           </button>
         </ion-col>
@@ -99,7 +98,7 @@
           <button ion-button block color="light">
             <div>
             <ion-icon name="help-circle" color="bluep"></ion-icon>
-            <label>Ayuda</label>
+            <label >Ayuda</label>
           </div>
           </button>
         </ion-col>
@@ -109,7 +108,7 @@
           <button ion-button block color="light">
             <div>
             <ion-icon name="cog" color="bluep"></ion-icon>
-            <label>Opciones</label>
+            <label >Opciones</label>
           </div>
           </button>
         </ion-col>
@@ -118,7 +117,7 @@
           <button ion-button block color="light" >
             <div>
             <ion-icon name="exit" color="bluep"></ion-icon>
-            <label>Salir</label>
+            <label >Salir</label>
           </div>
           </button>
         </ion-col>

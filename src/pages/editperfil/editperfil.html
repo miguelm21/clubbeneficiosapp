@@ -1,0 +1,63 @@
+<!--
+  Generated template for the EditperfilPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header class="Bg-header">
+	<ion-row class="header-row">
+		<ion-col col-8 class="first-col">
+			<ion-row>
+				<ion-col col-2>
+					<button ion-button clear color="light" (tap)="MoveToBack()">
+						<ion-icon style="color:white" name="arrow-back"></ion-icon>
+					</button>
+				</ion-col>
+				<ion-col col-10>
+					<ion-searchbar class="searchbar-input" style="background-color:transparent;" [(ngModel)]="myInput" [showCancelButton]="false" [animated]="true" [cancelButtonText]="cancelButtonText" [spellcheck]="true">
+					</ion-searchbar>
+				</ion-col>
+			</ion-row>
+		</ion-col>
+		<ion-col col-4 class="arrow">
+			<img class="club-logo" src="assets/imgs/logo-club.png">
+		</ion-col>
+	</ion-row>
+</ion-header>
+
+
+<ion-content>
+	<ion-grid no-padding>
+		<ion-col col-12 style="background-color: #133F6D;height: 165px;">
+		</ion-col>
+		<ion-col col-12 text-center style="margin-top: -42%;">
+			<div class="container">
+				<h2 text-center style="font-family:Monserrat;color:white;">Editar Perfil de Usuario</h2>
+				<img class="pantalla-1" src="assets/imgs/rihanna2.jpg" alt="Imagen Principal">
+			</div>
+		</ion-col>
+		<ion-col col-12 text-center>
+			<ion-item style="padding-left:40px;padding-right: 40px;">        
+				<ion-label><ion-icon name="create"></ion-icon></ion-label>
+				<ion-input  type="text"></ion-input>
+			</ion-item>
+			<ion-item style="padding-left:40px;padding-right: 40px;">        
+				<ion-label><ion-icon name="mail"></ion-icon></ion-label>
+				<ion-input  type="text"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-col col-12 text-center>
+			<ion-item style="padding-left:40px;padding-right: 40px;">        
+				<ion-label><ion-icon name="pin"></ion-icon></ion-label>
+				<ion-input  type="text"></ion-input>
+			</ion-item>
+		</ion-col>
+		<ion-row text-center style="padding: 50px;margin-top:13%;">
+			<ion-col col-12>
+				<button ion-button class="loginBtn loginBtn--facebook">
+					Guardar Cambios
+				</button>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

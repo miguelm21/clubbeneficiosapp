@@ -6,8 +6,6 @@ import { Component, Input, ElementRef, Renderer } from '@angular/core';
   templateUrl: 'shrinking-segment-header.html'
 })
 export class ShrinkingSegmentHeader {
-    latitude;
-  longitude;
 
   @Input('headerHeight') headerHeight: number;
 
