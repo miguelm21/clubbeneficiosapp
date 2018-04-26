@@ -6,20 +6,20 @@
 -->
 <ion-header class="Bg-header">
 	<ion-row class="header-row">
-		<ion-col col-8 class="first-col">
+		<ion-col col-8 col-lg-9 col-md-9 class="first-col">
 			<ion-row>
-				<ion-col col-2>
-					<button ion-button clear color="light" (tap)="MoveToBack()">
-						<ion-icon style="color:white" name="arrow-back"></ion-icon>
+				<ion-col col-1 col-lg-3 col-md-3>
+					<button ion-button clear  color="light" (tap)="MoveToBack()">
+						<ion-icon name="arrow-back"></ion-icon>
 					</button>
 				</ion-col>
-				<ion-col col-10>
+				<ion-col col-11 col-lg-9 col-md-9>
 					<ion-searchbar class="searchbar-input" style="background-color:transparent;" [(ngModel)]="myInput" [showCancelButton]="false" [animated]="true" [cancelButtonText]="cancelButtonText" [spellcheck]="true">
 					</ion-searchbar>
 				</ion-col>
 			</ion-row>
 		</ion-col>
-		<ion-col col-4 class="arrow">
+		<ion-col col-4 col-lg-3 col-md-3 class="arrow">
 			<img class="club-logo" src="assets/imgs/logo-club.png">
 		</ion-col>
 	</ion-row>
@@ -28,11 +28,11 @@
 
 <ion-content>
 	<ion-grid no-padding>
-		<ion-col col-12 style="background-color: #133F6D;height: 165px;">
+		<ion-col col-12 class="col-md-height" style="background-color: #133F6D;">
 		</ion-col>
-		<ion-col col-12 text-center style="margin-top: -42%;">
+		<ion-col col-12 text-center class="contenedor-card-perfil">
 			<div class="container">
-				<h2 text-center style="font-family:Monserrat;color:white;">Editar Perfil de Usuario</h2>
+				<h2 text-center class="font-perfil" style="font-family:Monserrat;color:white;">Editar Perfil de Usuario</h2>
 				<img class="pantalla-1" src="assets/imgs/rihanna2.jpg" alt="Imagen Principal">
 			</div>
 		</ion-col>
@@ -52,9 +52,9 @@
 				<ion-input  type="text"></ion-input>
 			</ion-item>
 		</ion-col>
-		<ion-row text-center style="padding: 50px;margin-top:13%;">
+		<ion-row text-center class="row-button-cambio" style="padding: 50px;">
 			<ion-col col-12>
-				<button ion-button class="loginBtn loginBtn--facebook">
+				<button ion-button class="loginBtn loginBtn--Perfil">
 					Guardar Cambios
 				</button>
 			</ion-col>

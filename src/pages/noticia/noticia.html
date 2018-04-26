@@ -6,20 +6,20 @@
 -->
 <ion-header class="Bg-header">
 	<ion-row class="header-row">
-		<ion-col col-8 class="first-col">
+		<ion-col col-8 col-md-9 class="first-col">
 			<ion-row>
-				<ion-col col-2>
-					<button ion-button clear color="light" (tap)="MoveToHome()">
+				<ion-col col-1 col-md-3>
+					<button ion-button clear  color="light" (tap)="MoveToHome()">
 						<ion-icon name="arrow-back"></ion-icon>
 					</button>
 				</ion-col>
-				<ion-col col-10>
+				<ion-col col-11 col-md-9>
 					<ion-searchbar class="searchbar-input" style="background-color:transparent;" [(ngModel)]="myInput" [showCancelButton]="false" [animated]="true" [cancelButtonText]="cancelButtonText" [spellcheck]="true">
 					</ion-searchbar>
 				</ion-col>
 			</ion-row>
 		</ion-col>
-		<ion-col col-4 class="arrow">
+		<ion-col col-4 col-md-3 class="arrow">
 			<img class="club-logo" src="assets/imgs/logo-club.png">
 		</ion-col>
 	</ion-row>
@@ -30,24 +30,17 @@
 	<ion-col col-12 class="cold-card-novedades">
 		<ion-card>
 			<!-- Title Card -->
-			<h2 class="title-card-novedades" text-center>Titulo</h2>
+			<h2 class="title-card-novedades">Titulo</h2>
 			<!-- Title Card end -->
 			<!-- Text Preview -->
 			<ion-card-content>
 				<p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
 				<!-- Text Preview End -->
 				<!-- Img Noticia Section -->
-				<div no-padding no-margin class="container-novedades" text-center (tap)="MoveToNoticia()">
+				<div  class="container-novedades" text-center (tap)="MoveToNoticia()">
 					<img class="img-noticias" src="assets/imgs/noticia-imagen.jpg" alt="Imagen Principal">
+					<p class="title-background text-autor-novedades">Luis Ortega</p>
 					<!-- Img Noticia End -->
-				<ion-row no-padding no-margin class="title-background">
-						<ion-col col-5>
-							<p class="text-fecha-noticia">12/02/2018</p>
-						</ion-col>
-						<ion-col col-7>
-							<p class="text-autor-novedades">Luis Ortega</p>
-						</ion-col>
-				</ion-row>
 				</div>
 				<!-- Social Section -->
 				<ion-row class="social-row-style">
@@ -76,5 +69,4 @@
 			</ion-card-content>        
 		</ion-card>
 	</ion-col>
-
 </ion-content>
