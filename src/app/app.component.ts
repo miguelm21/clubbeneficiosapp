@@ -19,12 +19,12 @@ export class MyApp {
 
   pages: Array<{ title: string, component: any }>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, public splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
-      splashScreen.hide();
+      this.hideSplashScreen();
     });
     this.pages = [
       { title: 'Login', component: LoginPage },
@@ -40,7 +40,13 @@ export class MyApp {
     this.nav.push(page.component);
   }
 
-
+  hideSplashScreen() {
+    if (this.splashScreen) {
+      setTimeout(() => {
+        this.splashScreen.hide();
+      }, 100);
+    }
+  }
 
   // navigateToBuscar(){
   //   this.nav.push('HomePage', {param1: '1'});
