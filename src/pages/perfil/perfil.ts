@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController,LoadingController } from 'ionic-angular';
 import { ImageViewerController } from 'ionic-img-viewer';
 
 
@@ -19,11 +19,17 @@ export class PerfilPage {
     _imageViewerCtrl: ImageViewerController;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public menuCtrl: MenuController,imageViewerCtrl: ImageViewerController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public menuCtrl: MenuController,imageViewerCtrl: ImageViewerController,public loadingCtrl: LoadingController) {
        this._imageViewerCtrl = imageViewerCtrl; 
   }
 
   ionViewDidLoad() {
+    let loading = this.loadingCtrl.create({
+      spinner: 'hide',
+      content: '<img src="../../assets/spinner2.gif"/>'
+    });
+    loading.present();
+    loading.dismiss();
     console.log('ionViewDidLoad PerfilPage');
     this.menuCtrl.close();
   }

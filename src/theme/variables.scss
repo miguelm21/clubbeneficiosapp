@@ -25,7 +25,10 @@ $text-input-placeholder-color: #000;
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
+$loading-ios-background: transparent;
+$loading-md-background: $loading-ios-background;
+$loading-wp-background: $loading-ios-background;
+$loading-md-box-shadow: none;
 
 
 // Named Color Variables

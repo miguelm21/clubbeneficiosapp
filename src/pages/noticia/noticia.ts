@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the NoticiaPage page.
@@ -15,10 +15,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NoticiaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
+    let loading = this.loadingCtrl.create({
+      spinner: 'hide',
+      content: '<img src="../../assets/spinner2.gif"/>'
+    });
+    loading.present();
+    loading.dismiss();
     console.log('ionViewDidLoad NoticiaPage');
   }
 

@@ -17,19 +17,19 @@
 		</ion-row>
 		<ion-row padding style="margin-top:4%;">
 			<ion-col col-12>
-				<ion-item style="background-color: transparent;color:white;padding-left:0px;">
+				<ion-item class="label-font" style="background-color: transparent;color:white;padding-left:0px;">
 					<ion-label style="color:white" floating>Usuario</ion-label>
 					<ion-input type="text" (keyup.enter)="keytab($event)"></ion-input>
 				</ion-item>
 			</ion-col>
 			<ion-col col-12>
-				<ion-item style="background-color: transparent;color:white;padding-left:0px;">
+				<ion-item class="label-font" style="background-color: transparent;color:white;padding-left:0px;">
 					<ion-label style="color:white" floating>Contraseña</ion-label>
 					<ion-input type="password" (keyup.enter)="keytab($event)"></ion-input>
 				</ion-item>
 			</ion-col>
 			<ion-col col-12 style="margin-top: 5%;">
-				<button ion-button  color="light" style="height: 42px;font-size:1.8rem;color:white;" icon-start block outline (tap)="MoveToHome()">
+				<button ion-button  class="button-login" color="light" icon-start block outline (tap)="MoveToHome()">
 					Login
 				</button>
 			</ion-col>

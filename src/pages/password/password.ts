@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController, LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the PasswordPage page.
@@ -15,11 +15,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PasswordPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public loadingCtrl: LoadingController,public menuCtrl: MenuController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PasswordPage');
+  	let loading = this.loadingCtrl.create({
+  		spinner: 'hide',
+  		content: '<img src="../../assets/spinner2.gif"/>'
+  	});
+  	loading.present();
+  	loading.dismiss();
+  	console.log('ionViewDidLoad PasswordPage');
+  	this.menuCtrl.close();
   }
  MoveToBack(){
  	this.navCtrl.popToRoot();

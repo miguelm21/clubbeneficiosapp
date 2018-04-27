@@ -6,8 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { PerfilPage } from '../pages/perfil/perfil';
-import { ContraseñaPage } from '../pages/contraseña/contraseña';
 import { LoginPage } from '../pages/login/login';
+import { PasswordPage } from '../pages/password/password'
 
 @Component({
   templateUrl: 'app.html'
@@ -30,7 +30,7 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Register', component: RegisterPage },
       { title: 'Perfil', component: PerfilPage },
-      { title: 'Contraseña', component: ContraseñaPage }
+      { title: 'Contraseña', component: PasswordPage }
     ];
   }
 

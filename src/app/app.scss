@@ -35,6 +35,80 @@ page-noticia ion-toolbar.scrollable-segments ion-segment ion-segment-button.segm
     width: 35%;
     height: 60px;
 }
+@media only screen and (min-width: 993px) and (max-width: 1200px){
+ .menu-o {
+    ion-content {
+        background-color: #133F6D;
+        ion-row {
+            margin-top: -7px;
+        }
+        button {
+            height: 20vh;
+            &.img-bg {
+                background-size: cover;
+            }
+            label {
+                display: block;
+                padding-top: 5px;
+                font-size: 18px !important;
+                font-family: Monserrat;
+            }
+            ion-icon {
+                font-size: 40px !important;
+            }
+        } 
+    }
+
+    ion-item {
+        background-color: transparent;
+        color: #fff;
+        h2 {
+            font-size: 27px !important;
+        }
+    }
+    .menu-inner {
+        width: 100%;
+        background-color: transparent;
+    }
+}    
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+   .menu-o {
+    ion-content {
+        background-color: #133F6D;
+        ion-row {
+            margin-top: -7px;
+        }
+        button {
+            height: 20vh;
+            &.img-bg {
+                background-size: cover;
+            }
+            label {
+                display: block;
+                padding-top: 5px;
+                font-size: 18px !important;
+                font-family: Monserrat;
+            }
+            ion-icon {
+                font-size: 40px !important;
+            }
+        } 
+    }
+
+    ion-item {
+        background-color: transparent;
+        color: #fff;
+        h2 {
+            font-size: 27px !important;
+        }
+    }
+    .menu-inner {
+        width: 100%;
+        background-color: transparent;
+    }
+}   
+}
 .menu-o {
     ion-content {
         background-color: #133F6D;

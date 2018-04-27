@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController,LoadingController } from 'ionic-angular';
 
 /**
  * Generated class for the RegisterPage page.
@@ -15,10 +15,16 @@ import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angul
 })
 export class RegisterPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public menuCtrl: MenuController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public menuCtrl: MenuController,public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
+    let loading = this.loadingCtrl.create({
+      spinner: 'hide',
+      content: '<img src="../../assets/spinner2.gif"/>'
+    });
+    loading.present();
+    loading.dismiss();
     console.log('ionViewDidLoad RegisterPage');
     this.menuCtrl.close();
   }

@@ -27,13 +27,13 @@ Ionic pages and navigation.
 </expandable-header>
 <ion-toolbar color="light" mode="md" class="scrollable-segments">
   <ion-segment color="bluep" mode="md" [(ngModel)]="section">
-    <ion-segment-button  value="1"  style="width:35%;">
+    <ion-segment-button  value="1"  style="width: 34%">
       <h6 class="title-segment" style="text-transform:none;">Cercanos a Mí</h6>
     </ion-segment-button>
-    <ion-segment-button  value="2"  style="width:35%;">
+    <ion-segment-button  value="2"  style="width: 34%">
       <h6 class="title-segment" style="text-transform:none;">Beneficios</h6>
     </ion-segment-button>
-    <ion-segment-button  value="3"  style="width:35%;">
+    <ion-segment-button  value="3"  style="width: 34%">
       <h6 class="title-segment" style="text-transform:none;">Novedades</h6>
     </ion-segment-button>
   </ion-segment>
@@ -65,7 +65,7 @@ Ionic pages and navigation.
             </ion-item>
             <ion-item-divider class="child-item">
               <ion-input type="number" class="input-filtro"></ion-input>
-              <button ion-button outline item-end style="margin-left: 30px;">{{ child.ver }}</button>
+              <button ion-button class="button-aplicar" outline item-end style="margin-left: 30px;">{{ child.ver }}</button>
             </ion-item-divider>
           </ion-list-header>
           <!--  Input Filtro End -->
@@ -322,6 +322,124 @@ Ionic pages and navigation.
         <img class="img-noticias" src="assets/imgs/modan.jpg" alt="Imagen Principal">
         <div no-padding no-margin class="title-background">
           <p class="text-autor-novedades">Maria Silva</p>
+        </div>
+        <!-- Img Noticia End -->
+      </div>
+    <!-- Social Section -->
+        <ion-row class="social-row-style">
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab color="googleplus-logo">
+              <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab  item-right color="facebook-logo">
+              <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab  item-right color="instagram-logo">
+              <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab item-right color="twitter-logo" >
+              <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <!-- Social Section End -->
+    </ion-card-content>        
+  </ion-card>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-1 text-center>
+    <div class="circle-day">
+      <ion-row class="row-day">
+        <ion-col no-margin no-padding col-12>
+          <span class="day-text-style">12</span>
+        </ion-col>
+        <ion-col no-margin no-padding style="line-height: 10px;" col-12>
+          <span class="month-text-style">Feb</span>
+        </ion-col>
+      </ion-row>
+    </div>
+    <hr class="hr-novedades">
+  </ion-col>
+  <ion-col col-11 class="cold-card-novedades">
+   <ion-card>
+    <!-- Title Card -->
+    <h2 class="title-card-novedades">Titulo</h2>
+    <!-- Title Card end -->
+    <!-- Text Preview -->
+    <ion-card-content>
+      <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      <!-- Text Preview End -->
+      <!-- Img Noticia Section -->
+      <div no-padding no-margin class="container-novedades" text-center (tap)="MoveToNoticia()">
+        <img class="img-noticias" src="assets/imgs/home_1.jpg" alt="Imagen Principal">
+        <div no-padding no-margin class="title-background">
+          <p class="text-autor-novedades">Maria Gutierrez</p>
+        </div>
+        <!-- Img Noticia End -->
+      </div>
+    <!-- Social Section -->
+        <ion-row class="social-row-style">
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab color="googleplus-logo">
+              <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab  item-right color="facebook-logo">
+              <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab  item-right color="instagram-logo">
+              <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col col-3 text-center>
+            <button class="social-button"  ion-fab item-right color="twitter-logo" >
+              <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+        <!-- Social Section End -->
+    </ion-card-content>        
+  </ion-card>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col col-1 text-center>
+    <div class="circle-day">
+      <ion-row class="row-day">
+        <ion-col no-margin no-padding col-12>
+          <span class="day-text-style">11</span>
+        </ion-col>
+        <ion-col no-margin no-padding style="line-height: 10px;" col-12>
+          <span class="month-text-style">Feb</span>
+        </ion-col>
+      </ion-row>
+    </div>
+    <hr class="hr-novedades">
+  </ion-col>
+  <ion-col col-11 class="cold-card-novedades">
+   <ion-card>
+    <!-- Title Card -->
+    <h2 class="title-card-novedades">Titulo</h2>
+    <!-- Title Card end -->
+    <!-- Text Preview -->
+    <ion-card-content>
+      <p class="text-noticia" text-justify>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+      <!-- Text Preview End -->
+      <!-- Img Noticia Section -->
+      <div no-padding no-margin class="container-novedades" text-center (tap)="MoveToNoticia()">
+        <img class="img-noticias" src="assets/imgs/tourism_1.jpg" alt="Imagen Principal">
+        <div no-padding no-margin class="title-background">
+          <p class="text-autor-novedades">Pedro Lopez</p>
         </div>
         <!-- Img Noticia End -->
       </div>

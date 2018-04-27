@@ -4,8 +4,9 @@ import { ImageViewerController } from 'ionic-img-viewer';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
 import { Http } from '@angular/http';
-import { Slides } from 'ionic-angular';
+import { Slides, LoadingController } from 'ionic-angular';
 import 'rxjs/add/operator/map'
+
 
 
 
@@ -38,7 +39,7 @@ declare var map;
 
 
 
-     constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,imageViewerCtrl: ImageViewerController, public menuCtrl: MenuController,private locationAccuracy: LocationAccuracy, public geolocation: Geolocation) {
+     constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,imageViewerCtrl: ImageViewerController,public loadingCtrl: LoadingController, public menuCtrl: MenuController,private locationAccuracy: LocationAccuracy, public geolocation: Geolocation) {
          let localData = http.get('assets/information.json').map(res => res.json().items);
          localData.subscribe(data => {
              this.information = data;
@@ -58,29 +59,31 @@ declare var map;
      }
 
      ionViewWillEnter() {
-         this.locationAccuracy.canRequest().then((canRequest: boolean) => {
-             if(canRequest) {
+       this.locationAccuracy.canRequest().then((canRequest: boolean) => {
+         if(canRequest) {
         // the accuracy option will be ignored by iOS
         this.locationAccuracy.request(this.locationAccuracy.REQUEST_PRIORITY_HIGH_ACCURACY).then(
-            () => console.log('Request successful'),
-            error => console.log('Error requesting location permissions', error)
-            );
-    }
-
-});
-         this.initMap();
-         console.log('ionViewDidLoad HomePage' + this.parameter1);
+          () => console.log('Request successful'),
+          error => console.log('Error requesting location permissions', error)
+          );
+      }
+    });
+       this.initMap();
+       console.log('ionViewDidLoad HomePage' + this.parameter1);
      }
 
+     
      ionViewDidLoad() {
-         this.menuCtrl.close();
-         this.initMap();
+       let loading = this.loadingCtrl.create({
+         spinner: 'hide',
+         content: '<img src="../../assets/spinner2.gif"/>'
+       });
+       loading.present();
+       loading.dismiss();
+       this.menuCtrl.close();
+       this.initMap();
      }
-
-  // ngAfterViewInit(){
-  //    this.initMap();
-  // }
-
+     
  toggleSection(i) {
     this.information[i].open = !this.information[i].open;
   }
