@@ -21,7 +21,7 @@ export class NoticiaPage {
   ionViewDidLoad() {
     let loading = this.loadingCtrl.create({
       spinner: 'hide',
-      content: '<img src="../../assets/spinner2.gif"/>'
+      content: '<img src="../../assets/spinner3.gif"/>'
     });
     loading.present();
     loading.dismiss();

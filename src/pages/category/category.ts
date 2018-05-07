@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { AnimationService} from 'css-animator';
+import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 
 
 
@@ -16,13 +17,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'category.html',
 })
 export class CategoryPage {
+  @ViewChild('myElement') myElem;
   section: string = 'one';
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
+     let loading = this.loadingCtrl.create({
+      spinner: 'hide',
+      content: '<img src="../../assets/spinner3.gif"/>'
+    });
+    loading.present();
+    loading.dismiss();
     console.log('ionViewDidLoad CategoryPage');
   }
 

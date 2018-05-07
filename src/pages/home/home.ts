@@ -4,7 +4,7 @@ import { ImageViewerController } from 'ionic-img-viewer';
 import { Geolocation } from '@ionic-native/geolocation';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
 import { Http } from '@angular/http';
-import { Slides, LoadingController } from 'ionic-angular';
+import { Slides, LoadingController} from 'ionic-angular';
 import 'rxjs/add/operator/map'
 
 
@@ -39,7 +39,7 @@ declare var map;
 
 
 
-     constructor(public navCtrl: NavController, public navParams: NavParams,private http: Http,imageViewerCtrl: ImageViewerController,public loadingCtrl: LoadingController, public menuCtrl: MenuController,private locationAccuracy: LocationAccuracy, public geolocation: Geolocation) {
+     constructor(public navCtrl: NavController,public navParams: NavParams,private http: Http,imageViewerCtrl: ImageViewerController,public loadingCtrl: LoadingController, public menuCtrl: MenuController,private locationAccuracy: LocationAccuracy, public geolocation: Geolocation) {
          let localData = http.get('assets/information.json').map(res => res.json().items);
          localData.subscribe(data => {
              this.information = data;
@@ -76,14 +76,14 @@ declare var map;
      ionViewDidLoad() {
        let loading = this.loadingCtrl.create({
          spinner: 'hide',
-         content: '<img src="../../assets/spinner2.gif"/>'
+         content: '<img src="../../assets/spinner3.gif"/>'
        });
        loading.present();
        loading.dismiss();
        this.menuCtrl.close();
        this.initMap();
      }
-     
+
  toggleSection(i) {
     this.information[i].open = !this.information[i].open;
   }
@@ -274,6 +274,11 @@ MoveToCategory(){
 MoveToNoticia(){
     this.navCtrl.push('NoticiaPage');
 }
+
+GoToBeneficio(){
+    this.navCtrl.push('BeneficioPage');
+}
+
 
 presentImage(myImage) {
     const imageViewer = this._imageViewerCtrl.create(myImage);

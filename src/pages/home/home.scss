@@ -32,7 +32,15 @@
 					height: auto;
 					margin-right: 15px;
 				}
-
+				.toolbar .segment-md {
+					margin: 0 auto;
+					margin-bottom: -30px;
+					margin-top: -20px;
+				}
+				.toolbar .segment-ios {
+					margin: 0 auto;
+					margin-bottom: -20px;
+				}
 				.header{
 					color: #001E42;
 				}
@@ -136,7 +144,7 @@
 				position: relative;
 				padding-left: 35px;
 				margin-top: 5px;
-				font-size:12px;
+				font-size:15px;
 				color:black;
 				margin-bottom: 20px;
 				font-family: Monserrat;
@@ -182,14 +190,15 @@
 			}
 			.title-filtro{
 				font-family: Monserrat;
-				font-size:15px;
+				font-size:17px;
 			}
 			.section {
 				background: white;
 				color: #000;
 				font-family: Monserrat;
 				font-size:20px;
-				margin-bottom: 0px;
+				padding-top:10px;
+				margin-bottom: -7px;
 			}
 			.section-active {
 				background: #133F6D;
@@ -259,7 +268,7 @@
 				border-radius:2px;
 			}
 			.row-card{
-				height: 100px;
+				height: 105px;
 			}
 			.img-card{
 				width: 60px;
@@ -274,17 +283,18 @@
 			.title-offert{
 				font-family: Sueca-bold;
 			}
-			.text-offert{
-				font-family: Sueca-bold;
-			}
 			.font-text{
 				font-size:18px;
 				font-family: Sueca-bold;
 			}
+			.tumb-img{
+				margin-top:20px;
+				padding-left: 8px;
+			}
 			.second-col-card{
 				line-height: 0px;
 				text-align: center;
-				height: 123px; 
+				height: 128px; 
 				background-color:#133F6D;
 				-webkit-clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
 				clip-path: polygon(0 0, 100% 0, 100% 83%, 50% 100%, 0 82%);
@@ -301,7 +311,16 @@
 				padding-left: 8px;
 			}
 			.text-offert{
-				line-height:0px;
+				font-family: Sueca-bold;
+				margin-top: -10px;
+				overflow: hidden;
+				-webkit-line-clamp: 3;
+				line-clamp:3;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				box-orient: vertical;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
 			}
 			.item-offert{
 				border-bottom: 1px outset;
@@ -328,7 +347,10 @@
 			}
 			// Search Page Section
 			ion-list-header {
-				margin-top: 0px !important;
+				margin-top: -16px !important;
+			}
+			.list-category{
+				margin-top:5%;
 			}
 			.slider{
 				height: 250px;

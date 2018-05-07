@@ -10,6 +10,7 @@ import { LocationAccuracy } from '@ionic-native/location-accuracy';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
+import { AnimationService, AnimatesDirective } from 'css-animator';
 
 // import { HomePage } from '../pages/home/home';
 import { LoginPageModule } from '../pages/login/login.module';
@@ -17,10 +18,11 @@ import { RegisterPageModule } from '../pages/register/register.module';
 import { HomePageModule } from '../pages/home/home.module';
 import { CategoryPageModule } from '../pages/category/category.module';
 import { NoticiaPageModule } from '../pages/noticia/noticia.module';
+import { OpcionesPageModule } from '../pages/opciones/opciones.module';
 import { PerfilPageModule } from '../pages/perfil/perfil.module';
 import { EditperfilPageModule } from '../pages/editperfil/editperfil.module';
 import { PasswordPageModule } from '../pages/password/password.module';
-import { ContraseñaPageModule } from '../pages/contraseña/contraseña.module';
+import { BeneficioPageModule } from '../pages/beneficio/beneficio.module';
 
 
 
@@ -31,6 +33,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
+    AnimatesDirective
     // HomePage,
     // ExpandableHeader
   ],
@@ -46,8 +49,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NoticiaPageModule,
     PerfilPageModule,
     EditperfilPageModule,
+    OpcionesPageModule,
     PasswordPageModule,
     CategoryPageModule,
+    BeneficioPageModule,
     HomePageModule,
     IonicModule.forRoot(MyApp),
   ],
@@ -61,6 +66,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     GoogleMaps,
     LocationAccuracy,
+    AnimationService,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]

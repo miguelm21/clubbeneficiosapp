@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { RegisterPage } from '../pages/register/register';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { LoginPage } from '../pages/login/login';
+import { OpcionesPage } from '../pages/opciones/opciones';
 import { PasswordPage } from '../pages/password/password'
 
 @Component({
@@ -30,7 +31,8 @@ export class MyApp {
       { title: 'Login', component: LoginPage },
       { title: 'Register', component: RegisterPage },
       { title: 'Perfil', component: PerfilPage },
-      { title: 'Contraseña', component: PasswordPage }
+      { title: 'Contraseña', component: PasswordPage },
+      { title: 'Opciones', component: OpcionesPage }
     ];
   }
 

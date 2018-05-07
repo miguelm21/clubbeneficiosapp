@@ -67,7 +67,6 @@ page-perfil {
         width: 150px;
         height: auto;
         max-height: 145px;
-        max-width: 100%;
         object-fit: contain;
         margin: 0 auto;
     }
@@ -77,6 +76,7 @@ page-perfil {
         padding: 1%;
         height: auto;
         width: auto;
+        max-width:126.6px;
         min-height: 145px;
         border: 1px solid #ccc;
         border-radius: 50%;

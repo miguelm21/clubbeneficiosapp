@@ -1,0 +1,99 @@
+page-beneficio {
+	// Main Header
+	.searchbar-md .searchbar-search-icon {
+		left: 25px;
+		top: 9px;
+		width: 21px;
+		height: 21px;
+	}
+	.searchbar-ios .searchbar-input{
+		background: #fff !important;
+		border-radius: 28px;
+	}
+	.searchbar-ios{
+		width: 100%;
+	}
+	.box-shadow{
+		content: "";
+	}
+	.searchbar-md .searchbar-input {
+		margin-top: -5px;
+		margin-left: 20px;
+		padding: 0px 22px;
+		border-radius: 28px;
+		border: 2px solid #2CB5E8;
+		background-position: left 8px center;
+		height: 37px;
+		font-size: 1.6rem;
+		font-weight: 400;
+		line-height: 0rem;
+		color: #141414;
+		background-color: #fff;
+		-webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+	.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+		display:none;
+	}
+	.Bg-header{
+		background-color: #133F6D;
+	}
+	.header-row{
+		height: 60px;
+	}
+	.first-col{
+		background-color: #133F6D;
+		height:60px;
+	}
+	.icon-category{
+		width: 35px;
+		height: 40px;
+	}
+	.arrow{
+		z-index:999;
+		background-color: #00A0E3;
+		clip-path: polygon(40% 0, 100% 0%, 100% 100%, 40% 100%, 20% 51%);		
+		height:64px;
+	}
+	.club-logo{
+		width: 54%;
+		margin-left: 49px;
+		margin-top: 11px;
+	}
+	// Main Header End
+
+	.card-style{
+		margin-top: 2%;
+		// margin-bottom:8%;
+		border-left:4px solid #001E42;
+		background-color:white;
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+		border-radius:2px;
+	}
+	.img-beneficio{
+		float:left; 
+		margin:10px;
+		width:100px;
+		max-width:100px;
+	}
+	.title-offer{
+		font-family: Monserrat;
+	}
+	.text-offert{
+		font-family: Sueca-medium;
+		line-height: 20px;
+	}
+	.row-map{
+		width:100%;
+	}
+	.contenedor-map{
+		width:100%;
+	}
+	#map{
+		width: 100%;
+		height: 100%;
+		border-top: 2px groove;
+		border-bottom: 2px groove;
+		padding: 135px;
+	}
+}

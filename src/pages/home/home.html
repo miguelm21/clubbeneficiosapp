@@ -53,6 +53,7 @@ Ionic pages and navigation.
           <button ion-item (click)="toggleSection(i)" detail-none [ngClass]="{'section-active': item.open, 'section': !item.open}">
             <ion-icon item-right name="arrow-down" *ngIf="!item.open"></ion-icon>
             <ion-icon item-right name="arrow-up" *ngIf="item.open"></ion-icon>
+            <img src="assets/imgs/filter.png" style="width:40px;" item-start>
             {{ item.name }}
           </button>
           <!-- Titulo-Filtro End -->
@@ -116,15 +117,15 @@ Ionic pages and navigation.
     <div class="card-style">
       <ion-row class="row-card">
         <ion-col col-3 col-md-2>
-         <ion-thumbnail item-start>
+         <ion-thumbnail class="tumb-img" item-start>
           <img class="img-card" src="assets/imgs/burger-icon.png" #myImage (click)="presentImage(myImage)">
         </ion-thumbnail>
       </ion-col>
       <ion-col col-6 col-md-8>
        <h2 class="title-offert">Oferta 1</h2>
-       <p class="text-offert">Descripción</p>
+       <p class="text-offert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae fugiat veritatis sit non, hic at tempore natus aut perspiciatis deleniti similique officia sed veniam ullam ducimus ipsam quod. Praesentium!</p>
      </ion-col>
-     <ion-col col-3 col-md-2 class="second-col-card">
+     <ion-col col-3 col-md-2 class="second-col-card" (tap)="GoToBeneficio()">
        <div class="card-text">
          <p class="font-text">Ver</p>
          <p class="font-text">Más</p>
@@ -137,13 +138,13 @@ Ionic pages and navigation.
  <div class="card-style">
    <ion-row class="row-card">
     <ion-col col-3 col-md-2>
-     <ion-thumbnail item-start>
+     <ion-thumbnail class="tumb-img" item-start>
       <img class="img-card" src="assets/imgs/Mc-icon.png" #myImage (click)="presentImage(myImage)">
     </ion-thumbnail>
   </ion-col>
   <ion-col col-6 col-md-8>
    <h2 class="title-offert">Oferta 2</h2>
-   <p class="text-offert">Descripción</p>
+   <p class="text-offert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae fugiat veritatis sit non, hic at tempore natus aut perspiciatis deleniti similique officia sed veniam ullam ducimus ipsam quod. Praesentium!</p>
  </ion-col>
  <ion-col col-3 col-md-2 class="second-col-card">
   <div class="card-text">
@@ -158,13 +159,13 @@ Ionic pages and navigation.
 <div class="card-style">
  <ion-row class="row-card">
   <ion-col col-3 col-md-2>
-   <ion-thumbnail item-start>
+    <ion-thumbnail class="tumb-img" item-start>
     <img class="img-card" src="assets/imgs/wendy-logo.png" #myImage (click)="presentImage(myImage)">
   </ion-thumbnail>
 </ion-col>
 <ion-col col-6 col-md-8>
  <h2 class="title-offert">Oferta 3</h2>
- <p class="text-offert">Descripción</p>
+ <p class="text-offert">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem vitae fugiat veritatis sit non, hic at tempore natus aut perspiciatis deleniti similique officia sed veniam ullam ducimus ipsam quod. Praesentium!</p>
 </ion-col>
 <ion-col col-3 col-md-2 class="second-col-card">
   <div class="card-text">
@@ -201,32 +202,32 @@ Ionic pages and navigation.
     </ion-slide>
   </ion-slides>
   <ion-list class="list-category">
-    <ion-list-header (tap)="MoveToCategory()">
+    <ion-list-header (tap)="navigateToGastronomia()">
       <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="restaurant"></ion-icon>
       </button>
       <span class="title-category">Gastronomia</span>
     </ion-list-header>
-    <ion-list-header (tap)="MoveToCategory()">
+    <ion-list-header (tap)="navigateToEntretenimiento()">
       <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="film"></ion-icon>
       </button>
       <span class="title-category">Entretenimiento</span>
     </ion-list-header>
-    <ion-list-header (tap)="MoveToCategory()">
+    <ion-list-header (tap)="navigateToTurismo()">
       <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="plane"></ion-icon>
       </button>
       <span class="title-category">Turismo</span>
     </ion-list-header>
-    <ion-list-header (tap)="MoveToCategory()">
+    <ion-list-header (tap)="navigateToModa()">
       <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="cut"></ion-icon>
       </button>
       <span class="title-category">Moda</span>
     </ion-list-header>
-    <ion-list-header (tap)="MoveToCategory()">
+    <ion-list-header (tap)="navigateToBelleza()">
       <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="woman"></ion-icon>
       </button>
       <span class="title-category">Belleza</span>
     </ion-list-header>
-    <ion-list-header (tap)="MoveToCategory()">
+    <ion-list-header (tap)="navigateToDeco()">
       <button ion-fab class="icon-category" color="bluep" item-start><ion-icon name="home"></ion-icon>
       </button>
       <span class="title-category">Deco y Hogar</span>
@@ -263,33 +264,33 @@ Ionic pages and navigation.
       <!-- Img Noticia Section -->
       <div  class="container-novedades" text-center (tap)="MoveToNoticia()">
         <img class="img-noticias" src="assets/imgs/noticia-imagen.jpg" alt="Imagen Principal">
-          <p class="title-background text-autor-novedades">Luis Ortega</p>
+        <p class="title-background text-autor-novedades">Luis Ortega</p>
         <!-- Img Noticia End -->
       </div>
       <!-- Social Section -->
-        <ion-row class="social-row-style">
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab color="googleplus-logo">
-              <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="facebook-logo">
-              <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="instagram-logo">
-              <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab item-right color="twitter-logo" >
-              <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        <!-- Social Section End -->
+      <ion-row class="social-row-style">
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab color="googleplus-logo">
+            <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="facebook-logo">
+            <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="instagram-logo">
+            <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab item-right color="twitter-logo" >
+            <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <!-- Social Section End -->
     </ion-card-content>        
   </ion-card>
 </ion-col>
@@ -325,30 +326,30 @@ Ionic pages and navigation.
         </div>
         <!-- Img Noticia End -->
       </div>
-    <!-- Social Section -->
-        <ion-row class="social-row-style">
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab color="googleplus-logo">
-              <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="facebook-logo">
-              <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="instagram-logo">
-              <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab item-right color="twitter-logo" >
-              <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        <!-- Social Section End -->
+      <!-- Social Section -->
+      <ion-row class="social-row-style">
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab color="googleplus-logo">
+            <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="facebook-logo">
+            <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="instagram-logo">
+            <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab item-right color="twitter-logo" >
+            <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <!-- Social Section End -->
     </ion-card-content>        
   </ion-card>
 </ion-col>
@@ -384,30 +385,30 @@ Ionic pages and navigation.
         </div>
         <!-- Img Noticia End -->
       </div>
-    <!-- Social Section -->
-        <ion-row class="social-row-style">
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab color="googleplus-logo">
-              <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="facebook-logo">
-              <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="instagram-logo">
-              <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab item-right color="twitter-logo" >
-              <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        <!-- Social Section End -->
+      <!-- Social Section -->
+      <ion-row class="social-row-style">
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab color="googleplus-logo">
+            <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="facebook-logo">
+            <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="instagram-logo">
+            <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab item-right color="twitter-logo" >
+            <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <!-- Social Section End -->
     </ion-card-content>        
   </ion-card>
 </ion-col>
@@ -443,30 +444,30 @@ Ionic pages and navigation.
         </div>
         <!-- Img Noticia End -->
       </div>
-    <!-- Social Section -->
-        <ion-row class="social-row-style">
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab color="googleplus-logo">
-              <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="facebook-logo">
-              <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab  item-right color="instagram-logo">
-              <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
-            </button>
-          </ion-col>
-          <ion-col col-3 text-center>
-            <button class="social-button"  ion-fab item-right color="twitter-logo" >
-              <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
-            </button>
-          </ion-col>
-        </ion-row>
-        <!-- Social Section End -->
+      <!-- Social Section -->
+      <ion-row class="social-row-style">
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab color="googleplus-logo">
+            <ion-icon class="social-logo" name="logo-googleplus"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="facebook-logo">
+            <ion-icon class="social-logo" name="logo-facebook" style=""></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab  item-right color="instagram-logo">
+            <ion-icon class="social-logo" name="logo-instagram"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-3 text-center>
+          <button class="social-button"  ion-fab item-right color="twitter-logo" >
+            <ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+      <!-- Social Section End -->
     </ion-card-content>        
   </ion-card>
 </ion-col>
