@@ -49,53 +49,6 @@ export class LoginPage {
 
   keytab(event) {
       let element = event.srcElement.nextElementSibling; // get the sibling element
-<<<<<<< HEAD
-      if(element == null)  // check if its null
-          return;
-      else
-          element.focus();   // focus if not null
-  }
-
-  register() {
-    this.navCtrl.push(RegisterPage);
-  }
-
-  me () {
-    let headers = new Headers();
-    headers.append('Authorization', 'Basic Z29vZGNvbWV4OmNvbWV4MDA=');
-    headers.append('Authorization', this.token);
-    headers.append('Content-Type', 'application/json');
-
-    this.http.get(this.api + 'me', { headers: headers })
-      .map(res => res.json())
-      .subscribe(
-        data => {
-          this.authenticate();
-        },
-        err => {
-          if (err.status == 401){
-            this.toast('Inicie Sesion Nuevamente');
-          } else if (err.status == 500) {
-            
-          } else {
-            
-          }   
-        },
-      );
-  }
-
-  login() {
-    var loading = this.loadingCtrl.create({
-      spinner: 'hide',
-      content: '<img src="../../assets/spinner3.gif"/>'
-    });
-    loading.present();
-
-    let headers = new Headers();
-    /*headers.append('Authorization', 'Basic Z29vZGNvbWV4OmNvbWV4MDA=');*/
-    headers.append('Content-Type', 'application/json');
-
-=======
 
       if(element == null)  // check if its null
           return;
@@ -142,7 +95,6 @@ export class LoginPage {
     /*headers.append('Authorization', 'Basic Z29vZGNvbWV4OmNvbWV4MDA=');*/
     headers.append('Content-Type', 'application/json');
 
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
     var credentials = JSON.stringify({ email: this.Email, password: this.Password });
     this.http.post('https://clubbeneficiosuno.goodcomex.com/beneficios/public/api/login', credentials, { headers: headers })
       .map(res => res.json())

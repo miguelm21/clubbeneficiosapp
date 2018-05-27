@@ -104,11 +104,7 @@ export class PerfilPage {
   }
 
   home(){
-<<<<<<< HEAD
     this.navCtrl.popToRoot();
-=======
-  	this.navCtrl.popToRoot();
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
   }
 
   EditProfile(){
@@ -117,19 +113,6 @@ export class PerfilPage {
 
   ChangePassword(){
     this.navCtrl.push(PasswordPage, { profile: this.profile, token: this.token } );
-<<<<<<< HEAD
-=======
-  }
-
-  toast(message) {
-    let toast = this.toastCtrl.create({
-      message: message,
-      duration: 3000,
-      position: 'bottom'
-    });
-
-    toast.present();
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
   }
 
   toast(message) {
@@ -143,3 +126,5 @@ export class PerfilPage {
   }
 
 }
+
+

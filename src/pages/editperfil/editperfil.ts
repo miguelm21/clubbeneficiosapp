@@ -76,7 +76,6 @@ export class EditperfilPage {
           }
         },
       );
-<<<<<<< HEAD
   }
 
   back(){
@@ -94,22 +93,3 @@ export class EditperfilPage {
   }
 
 }
-=======
-  }
-
-  back(){
-  	this.navCtrl.popToRoot();
-  }
-
-  toast(message) {
-    let toast = this.toastCtrl.create({
-      message: message,
-      duration: 3000,
-      position: 'bottom'
-    });
-
-    toast.present();
-  }
-
-}
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5

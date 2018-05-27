@@ -139,7 +139,6 @@ export class CategoryPage {
   }
 
   home(){
-<<<<<<< HEAD
     this.navCtrl.popToRoot();
   }
 
@@ -147,15 +146,6 @@ export class CategoryPage {
     this.navCtrl.push(BeneficioPage, {id: id, token: this.token });
   }
 
-=======
-  	this.navCtrl.popToRoot();
-  }
-
-  benefit(id){
-    this.navCtrl.push(BeneficioPage, {id: id, token: this.token });
-  }
-
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
   presentImage(myImage) {
     const imageViewer = this._imageViewerCtrl.create(myImage);
     imageViewer.present();

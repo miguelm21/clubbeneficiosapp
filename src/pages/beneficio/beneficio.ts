@@ -22,13 +22,8 @@ declare var map;
   templateUrl: 'beneficio.html',
 })
 export class BeneficioPage {
-<<<<<<< HEAD
   latitude;
   longitude;
-=======
-	latitude;
-	longitude;
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
 
   benefit: Object[];
   Pos;
@@ -130,10 +125,7 @@ export class BeneficioPage {
     });
 
     //InforWindows
-<<<<<<< HEAD
-=======
 
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
     var contentString = 
       '<div class="container">' +
           '<img class="card-img-top" height="30px" src="data:image/png;base64,' + benefit.image +'" alt="map-image' + benefit.id + '">' +
@@ -185,38 +177,10 @@ setMapOnAll(map, markers) {
     for (var i = 0; i < markers.length; i++) {
       markers[i].setMap(map);
     }
-<<<<<<< HEAD
 }
 
 clearMarkers() {
     this.setMapOnAll(null, null);
-=======
-}
-
-clearMarkers() {
-    this.setMapOnAll(null, null);
-}
-
-deleteMarkers(markers) {
-    this.clearMarkers();
-    markers = [];
-}
-
-back(){
-	this.navCtrl.pop();
-}
-
-toast(message) {
-  let toast = this.toastCtrl.create({
-    message: message,
-    duration: 3000,
-    position: 'bottom'
-  });
-
-  toast.present();
-}
-
->>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
 }
 
 deleteMarkers(markers) {
