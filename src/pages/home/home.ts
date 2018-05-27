@@ -541,4 +541,8 @@ declare var map;
       });
       this.oneSignal.endInit();
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1b798a70b615a109055d16e9a79c609171b1c4a5
