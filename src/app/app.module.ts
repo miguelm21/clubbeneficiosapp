@@ -4,13 +4,13 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HttpModule } from '@angular/http';
 import { LocationAccuracy } from '@ionic-native/location-accuracy';
-
+import { IonicStorageModule } from '@ionic/storage';
+import { OneSignal } from '@ionic-native/onesignal';
 
 // import { ExpandableHeader } from '../components/expandable-header/expandable-header';
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { IonicImageViewerModule } from 'ionic-img-viewer';
-import { AnimationService, AnimatesDirective } from 'css-animator';
 
 // import { HomePage } from '../pages/home/home';
 import { LoginPageModule } from '../pages/login/login.module';
@@ -24,16 +24,12 @@ import { EditperfilPageModule } from '../pages/editperfil/editperfil.module';
 import { PasswordPageModule } from '../pages/password/password.module';
 import { BeneficioPageModule } from '../pages/beneficio/beneficio.module';
 
-
-
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
-    MyApp,
-    AnimatesDirective
+    MyApp
     // HomePage,
     // ExpandableHeader
   ],
@@ -55,6 +51,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     BeneficioPageModule,
     HomePageModule,
     IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,7 +63,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     SplashScreen,
     GoogleMaps,
     LocationAccuracy,
-    AnimationService,
+    OneSignal,
     Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
   ]

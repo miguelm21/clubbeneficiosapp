@@ -1,7 +1,9 @@
+.ios, .md {
 page-login {
 	.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
 		background-image: none;
 	}
+
 	.ion-md-arrow-back:before{
 		color: #fff;
 	}
@@ -102,6 +104,7 @@ page-login {
 		}
 		.loginBtn {
 			font-size: 27px;
+			height: 65px;
 		}
 		.loginBtn:before {
 			width:57px
@@ -118,34 +121,47 @@ page-login {
 		}
 	}
 	@media only screen and (min-width: 768px) and (max-width: 992px){
-		.bg-color{
-			height: auto;
-			width:100%;
-			position:absolute;
-			padding:50px !important;
+		// .header-ios::after, .tabs-ios[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-ios[tabsPlacement="bottom"] > .tabbar::before{
+			// 	background-image: none;
+			// }
+			.bg-color{
+				height: auto;
+				width:100%;
+				position:absolute;
+				padding:50px !important;
+			}
+			.label-font{
+				font-size:27px;
+			}
+			.button-login{
+				font-size:27px;
+			}
+			.loginBtn {
+				font-size: 27px;
+				height: 65px;
+			}
+			.loginBtn:before {
+				width:57px
+			}
+			.bg-color{
+				background-color: rgba(0,174,239, 0.4);
+				// background: rgba(0,160,227, 0.4);
+				background: linear-gradient(to right, rgba(190,231,251, 0.4),rgba(0,174,239, 0.7));
+				height: 100%;
+				width:100%;
+				position:absolute;
+			}
+			.loginBtn--facebook:before {
+				border-right: #364e92 1px solid;
+				background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 12px no-repeat;
+				background-size:48px;
+			}
+			.loginBtn--google:before {
+				border-right: #364e92 1px solid;
+				background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 12px no-repeat;
+				background-size:48px;
+			}
 		}
-		.label-font{
-			font-size:27px;
-		}
-		.button-login{
-			font-size:27px;
-		}
-		.loginBtn {
-			font-size: 27px;
-		}
-		.loginBtn:before {
-			width:57px
-		}
-		.loginBtn--facebook:before {
-			border-right: #364e92 1px solid;
-			background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 12px no-repeat;
-			background-size:48px;
-		}
-		.loginBtn--google:before {
-			border-right: #364e92 1px solid;
-			background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 12px no-repeat;
-			background-size:48px;
-		}
-	}
 
-}
+	}
+	}
